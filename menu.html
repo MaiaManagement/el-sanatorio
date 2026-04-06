@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expediente del Paciente — Menú | El Sanatorio, Santa Marta</title>
+  <meta name="description" content="El menú de El Sanatorio: yakitori al carbón, cócteles prescritos por el Doctor de turno — La Morfina, El Paracetamol, La Transfusión. Centro Histórico, Santa Marta." />
+  <meta property="og:title"       content="Expediente del Paciente — Menú | El Sanatorio" />
+  <meta property="og:description" content="No vendemos cócteles — los recetamos. Yakitori, dosis de bar y diagnósticos líquidos." />
+  <meta property="og:url"         content="https://elsanatorio.co/menu.html" />
+  <link rel="canonical" href="https://elsanatorio.co/menu.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="El Sanatorio — inicio">
+      <span class="nav__logo-num">PACIENTE 013</span>
+      <span class="nav__logo-name">EL SANATORIO</span>
+    </a>
+    <div class="nav__monitor" aria-hidden="true">
+      <svg viewBox="0 0 300 36" preserveAspectRatio="none">
+        <path class="ekg-line" d="M 0,18 L 30,18 L 45,12 L 60,27 L 66,0 L 75,34 L 90,18 L 120,18 L 135,12 L 150,27 L 156,0 L 165,34 L 180,18 L 300,18" />
+      </svg>
+    </div>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html" class="active">Menú</a></li>
+      <li><a href="experience.html">Experiencia</a></li>
+      <li><a href="tours.html">Tours</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile-menu" role="navigation">
+  <a href="index.html">Inicio</a>
+  <a href="menu.html">Menú</a>
+  <a href="experience.html">Experiencia</a>
+  <a href="tours.html">Tours</a>
+  <a href="contact.html">Contacto</a>
+</div>
+
+<!-- ── Menu Hero ──────────────────────────────────────────────── -->
+<div class="menu-hero">
+  <div class="container--sm">
+    <div class="section-label" style="justify-content: center;"><span>Archivo Clínico</span></div>
+    <h1 class="section-title section-title--center">Expediente del Paciente</h1>
+    <p class="serif text-center" style="color: var(--light-gray); margin-top: 0.75rem;">
+      Dieta prescrita por el Doctor de turno.<br>
+      <em>No se aceptan modificaciones sin autorización médica.</em>
+    </p>
+
+    <!-- Patient header card -->
+    <div class="patient-header" role="complementary" aria-label="Encabezado de expediente médico">
+      <div class="patient-header__top">
+        <span style="font-size: 0.72rem; color: var(--crimson); letter-spacing: 0.2em;">EXPEDIENTE DIETÉTICO — HOSPITALIZADOS Y VISITANTES</span>
+        <span style="font-size: 0.62rem; color: var(--gray);">EL SANATORIO · SANTA MARTA</span>
+      </div>
+      <div class="patient-header__fields">
+        <div class="patient-header__field">
+          <p class="patient-header__key">Médico Tratante</p>
+          <p class="patient-header__val">Doctor de Turno</p>
+        </div>
+        <div class="patient-header__field">
+          <p class="patient-header__key">Tipo de Dieta</p>
+          <p class="patient-header__val">Alta en sabor / Riesgo moderado</p>
+        </div>
+        <div class="patient-header__field">
+          <p class="patient-header__key">Restricciones</p>
+          <p class="patient-header__val">Consultar con enfermería</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="xray-note" style="margin-top: 2rem;">
+      <div class="xray-note__icon" aria-hidden="true">☢</div>
+      <p class="xray-note__text">
+        Los menús del día se exhiben en las cajas de luz de rayos X en la barra principal.
+        Pregunte al Doctor de turno por disponibilidad y recomendaciones.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ── Menu Content ───────────────────────────────────────────── -->
+<main style="background: var(--panel-dark);">
+  <div class="container--sm">
+
+    <!-- ── YAKITORI ───────────────────────────────────────────── -->
+    <div class="menu-section fade-in-section" id="yakitori" aria-labelledby="yakitori-title">
+      <div class="menu-category-header">
+        <span class="menu-category-code">SECCIÓN A</span>
+        <h2 class="menu-category-title" id="yakitori-title">Dieta del Paciente</h2>
+      </div>
+      <p class="menu-category-sub">
+        Yakitori al carbón de marabú · Brochetas preparadas sobre fuego directo, sin apresuramiento.
+        <em>Prescripción mínima: 3 unidades por paciente.</em>
+      </p>
+
+      <div class="menu-items" role="list">
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">A-01</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Protocolo de Muslo</p>
+            <p class="menu-item__desc">Muslo de ave, glaseado con tare de la casa, carbón de marabú. La base de todo tratamiento.</p>
+            <p class="menu-item__prescription">Pollo · Tare · Carbón</p>
+          </div>
+          <span class="menu-item__price">COP 8.500</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">A-02</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Espécimen de Pechuga</p>
+            <p class="menu-item__desc">Pechuga de ave, shiso fresco, semillas de sésamo tostadas. Para diagnósticos más delicados.</p>
+            <p class="menu-item__prescription">Pollo · Shiso · Sésamo</p>
+          </div>
+          <span class="menu-item__price">COP 8.500</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">A-03</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Biopsia de Panceta</p>
+            <p class="menu-item__desc">Cerdo sin curar, glaseado con miso y jengibre. Extraído con precisión quirúrgica.</p>
+            <p class="menu-item__prescription">Cerdo · Miso · Jengibre</p>
+          </div>
+          <span class="menu-item__price">COP 9.500</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">A-04</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Tejido Bovino</p>
+            <p class="menu-item__desc">Res de res, sal de carbón, cebolleta. Procedimiento de alta complejidad. Resultado garantizado.</p>
+            <p class="menu-item__prescription">Res · Sal de carbón · Cebolleta</p>
+          </div>
+          <span class="menu-item__price">COP 12.500</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">A-05</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Nervio y Cartílago <span class="cocktail-tag">TSUKUNE</span></p>
+            <p class="menu-item__desc">Albóndigas de pollo molido a mano, tare doble, yema de huevo para dipear. El diagnóstico más solicitado.</p>
+            <p class="menu-item__prescription">Pollo · Tare · Yema fresca</p>
+          </div>
+          <span class="menu-item__price highlight">COP 9.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">A-06</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Órgano Hepático</p>
+            <p class="menu-item__desc">Hígado de pollo, tare tradicional. No apto para pacientes aprensivos. Para los de criterio clínico.</p>
+            <p class="menu-item__prescription">Hígado · Tare · Cebollín</p>
+          </div>
+          <span class="menu-item__price">COP 8.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">A-07</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Espécimen Fúngico</p>
+            <p class="menu-item__desc">Hongos shiitake, mantequilla de hierbas, flor de sal. Para pacientes sin proteína animal.</p>
+            <p class="menu-item__prescription">Shiitake · Mantequilla · Hierbas</p>
+          </div>
+          <span class="menu-item__price">COP 7.500</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">A-08</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Autopsia Vegetal</p>
+            <p class="menu-item__desc">Verduras de temporada, sal de carbón, limón. La dieta mínima para continuar en observación.</p>
+            <p class="menu-item__prescription">Temporal · Carbón · Limón</p>
+          </div>
+          <span class="menu-item__price">COP 7.000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr-label"><span>Fin de sección A — Continuar tratamiento</span></div>
+
+    <!-- ── COCKTAILS ──────────────────────────────────────────── -->
+    <div class="menu-section fade-in-section" id="cocktails" aria-labelledby="cocktails-title">
+      <div class="menu-category-header">
+        <span class="menu-category-code">SECCIÓN B</span>
+        <h2 class="menu-category-title" id="cocktails-title">Prescripciones</h2>
+      </div>
+      <p class="menu-category-sub">
+        Cócteles de alta potencia · Recetados por el Doctor de turno · Consumir según indicaciones.
+        <em>El establecimiento no se responsabiliza por efectos secundarios.</em>
+      </p>
+
+      <div class="menu-items" role="list">
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">B-01</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">La Morfina</p>
+            <p class="menu-item__desc">Ron oscuro, maracuyá fresco, carbón activado, lima. Oscuro. Dulce. Adictivo por definición.</p>
+            <p class="menu-item__prescription">"Para el dolor que no tiene cura."</p>
+          </div>
+          <span class="menu-item__price highlight">COP 24.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">B-02</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">El Paracetamol</p>
+            <p class="menu-item__desc">Vodka, flor de saúco, pepino, tónica. Limpio. Preciso. Efectivo en dosis moderadas.</p>
+            <p class="menu-item__prescription">"Efectivo en dosis moderadas. Puede causar dependencia."</p>
+          </div>
+          <span class="menu-item__price">COP 22.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">B-03</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">La Transfusión <span class="cocktail-tag">FIRMA</span></p>
+            <p class="menu-item__desc">Tequila, hibisco, naranja sanguina, enjuague de mezcal. Rojo. Vivo. Tipo O universal.</p>
+            <p class="menu-item__prescription">"Tipo O universal. Analizar grupo antes de administrar."</p>
+          </div>
+          <span class="menu-item__price highlight">COP 26.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">B-04</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Dosis Letal</p>
+            <p class="menu-item__desc">Triple medida de ron, jengibre, lima, ginger beer. No apto para menores ni cobardes. Firmar consentimiento.</p>
+            <p class="menu-item__prescription">"Requiere firma de consentimiento informado."</p>
+          </div>
+          <span class="menu-item__price">COP 28.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">B-05</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Suero</p>
+            <p class="menu-item__desc">Gin botánico, agua de coco, menta, borde de sal marina. Hidratación terapéutica. El primero que recomienda la enfermería.</p>
+            <p class="menu-item__prescription">"Hidratación terapéutica. Seguro para pacientes nuevos."</p>
+          </div>
+          <span class="menu-item__price">COP 23.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">B-06</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">La Anestesia</p>
+            <p class="menu-item__desc">Mezcal, amaro, bitter de chocolate, expresión de naranja. Se administra antes del procedimiento. Sin retorno.</p>
+            <p class="menu-item__prescription">"Administrar antes del procedimiento. No conducir maquinaria."</p>
+          </div>
+          <span class="menu-item__price highlight">COP 27.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">B-07</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Sangre de Paciente</p>
+            <p class="menu-item__desc">Reducción de vino tinto, brandy, jarabe especiado. Tipo desconocido. Analizar antes de consumir. Siempre hay suficiente.</p>
+            <p class="menu-item__prescription">"Tipo desconocido. Procedencia: Sala 7. No preguntar."</p>
+          </div>
+          <span class="menu-item__price">COP 24.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">B-08</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">La Receta <span class="cocktail-tag">CON PRESCRIPCIÓN</span></p>
+            <p class="menu-item__desc">Whisky, miel de acacia, limón, tomillo fresco. Solo con receta médica. El Doctor decide quién la merece.</p>
+            <p class="menu-item__prescription">"Solo con prescripción médica. Disponibilidad limitada."</p>
+          </div>
+          <span class="menu-item__price">COP 25.000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr-label"><span>Fin de sección B — Rehidratación disponible</span></div>
+
+    <!-- ── NON-ALCOHOLIC ──────────────────────────────────────── -->
+    <div class="menu-section fade-in-section" id="non-alc" aria-labelledby="nonalc-title">
+      <div class="menu-category-header">
+        <span class="menu-category-code">SECCIÓN C</span>
+        <h2 class="menu-category-title" id="nonalc-title">Rehidratación</h2>
+      </div>
+      <p class="menu-category-sub">
+        Soluciones no alcohólicas · Para pacientes en recuperación o en observación.
+        <em>El médico puede prescribir estas opciones en cualquier etapa del tratamiento.</em>
+      </p>
+
+      <div class="menu-items" role="list">
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">C-01</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Suero Fisiológico</p>
+            <p class="menu-item__desc">Agua mineral espumosa, pepino, lima, sal de carbón. La base de toda recuperación seria.</p>
+            <p class="menu-item__prescription">Sin alcohol · Recomendado para conductores</p>
+          </div>
+          <span class="menu-item__price">COP 8.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">C-02</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Plasma Fresco</p>
+            <p class="menu-item__desc">Jugo de frutas tropicales de la temporada, jengibre, menta. Extraído al momento. Sin conservantes.</p>
+            <p class="menu-item__prescription">Sin alcohol · Tropical · Fresco</p>
+          </div>
+          <span class="menu-item__price">COP 10.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">C-03</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Glucosa IV</p>
+            <p class="menu-item__desc">Té de la casa con hibisco y panela, servido frío. Dulce. Estabilizador. Administrar en vaso grande.</p>
+            <p class="menu-item__prescription">Sin alcohol · Dulce · Estabilizador de humor</p>
+          </div>
+          <span class="menu-item__price">COP 9.000</span>
+        </div>
+
+        <div class="menu-item" role="listitem">
+          <span class="menu-item__num">C-04</span>
+          <div class="menu-item__body">
+            <p class="menu-item__name">Solución Salina</p>
+            <p class="menu-item__desc">Agua mineral sin gas, pH balanceado. Para quienes solo necesitan existir por un momento.</p>
+            <p class="menu-item__prescription">Sin alcohol · Sin azúcar · Existencial</p>
+          </div>
+          <span class="menu-item__price">COP 5.000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr-label"><span>Fin del expediente — Paciente agradecido</span></div>
+
+    <!-- Footer note -->
+    <div style="padding: 2rem 0 4rem; text-align: center;">
+      <p class="mono" style="font-size: 0.68rem; color: var(--gray); letter-spacing: 0.1em; line-height: 1.9;">
+        Los precios incluyen IVA · Los menús pueden cambiar según disponibilidad del mercado<br>
+        y los sueños del Doctor de turno · Informar alergias al personal clínico<br>
+        <em style="color: var(--crimson);">El menú del día se exhibe en las cajas de luz de la barra.</em>
+      </p>
+      <div style="margin-top: 2rem;">
+        <a href="index.html#reservar" class="btn btn--red">Solicitar Admisión</a>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__logo">EL SANATORIO</p>
+        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
+        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 1rem; line-height: 1.8;">
+          Calle 19 #4-23 · Centro Histórico<br>Santa Marta, Colombia
+        </p>
+      </div>
+      <div>
+        <p class="footer__col-title">Instalaciones</p>
+        <ul class="footer__links" role="list">
+          <li><a href="menu.html">El Menú / Expediente</a></li>
+          <li><a href="experience.html">La Experiencia</a></li>
+          <li><a href="tours.html">Tours Históricos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Contacto</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://wa.me/573174370575" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="index.html#reservar">Reservar Mesa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia.</p>
+      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

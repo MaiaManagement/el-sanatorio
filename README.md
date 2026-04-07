@@ -121,7 +121,7 @@ netlify deploy --prod
 
 - **WhatsApp:** [+57 317 437 0575](https://wa.me/573174370575)
 - **Instagram:** [@elsanatorio.sm](https://instagram.com/elsanatorio.sm)
-- **Email:** hola@elsanatorio.co
+- **Email:** hola@el-sanatorio.com
 
 ---
 

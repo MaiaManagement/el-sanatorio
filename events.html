@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos Privados / Private Events — El Sanatorio, Santa Marta</title>
+  <meta name="description" content="Reserva El Sanatorio para tu evento privado. Fiestas corporativas, cumpleaños, Halloween, eventos de empresa. Ambiente horror único. Capacidad para grupos. Santa Marta, Colombia." />
+  <meta name="keywords" content="eventos privados santa marta, fiestas halloween colombia, bar temático horror, evento corporativo santa marta, cumpleaños bar temático" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Eventos Privados — El Sanatorio, Santa Marta" />
+  <meta property="og:description" content="Transforma tu evento en una experiencia que nadie olvidará. El Sanatorio disponible para grupos privados, fiestas de Halloween, cumpleaños y eventos corporativos." />
+  <meta property="og:url"         content="https://el-sanatorio.com/events.html" />
+  <meta property="og:image"       content="https://el-sanatorio.com/og-image.jpg" />
+  <meta property="og:locale"      content="es_CO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Eventos Privados — El Sanatorio" />
+  <meta name="twitter:description" content="El bar de horror más singular de Santa Marta disponible para tu evento." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://el-sanatorio.com/events.html" />
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "name": "El Sanatorio — Eventos Privados",
+    "description": "Venue de horror temático para eventos privados, fiestas corporativas y celebraciones en el Centro Histórico de Santa Marta.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 19 #4-23",
+      "addressLocality": "Centro Histórico, Santa Marta",
+      "addressCountry": "CO"
+    },
+    "telephone": "+19034598763",
+    "url": "https://el-sanatorio.com/events.html"
+  }
+  </script>
+
+  <style>
+    .events-hero {
+      background: var(--black);
+      padding: 8rem 0 5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .events-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center top, rgba(180,0,0,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .events-type-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .event-type-card {
+      background: var(--panel-dark);
+      border: 1px solid var(--border);
+      padding: 2rem 1.75rem;
+      position: relative;
+      transition: border-color 0.3s;
+    }
+    .event-type-card:hover {
+      border-color: var(--red);
+    }
+    .event-type-card__num {
+      font-family: var(--font-type);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      color: var(--red);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .event-type-card h3 {
+      font-family: var(--font-type);
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+    .event-type-card p {
+      font-size: 0.88rem;
+      color: var(--light-gray);
+      line-height: 1.7;
+    }
+    .capacity-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      .capacity-grid { grid-template-columns: 1fr; }
+    }
+    .capacity-stat {
+      text-align: center;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: var(--black);
+    }
+    .capacity-stat__num {
+      font-family: var(--font-type);
+      font-size: 2.5rem;
+      color: var(--red);
+      display: block;
+      letter-spacing: 0.05em;
+    }
+    .capacity-stat__label {
+      font-family: var(--font-type);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      color: var(--gray);
+      text-transform: uppercase;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    .cocktail-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 0;
+    }
+    .cocktail-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-family: var(--font-type);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+    .cocktail-list li:last-child { border-bottom: none; }
+    .cocktail-list .c-name { color: var(--white); }
+    .cocktail-list .c-tag  { color: var(--gold); font-size: 0.7rem; }
+    .process-steps {
+      counter-reset: steps;
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0 0;
+    }
+    .process-steps li {
+      counter-increment: steps;
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .process-steps li:last-child { border-bottom: none; }
+    .process-steps li::before {
+      content: "0" counter(steps);
+      font-family: var(--font-type);
+      font-size: 1.5rem;
+      color: var(--red);
+      letter-spacing: 0.05em;
+      min-width: 2.5rem;
+      padding-top: 0.1rem;
+    }
+    .process-steps li h4 {
+      font-family: var(--font-type);
+      letter-spacing: 0.1em;
+      font-size: 0.85rem;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+    .process-steps li p {
+      font-size: 0.88rem;
+      color: var(--light-gray);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .cta-box {
+      background: var(--black);
+      border: 1px solid var(--red);
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(180,0,0,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="El Sanatorio — inicio">
+      <span class="nav__logo-num">PACIENTE 013</span>
+      <span class="nav__logo-name">EL SANATORIO</span>
+    </a>
+    <div class="nav__monitor" aria-hidden="true">
+      <svg viewBox="0 0 300 36" preserveAspectRatio="none">
+        <path class="ekg-line" d="M 0,18 L 30,18 L 45,12 L 60,27 L 66,0 L 75,34 L 90,18 L 120,18 L 135,12 L 150,27 L 156,0 L 165,34 L 180,18 L 300,18" />
+      </svg>
+    </div>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="experience.html">Experiencia</a></li>
+      <li><a href="events.html" class="active">Eventos</a></li>
+      <li><a href="tours.html">Tours</a></li>
+      <li><a href="historia.html">Historia</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile-menu" role="navigation" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="menu.html">Menú</a>
+  <a href="experience.html">Experiencia</a>
+  <a href="events.html">Eventos</a>
+  <a href="tours.html">Tours</a>
+  <a href="historia.html">Historia</a>
+  <a href="contact.html">Contacto</a>
+</div>
+
+<!-- ── Hero ──────────────────────────────────────────────────── -->
+<div class="events-hero">
+  <div class="container--sm">
+    <div class="maze-warning" role="alert">⚠ ÁREA DE EVENTOS — ACCESO RESTRINGIDO</div>
+    <div class="section-label" style="justify-content: center;"><span>Protocolo de Celebración</span></div>
+    <h1 class="section-title section-title--center neon-red" style="font-size: clamp(2rem, 6vw, 4rem);">
+      Eventos Privados
+    </h1>
+    <p class="serif" style="color: var(--light-gray); margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto;">
+      Hay lugares donde celebrar. Y hay lugares donde la celebración se convierte en algo
+      que nadie va a olvidar. El Sanatorio es lo segundo.
+    </p>
+    <p class="mono" style="font-size: 0.72rem; letter-spacing: 0.18em; color: var(--gray); margin-top: 1rem;">
+      PRIVATE EVENTS &nbsp;·&nbsp; CORPORATE &nbsp;·&nbsp; HALLOWEEN &nbsp;·&nbsp; BIRTHDAYS
+    </p>
+  </div>
+</div>
+
+<!-- ── Tipos de Evento ────────────────────────────────────── -->
+<section style="background: var(--panel-dark); padding: 5rem 0;" aria-labelledby="tipos-title">
+  <div class="container">
+    <div class="section-label"><span>Clasificación de Ingreso</span></div>
+    <h2 class="section-title" id="tipos-title">Tipos de Evento</h2>
+    <p class="serif" style="color: var(--light-gray); max-width: 540px; margin-bottom: 2rem;">
+      Desde cumpleaños íntimos hasta tomas completas del edificio.
+      El Sanatorio se adapta — siempre dentro de su protocolo.
+    </p>
+
+    <div class="events-type-grid fade-in-section">
+      <div class="event-type-card">
+        <span class="event-type-card__num">TIPO 01</span>
+        <h3>Cumpleaños & Celebraciones</h3>
+        <p>Una noche que no parece cumpleaños normal — porque no lo es. Mesa reservada
+           para tu grupo, menú personalizado, coctelería a medida. El Doctor de turno
+           prescribirá el trago del festejado.</p>
+      </div>
+      <div class="event-type-card">
+        <span class="event-type-card__num">TIPO 02</span>
+        <h3>Fiestas Corporativas</h3>
+        <p>Team building de otro tipo. Cenas de empresa, lanzamientos de producto,
+           celebraciones de cierre. El ambiente hace el trabajo — nadie sale igual que entró,
+           y eso es exactamente lo que se busca.</p>
+      </div>
+      <div class="event-type-card">
+        <span class="event-type-card__num">TIPO 03</span>
+        <h3>Halloween Especiales</h3>
+        <p>El Sanatorio no se disfraza en Halloween — ya es Halloween todo el año. Pero
+           en octubre desbloqueamos el modo completo: laberinto de terror activado,
+           actores en escena, coctelería de edición limitada.</p>
+      </div>
+      <div class="event-type-card">
+        <span class="event-type-card__num">TIPO 04</span>
+        <h3>Toma Total del Espacio</h3>
+        <p>El edificio entero para tu grupo. Bar, patio interior, salas superiores,
+           acceso a zonas normalmente cerradas. Para cuando la ocasión lo merece y el
+           presupuesto lo permite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Capacidad ──────────────────────────────────────────── -->
+<section style="background: var(--black); padding: 5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);" aria-labelledby="cap-title">
+  <div class="container">
+    <div class="section-label" style="justify-content: center;"><span>Informe de Capacidad</span></div>
+    <h2 class="section-title section-title--center" id="cap-title">Capacidad & Espacios</h2>
+
+    <div class="capacity-grid fade-in-section">
+      <div class="capacity-stat">
+        <span class="capacity-stat__num">80</span>
+        <span class="capacity-stat__label">Aforo total del bar</span>
+      </div>
+      <div class="capacity-stat">
+        <span class="capacity-stat__num">30</span>
+        <span class="capacity-stat__label">Zona VIP / reservada</span>
+      </div>
+      <div class="capacity-stat">
+        <span class="capacity-stat__num">120+</span>
+        <span class="capacity-stat__label">Toma total del edificio</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem;" class="fade-in-section">
+      <div class="panel panel--red-accent">
+        <h4 style="margin-bottom: 0.75rem; color: var(--gold);">Zona del Bar Principal</h4>
+        <p style="font-size: 0.88rem; color: var(--light-gray);">
+          La planta baja del sanatorio. Barra de acero inoxidable, zona de cocina yakitori,
+          mesas clínicas, patio interior con buganvillas. Ideal para eventos de hasta 80 personas
+          en modalidad cóctel o hasta 50 en configuración de cena.
+        </p>
+      </div>
+      <div class="panel panel--gold-accent">
+        <h4 style="margin-bottom: 0.75rem; color: var(--gold);">Pisos Superiores</h4>
+        <p style="font-size: 0.88rem; color: var(--light-gray);">
+          Los tres pisos del laberinto disponibles para eventos con experiencia de terror incluida.
+          El grupo recorre las instalaciones antes de la cena. Grupos de hasta 40 personas para
+          la experiencia inmersiva combinada con evento privado.
+        </p>
+      </div>
+      <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem;">
+        <h4 style="margin-bottom: 0.75rem; color: var(--gold);">Patio Interior Colonial</h4>
+        <p style="font-size: 0.88rem; color: var(--light-gray);">
+          El patio del edificio colonial, con buganvillas moradas y la luz que se filtra entre
+          los muros de cal. Espacio al aire libre para aperitivos, fotografías, o ceremonias
+          breves. Capacidad: 40 personas sentadas.
+        </p>
+      </div>
+      <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem;">
+        <h4 style="margin-bottom: 0.75rem; color: var(--gold);">Sala Privada — "El Quirófano"</h4>
+        <p style="font-size: 0.88rem; color: var(--light-gray);">
+          Sala separada en el primer piso para grupos de hasta 20 personas. Mesa larga de acero,
+          cajas de luz con radiografías decorativas, iluminación de sala de operaciones.
+          Privacidad total. Disponible para cenas privadas y reuniones.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Coctelería Personalizada ───────────────────────────── -->
+<section style="background: var(--panel-dark); padding: 5rem 0;" aria-labelledby="cocktails-title">
+  <div class="container">
+    <div class="section-label"><span>Prescripciones Especiales</span></div>
+    <h2 class="section-title" id="cocktails-title">Menú de Coctelería a Medida</h2>
+    <p class="serif" style="color: var(--light-gray); max-width: 520px; margin-bottom: 0.5rem;">
+      Para eventos privados, el Doctor de turno formula prescripciones exclusivas.
+      Tragos con el nombre del homenajeado. Cócteles temáticos para la empresa.
+      Menú de barra abierta con selección curada.
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem;" class="fade-in-section">
+      <div>
+        <p class="mono" style="font-size: 0.65rem; letter-spacing: 0.18em; color: var(--gray); margin-bottom: 1rem;">
+          — PRESCRIPCIONES ESTÁNDAR DEL BAR —
+        </p>
+        <ul class="cocktail-list">
+          <li><span class="c-name">La Morfina</span><span class="c-tag">Vodka · Lychee · Jengibre</span></li>
+          <li><span class="c-name">El Paracetamol</span><span class="c-tag">Gin · Pepino · Albahaca</span></li>
+          <li><span class="c-name">La Transfusión</span><span class="c-tag">Ron · Granadina · Lima</span></li>
+          <li><span class="c-name">El Sedante Mayor</span><span class="c-tag">Whisky · Amaro · Naranja</span></li>
+          <li><span class="c-name">Dosis Letal</span><span class="c-tag">Mezcal · Mole · Sal de Gusano</span></li>
+          <li><span class="c-name">El Antídoto</span><span class="c-tag">Sake · Yuzu · Soda</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="mono" style="font-size: 0.65rem; letter-spacing: 0.18em; color: var(--gray); margin-bottom: 1rem;">
+          — OPCIONES PARA EVENTO PRIVADO —
+        </p>
+        <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1rem;">
+          <h4 style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--white); margin-bottom: 0.5rem;">Barra Abierta Premium</h4>
+          <p style="font-size: 0.82rem; color: var(--light-gray);">Selección completa del bar durante la duración del evento. Incluye coctelería de firma, cervezas y selección de vinos.</p>
+        </div>
+        <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1rem;">
+          <h4 style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--white); margin-bottom: 0.5rem;">Cóctel de Bienvenida Personalizado</h4>
+          <p style="font-size: 0.82rem; color: var(--light-gray);">El Doctor formula una prescripción exclusiva para tu evento. Nombre, historia, y presentación personalizada.</p>
+        </div>
+        <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem;">
+          <h4 style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--white); margin-bottom: 0.5rem;">Menú Yakitori Cerrado</h4>
+          <p style="font-size: 0.82rem; color: var(--light-gray);">Selección de brochetas al carbón diseñada por el chef para tu grupo. Opciones vegetarianas disponibles bajo prescripción médica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Proceso de Reserva ─────────────────────────────────── -->
+<section style="background: var(--black); padding: 5rem 0; border-top: 1px solid var(--border);" aria-labelledby="process-title">
+  <div class="container--sm">
+    <div class="section-label"><span>Protocolo de Admisión</span></div>
+    <h2 class="section-title" id="process-title">Cómo Reservar</h2>
+    <p class="serif" style="color: var(--light-gray); margin-bottom: 0.5rem;">
+      El proceso es directo. Nosotros hacemos el resto.
+    </p>
+
+    <ol class="process-steps fade-in-section">
+      <li>
+        <div>
+          <h4>Primer Contacto</h4>
+          <p>Escríbenos por WhatsApp o completa el formulario con la fecha, número de personas y tipo de evento. Respondemos en menos de 24 horas con disponibilidad.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>Diagnóstico del Evento</h4>
+          <p>Una llamada o reunión breve para entender qué necesitas: espacio, menú, horario, decoración adicional, si quieres la experiencia de terror incluida. Sin compromisos.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>Propuesta y Presupuesto</h4>
+          <p>Te enviamos una propuesta detallada con opciones de espacio, menú y precios. El depósito de reserva asegura la fecha — la clínica no puede garantizar disponibilidad sin él.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>Preparativos Finales</h4>
+          <p>72 horas antes confirmamos el menú definitivo, número exacto de asistentes y cualquier requerimiento especial. El Doctor estará de turno a tiempo.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>La Noche del Evento</h4>
+          <p>Tu grupo llega. El sanatorio los recibe. Lo que pase dentro queda bajo expediente sellado.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ── CTA Principal ──────────────────────────────────────── -->
+<section style="padding: 5rem 0;" aria-labelledby="cta-events">
+  <div class="container--sm">
+    <div class="cta-box fade-in-section">
+      <div class="maze-warning" role="presentation" style="margin-bottom: 1.5rem;">⚠ SOLICITUD DE EVENTO PRIVADO</div>
+      <h2 class="section-title section-title--center" id="cta-events" style="font-size: clamp(1.5rem, 4vw, 2.5rem);">
+        Cuéntanos Tu Evento
+      </h2>
+      <p class="serif" style="color: var(--light-gray); margin: 1rem auto 2rem; max-width: 460px;">
+        El Doctor de turno está disponible. Una consulta sin costo para evaluar si tu caso
+        califica para tratamiento en nuestras instalaciones.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+        <a href="https://wa.me/19034598763?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20un%20evento%20privado%20en%20El%20Sanatorio"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--red"
+           style="font-size: 0.9rem; padding: 1rem 2.5rem;">
+          Escribir por WhatsApp
+        </a>
+        <p class="mono" style="font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gray);">
+          +1 (903) 459-8763 &nbsp;·&nbsp; EVENTOS Y GRUPOS PRIVADOS
+        </p>
+      </div>
+    </div>
+
+    <!-- Inquiry Form -->
+    <div class="form-panel" style="margin-top: 3rem;">
+      <div class="form-panel__header">
+        <span class="form-panel__title">FORMULARIO DE SOLICITUD — EVENTO PRIVADO</span>
+        <span class="form-panel__ref">PROT-EVT-013</span>
+      </div>
+
+      <form name="evento-privado" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias">
+        <input type="hidden" name="form-name" value="evento-privado" />
+        <p style="display:none;"><label>No llenar: <input name="bot-field" /></label></p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="ev-name">Nombre de Contacto *</label>
+            <input class="form-input" type="text" id="ev-name" name="nombre" required placeholder="Nombre completo" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ev-phone">WhatsApp / Teléfono *</label>
+            <input class="form-input" type="tel" id="ev-phone" name="telefono" required placeholder="+57 300 000 0000" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ev-email">Correo Electrónico</label>
+            <input class="form-input" type="email" id="ev-email" name="email" placeholder="correo@ejemplo.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ev-type">Tipo de Evento *</label>
+            <select class="form-select" id="ev-type" name="tipo_evento" required>
+              <option value="" disabled selected>Seleccionar</option>
+              <option value="cumpleanos">Cumpleaños / Celebración</option>
+              <option value="corporativo">Evento Corporativo</option>
+              <option value="halloween">Halloween Especial</option>
+              <option value="toma-total">Toma Total del Espacio</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ev-guests">Número de Personas *</label>
+            <select class="form-select" id="ev-guests" name="personas" required>
+              <option value="" disabled selected>Seleccionar</option>
+              <option value="10-20">10 – 20 personas</option>
+              <option value="20-40">20 – 40 personas</option>
+              <option value="40-80">40 – 80 personas</option>
+              <option value="80+">Más de 80 personas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ev-date">Fecha Tentativa *</label>
+            <input class="form-input" type="date" id="ev-date" name="fecha" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ev-budget">Presupuesto Aproximado</label>
+            <select class="form-select" id="ev-budget" name="presupuesto">
+              <option value="" disabled selected>Seleccionar</option>
+              <option value="500k-1m">$500.000 – $1.000.000</option>
+              <option value="1m-3m">$1.000.000 – $3.000.000</option>
+              <option value="3m-5m">$3.000.000 – $5.000.000</option>
+              <option value="5m+">Más de $5.000.000</option>
+              <option value="consultar">Prefiero consultar primero</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ev-experience">¿Incluir Experiencia de Terror?</label>
+            <select class="form-select" id="ev-experience" name="experiencia_terror">
+              <option value="si">Sí — queremos el laberinto</option>
+              <option value="no">No — solo el bar y el ambiente</option>
+              <option value="consultar">Consultar opciones</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label class="form-label" for="ev-notes">Descripción del Evento</label>
+            <textarea class="form-textarea" id="ev-notes" name="descripcion" placeholder="Cuéntanos sobre tu evento: ocasión, qué tiene en mente, requerimientos especiales, decoración adicional..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit">ENVIAR SOLICITUD DE EVENTO</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__logo">EL SANATORIO</p>
+        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
+        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 1rem; line-height: 1.8;">
+          Calle 19 #4-23 · Centro Histórico<br>Santa Marta, Colombia
+        </p>
+      </div>
+      <div>
+        <p class="footer__col-title">Instalaciones</p>
+        <ul class="footer__links" role="list">
+          <li><a href="menu.html">El Menú / Expediente</a></li>
+          <li><a href="experience.html">La Experiencia</a></li>
+          <li><a href="events.html">Eventos Privados</a></li>
+          <li><a href="tours.html">Tours Históricos</a></li>
+          <li><a href="historia.html">La Historia</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Contacto</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://wa.me/573174370575" target="_blank" rel="noopener">WhatsApp Bar</a></li>
+          <li><a href="https://wa.me/19034598763" target="_blank" rel="noopener">WhatsApp Eventos</a></li>
+          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="index.html#reservar">Reservar Mesa</a></li>
+        </ul>
+        <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1.5rem; line-height: 1.8;">
+          Mié – Dom &nbsp;·&nbsp; 6 PM – 2 AM
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados.</p>
+      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

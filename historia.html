@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Historia — El Origen de El Sanatorio | Santa Marta</title>
+  <meta name="description" content="La historia de El Sanatorio: un edificio colonial en el Centro Histórico de Santa Marta convertido en yakitori gastro bar y experiencia de terror inmersiva por el Grupo Maia." />
+  <meta name="keywords" content="historia el sanatorio, origen, maia group, santa marta, centro histórico, yakitori bar colombia" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="La Historia — El Origen de El Sanatorio" />
+  <meta property="og:description" content="Un edificio colonial abandonado. Una niña que nunca se fue. Un grupo que decidió abrir las puertas. La historia de El Sanatorio, Santa Marta." />
+  <meta property="og:url"         content="https://el-sanatorio.com/historia.html" />
+  <meta property="og:image"       content="https://el-sanatorio.com/og-image.jpg" />
+  <meta property="og:locale"      content="es_CO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="La Historia — El Sanatorio, Santa Marta" />
+  <meta name="twitter:description" content="La historia detrás del bar de horror más singular del Caribe colombiano." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://el-sanatorio.com/historia.html" />
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "La Historia de El Sanatorio",
+    "description": "El origen de El Sanatorio: un edificio colonial en el Centro Histórico de Santa Marta transformado en yakitori gastro bar y experiencia de terror inmersiva por el Grupo Maia.",
+    "author": {
+      "@type": "Organization",
+      "name": "Grupo Maia"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "El Sanatorio",
+      "url": "https://el-sanatorio.com"
+    },
+    "about": {
+      "@type": "BarOrPub",
+      "name": "El Sanatorio",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 19 #4-23",
+        "addressLocality": "Centro Histórico, Santa Marta",
+        "addressCountry": "CO"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    /* Language toggle */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: flex-end;
+      margin-bottom: 2rem;
+    }
+    .lang-btn {
+      font-family: var(--font-type);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--gray);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+    }
+    .lang-btn.active {
+      border-color: var(--red);
+      color: var(--white);
+      background: rgba(180,0,0,0.12);
+    }
+    .lang-btn:hover:not(.active) {
+      border-color: var(--light-gray);
+      color: var(--light-gray);
+    }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+
+    /* Historia hero */
+    .historia-hero {
+      background: var(--black);
+      padding: 8rem 0 5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .historia-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center bottom, rgba(180,0,0,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 2.5rem;
+      margin-top: 2.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--red), transparent);
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2.5rem;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.5rem;
+      top: 0.4rem;
+      width: 8px;
+      height: 8px;
+      background: var(--red);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(180,0,0,0.6);
+    }
+    .timeline-year {
+      font-family: var(--font-type);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--red);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .timeline-item h4 {
+      font-family: var(--font-type);
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .timeline-item p {
+      font-size: 0.88rem;
+      color: var(--light-gray);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--red);
+      padding: 1.25rem 1.5rem;
+      margin: 2.5rem 0;
+      background: rgba(180,0,0,0.04);
+    }
+    .pull-quote p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--white);
+      line-height: 1.6;
+      margin: 0 0 0.5rem;
+    }
+    .pull-quote cite {
+      font-family: var(--font-type);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      color: var(--gray);
+    }
+
+    /* Maia group panel */
+    .maia-panel {
+      background: var(--panel-dark);
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      position: relative;
+    }
+    .maia-panel__label {
+      font-family: var(--font-type);
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    /* Story section layout */
+    .historia-body {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 4rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .historia-body { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* Vision cards */
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .vision-grid { grid-template-columns: 1fr; }
+    }
+    .vision-card {
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      background: var(--black);
+    }
+    .vision-card__icon {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .vision-card h4 {
+      font-family: var(--font-type);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+    .vision-card p {
+      font-size: 0.84rem;
+      color: var(--light-gray);
+      line-height: 1.65;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="El Sanatorio — inicio">
+      <span class="nav__logo-num">PACIENTE 013</span>
+      <span class="nav__logo-name">EL SANATORIO</span>
+    </a>
+    <div class="nav__monitor" aria-hidden="true">
+      <svg viewBox="0 0 300 36" preserveAspectRatio="none">
+        <path class="ekg-line" d="M 0,18 L 30,18 L 45,12 L 60,27 L 66,0 L 75,34 L 90,18 L 120,18 L 135,12 L 150,27 L 156,0 L 165,34 L 180,18 L 300,18" />
+      </svg>
+    </div>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="experience.html">Experiencia</a></li>
+      <li><a href="events.html">Eventos</a></li>
+      <li><a href="tours.html">Tours</a></li>
+      <li><a href="historia.html" class="active">Historia</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile-menu" role="navigation" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="menu.html">Menú</a>
+  <a href="experience.html">Experiencia</a>
+  <a href="events.html">Eventos</a>
+  <a href="tours.html">Tours</a>
+  <a href="historia.html">Historia</a>
+  <a href="contact.html">Contacto</a>
+</div>
+
+<!-- ── Hero ──────────────────────────────────────────────────── -->
+<div class="historia-hero">
+  <div class="container--sm">
+    <div class="section-label" style="justify-content: center;"><span>Archivo Fundacional</span></div>
+    <h1 class="section-title section-title--center neon-red" style="font-size: clamp(2rem, 6vw, 4rem);">
+      La Historia
+    </h1>
+    <p class="serif" style="color: var(--light-gray); margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto;">
+      Todo edificio carga con lo que pasó dentro. Este más que la mayoría.
+    </p>
+    <p class="mono" style="font-size: 0.7rem; letter-spacing: 0.18em; color: var(--gray); margin-top: 1rem;">
+      CENTRO HISTÓRICO · SANTA MARTA · COLOMBIA · EST. 2024
+    </p>
+  </div>
+</div>
+
+<!-- ── Main Story ─────────────────────────────────────────── -->
+<section style="background: var(--panel-dark); padding: 5rem 0;" aria-labelledby="historia-main">
+  <div class="container">
+
+    <!-- Language toggle -->
+    <div class="lang-toggle" role="group" aria-label="Seleccionar idioma">
+      <button class="lang-btn active" id="btn-es" onclick="setLang('es')" aria-pressed="true">ES — Español</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false">EN — English</button>
+    </div>
+
+    <div class="historia-body">
+
+      <!-- Main text column -->
+      <div>
+
+        <!-- SPANISH VERSION -->
+        <div data-lang="es" class="visible">
+          <div class="section-label"><span>Expediente Fundacional</span></div>
+          <h2 class="section-title" id="historia-main">El Edificio</h2>
+
+          <p style="margin-bottom: 1.5rem;">
+            En el Centro Histórico de Santa Marta, entre las calles coloniales y el calor
+            del Caribe, había un edificio que la ciudad había aprendido a ignorar.
+            Fachada descascarada. Portón de madera. Buganvillas que crecían sin permiso.
+            Los vecinos sabían que algo había sido — no sabían exactamente qué.
+          </p>
+
+          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
+            Los archivos municipales lo registran como un edificio de uso mixto del
+            siglo XIX, ampliado a principios del XX. Lo que se sabe con certeza:
+            durante décadas sirvió como centro de atención médica informal para el barrio.
+            Lo que no figura en los archivos es igual de interesante.
+          </p>
+
+          <div class="pull-quote">
+            <p>"El edificio no estaba abandonado. Estaba esperando."</p>
+            <cite>— Registro de obra, Grupo Maia, 2023</cite>
+          </div>
+
+          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
+            Cuando el Grupo Maia adquirió la propiedad en 2022, la idea inicial era
+            straightforward: rehabilitar un edificio colonial en el centro histórico,
+            abrir un concepto gastronómico diferente. Lo que encontraron durante las obras
+            cambió el plan — no el proyecto, sino el tono.
+          </p>
+
+          <p style="color: var(--light-gray);">
+            Los albañiles abrieron una pared en el segundo piso y encontraron una habitación
+            que no figuraba en los planos. Pequeña. Con una silla. Una ventana tapiada.
+            Y en el suelo, trazado con algo que nadie quiso identificar, un número: 013.
+          </p>
+
+          <h2 class="section-title" style="margin-top: 3.5rem;" id="vision-title">La Visión</h2>
+
+          <p style="margin-bottom: 1.5rem;">
+            El Sanatorio nació de una pregunta: ¿qué pasa cuando combinas la disciplina
+            y la precisión de la cocina japonesa de calle con la atmósfera cargada de un
+            edificio que claramente tiene algo que contar?
+          </p>
+
+          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
+            El yakitori — brochetas al carbón, cocina lenta, ingredientes precisos, ritual
+            de fuego — tiene su propio tipo de solemnidad. No es comida rápida. Es comida
+            con proceso. El Sanatorio tomó ese proceso y lo instaló en un espacio donde
+            cada detalle habla de otro tipo de rituales: los de la medicina, los del cuidado,
+            los del diagnóstico. Y los que la historia del edificio sugiere pero nunca confirma.
+          </p>
+
+          <p style="color: var(--light-gray);">
+            El resultado no es un bar de terror. Es un lugar donde la experiencia de cenar
+            tiene capas: el fuego del carbón, el trago prescrito, el pasillo que crujas
+            al llegar al baño, la canción que suena desde arriba y que nadie puso.
+          </p>
+
+          <h2 class="section-title" style="margin-top: 3.5rem;">El Grupo Maia</h2>
+
+          <p style="margin-bottom: 1.5rem;">
+            El Sanatorio es un proyecto del Grupo Maia — empresa de gestión de conceptos
+            gastronómicos y de entretenimiento con presencia en el Caribe colombiano.
+          </p>
+
+          <p style="color: var(--light-gray);">
+            La filosofía del grupo es consistente: identificar espacios con historia,
+            con carácter, con algo que no se puede construir desde cero — y desarrollar
+            conceptos que amplifiquen lo que el espacio ya tiene en lugar de borrarlo.
+            El Sanatorio es la expresión más completa de esa filosofía hasta la fecha.
+          </p>
+
+          <div class="pull-quote" style="margin-top: 2.5rem;">
+            <p>"No diseñamos el ambiente. Lo encontramos. Lo limpiamos. Lo abrimos."</p>
+            <cite>— Grupo Maia</cite>
+          </div>
+        </div>
+
+        <!-- ENGLISH VERSION -->
+        <div data-lang="en">
+          <div class="section-label"><span>Founding File</span></div>
+          <h2 class="section-title" id="historia-main-en">The Building</h2>
+
+          <p style="margin-bottom: 1.5rem;">
+            In Santa Marta's Centro Histórico — among the colonial streets and Caribbean heat —
+            there was a building the city had learned to overlook. Peeling facade. Wooden gate.
+            Bougainvillea growing without permission. The neighbors knew it had been something once.
+            They just couldn't say exactly what.
+          </p>
+
+          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
+            Municipal records list it as a mixed-use building from the 19th century, expanded
+            in the early 20th. What's certain: for decades it served as an informal medical
+            care center for the neighborhood. What doesn't appear in the records is equally
+            interesting.
+          </p>
+
+          <div class="pull-quote">
+            <p>"The building wasn't abandoned. It was waiting."</p>
+            <cite>— Construction log, Grupo Maia, 2023</cite>
+          </div>
+
+          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
+            When Grupo Maia acquired the property in 2022, the initial concept was
+            straightforward: restore a colonial building in the historic center, open
+            a different kind of dining concept. What they found during construction
+            changed the plan — not the project, but the tone.
+          </p>
+
+          <p style="color: var(--light-gray);">
+            Workers opened a wall on the second floor and found a room that didn't appear
+            in the floor plans. Small. A chair. A bricked-up window. And on the floor,
+            traced in something no one wanted to identify, a number: 013.
+          </p>
+
+          <h2 class="section-title" style="margin-top: 3.5rem;">The Vision</h2>
+
+          <p style="margin-bottom: 1.5rem;">
+            El Sanatorio grew out of a question: what happens when you combine the discipline
+            and precision of Japanese street food with the charged atmosphere of a building
+            that clearly has something to say?
+          </p>
+
+          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
+            Yakitori — charcoal skewers, slow cooking, precise ingredients, a ritual of fire —
+            has its own kind of solemnity. It's not fast food. It's food with process.
+            El Sanatorio took that process and installed it in a space where every detail
+            speaks of another kind of ritual: medicine, care, diagnosis. And whatever the
+            building's history suggests but never confirms.
+          </p>
+
+          <p style="color: var(--light-gray);">
+            The result isn't a horror bar. It's a place where the dining experience has
+            layers: the heat of the charcoal, the prescribed cocktail, the hallway that
+            creaks on the way to the bathroom, the song coming from upstairs that nobody
+            put on.
+          </p>
+
+          <h2 class="section-title" style="margin-top: 3.5rem;">The Maia Group</h2>
+
+          <p style="margin-bottom: 1.5rem;">
+            El Sanatorio is a Grupo Maia project — a company specializing in gastronomic
+            and entertainment concepts in the Colombian Caribbean.
+          </p>
+
+          <p style="color: var(--light-gray);">
+            The group's philosophy is consistent: find spaces with history, with character,
+            with something that can't be built from scratch — then develop concepts that
+            amplify what the space already holds rather than erasing it. El Sanatorio is
+            the fullest expression of that philosophy to date.
+          </p>
+
+          <div class="pull-quote" style="margin-top: 2.5rem;">
+            <p>"We didn't design the atmosphere. We found it. We cleaned it. We opened it."</p>
+            <cite>— Grupo Maia</cite>
+          </div>
+        </div>
+
+      </div><!-- /main text column -->
+
+      <!-- Sidebar -->
+      <div>
+        <!-- Timeline -->
+        <div class="maia-panel" style="margin-bottom: 2rem;">
+          <span class="maia-panel__label">Cronología / Timeline</span>
+
+          <div data-lang="es" class="visible">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-year">S. XIX</span>
+                <h4>El Edificio Original</h4>
+                <p>Construcción colonial en el centro histórico de Santa Marta. Uso mixto: vivienda y comercio.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">ca. 1920s</span>
+                <h4>Centro de Atención Médica</h4>
+                <p>El edificio comienza a funcionar como punto de atención de salud informal para el barrio.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">ca. 1952</span>
+                <h4>Paciente 013</h4>
+                <p>Los registros sugieren que algo ocurrió en el ala norte. Los detalles figuran como clasificados.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">1969</span>
+                <h4>Cierre</h4>
+                <p>El edificio cierra. No todos salen. Nadie regresa a buscar lo que quedó.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2022</span>
+                <h4>Grupo Maia</h4>
+                <p>Adquisición de la propiedad. Inicio de obras de rehabilitación. Hallazgo en el segundo piso.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2024</span>
+                <h4>El Sanatorio Abre</h4>
+                <p>Yakitori gastro bar & horror experience. Calle 19 #4-23. Ella sigue aquí.</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-lang="en">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-year">19th C.</span>
+                <h4>The Original Building</h4>
+                <p>Colonial construction in Santa Marta's historic center. Mixed-use: residential and commercial.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">ca. 1920s</span>
+                <h4>Medical Care Center</h4>
+                <p>The building begins operating as an informal neighborhood health post.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">ca. 1952</span>
+                <h4>Patient 013</h4>
+                <p>Records suggest something occurred in the north wing. Details are classified.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">1969</span>
+                <h4>Closure</h4>
+                <p>The building closes. Not everyone leaves. Nobody comes back for what remained.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2022</span>
+                <h4>Grupo Maia</h4>
+                <p>Property acquisition. Restoration begins. Discovery on the second floor.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2024</span>
+                <h4>El Sanatorio Opens</h4>
+                <p>Yakitori gastro bar & horror experience. Calle 19 #4-23. She's still here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Patient file -->
+        <div class="patient-file" role="complementary" aria-label="Expediente Paciente 013">
+          <div class="patient-file__header">
+            <span class="patient-file__num">PACIENTE 013</span>
+            <span class="patient-file__stamp">CLASIFICADO</span>
+          </div>
+          <div class="patient-file__body">
+            <div class="patient-file__row">
+              <span class="patient-file__key">Nombre</span>
+              <span class="patient-file__val">"Trece"</span>
+            </div>
+            <div class="patient-file__row">
+              <span class="patient-file__key">Ingreso</span>
+              <span class="patient-file__val">ca. 1952</span>
+            </div>
+            <div class="patient-file__row">
+              <span class="patient-file__key">Alta</span>
+              <span class="patient-file__val">Nunca</span>
+            </div>
+            <div class="patient-file__row">
+              <span class="patient-file__key">Diagnóstico</span>
+              <span class="patient-file__val redacted" title="[REDACTADO]">[REDACTADO]</span>
+            </div>
+            <div class="patient-file__row">
+              <span class="patient-file__key">Estado</span>
+              <span class="patient-file__val" style="color: var(--green-bright);">ACTIVA</span>
+            </div>
+            <div class="patient-file__row">
+              <span class="patient-file__key">Ubicación</span>
+              <span class="patient-file__val" style="color: var(--gold); font-style: italic;">Conocida</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="mono" style="font-size: 0.6rem; color: var(--gray); margin-top: 1rem; letter-spacing: 0.1em; line-height: 1.8;">
+          ARCHIVO: SANATORIO DEL NORTE<br>
+          SANTA MARTA — COLOMBIA<br>
+          CLAUSURADO: 1969 / REABIERTO: 2024
+        </p>
+      </div><!-- /sidebar -->
+
+    </div><!-- /historia-body -->
+  </div>
+</section>
+
+<!-- ── La Visión en Detalle ───────────────────────────────── -->
+<section style="background: var(--black); padding: 5rem 0; border-top: 1px solid var(--border);" aria-labelledby="vision-detail">
+  <div class="container">
+    <div class="section-label" style="justify-content: center;"><span>Protocolo de Concepto</span></div>
+    <h2 class="section-title section-title--center" id="vision-detail">Yakitori + Horror: El Concepto</h2>
+    <p class="serif text-center" style="color: var(--light-gray); max-width: 540px; margin: 0 auto 0.5rem; font-size: 1rem;">
+      Dos tradiciones con más en común de lo que parece. Fuego. Ritual. Precisión.
+      La diferencia está en qué tipo de paciencia requieren.
+    </p>
+
+    <div class="vision-grid fade-in-section">
+      <div class="vision-card">
+        <span class="vision-card__icon" aria-hidden="true">🔥</span>
+        <h4>Yakitori al Carbón</h4>
+        <p>Brochetas japonesas sobre carbón de marabú. Cocina lenta, temperatura
+           controlada, tare de la casa. La disciplina de la calle Shinjuku en el
+           corazón colonial del Caribe.</p>
+      </div>
+      <div class="vision-card">
+        <span class="vision-card__icon" aria-hidden="true">🧪</span>
+        <h4>Coctelería Médica</h4>
+        <p>Tragos con nombre de diagnóstico. Prescripciones del Doctor de turno.
+           Grifos en forma de jeringa. La farmacia reconvertida en barra —
+           la terapia de la noche.</p>
+      </div>
+      <div class="vision-card">
+        <span class="vision-card__icon" aria-hidden="true">🏚</span>
+        <h4>El Edificio Real</h4>
+        <p>No es un set de película. Es un edificio colonial con historia real.
+           Los pisos superiores no se renovaron. Lo que hay dentro es lo que había.
+           Nosotros solo encendimos las luces — las que funcionan.</p>
+      </div>
+      <div class="vision-card">
+        <span class="vision-card__icon" aria-hidden="true">👁</span>
+        <h4>Horror Inmersivo</h4>
+        <p>Una experiencia de terror de guión que usa el espacio real como escenario.
+           Los actores conocen los pasillos. Los visitantes no. Esa es la diferencia
+           que importa cuando las luces se van.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ────────────────────────────────────────────────── -->
+<section style="background: var(--panel-dark); padding: 5rem 0; border-top: 1px solid var(--border);" aria-labelledby="historia-cta">
+  <div class="container--sm text-center">
+    <div class="section-label" style="justify-content: center;"><span>Próximo Paso</span></div>
+    <h2 class="section-title section-title--center" id="historia-cta">Ahora Que Lo Sabes</h2>
+    <p class="serif" style="color: var(--light-gray); margin: 1rem auto 2.5rem; max-width: 460px;">
+      La historia no termina aquí. La historia empieza cuando tú llegas.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="experience.html" class="btn btn--red">La Experiencia</a>
+      <a href="index.html#reservar" class="btn btn--white">Reservar Mesa</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__logo">EL SANATORIO</p>
+        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
+        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 1rem; line-height: 1.8;">
+          Calle 19 #4-23 · Centro Histórico<br>Santa Marta, Colombia
+        </p>
+      </div>
+      <div>
+        <p class="footer__col-title">Instalaciones</p>
+        <ul class="footer__links" role="list">
+          <li><a href="menu.html">El Menú / Expediente</a></li>
+          <li><a href="experience.html">La Experiencia</a></li>
+          <li><a href="events.html">Eventos Privados</a></li>
+          <li><a href="tours.html">Tours Históricos</a></li>
+          <li><a href="historia.html">La Historia</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Contacto</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://wa.me/573174370575" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="index.html#reservar">Reservar Mesa</a></li>
+        </ul>
+        <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1.5rem; line-height: 1.8;">
+          Mié – Dom &nbsp;·&nbsp; 6 PM – 2 AM
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados.</p>
+      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  function setLang(lang) {
+    // Toggle content blocks
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    // Toggle button states
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
+    document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+    // Update html lang attribute
+    document.documentElement.lang = lang === 'en' ? 'en' : 'es';
+  }
+</script>
+</body>
+</html>

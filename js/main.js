@@ -5,6 +5,12 @@
 (function () {
   'use strict';
 
+  /* ── js-ready flag (enables CSS scroll animations) ────────── */
+  document.documentElement.classList.add('js-ready');
+
+  /* ── Reduced motion preference ───────────────────────────── */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ── Nav scroll ──────────────────────────────────────────── */
   const nav = document.querySelector('.nav');
   if (nav) {
@@ -166,7 +172,7 @@
 
   /* ── Parallax hero ───────────────────────────────────────── */
   const heroContent = document.querySelector('.hero__content');
-  if (heroContent) {
+  if (heroContent && !prefersReducedMotion) {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       heroContent.style.transform = `translateY(${scrollY * 0.2}px)`;
@@ -201,7 +207,7 @@
         const navH = parseInt(getComputedStyle(document.documentElement)
           .getPropertyValue('--nav-h'), 10) || 72;
         const y = target.getBoundingClientRect().top + window.scrollY - navH;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+        window.scrollTo({ top: y, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       }
     });
   });

@@ -79,7 +79,7 @@
           <p style="font-family: var(--font-type); font-size: 1.2rem; letter-spacing: 0.08em; color: var(--white); margin-bottom: 0.5rem;">
             Calle 19 #4-23
           </p>
-          <p class="mono" style="font-size: 0.78rem; color: var(--light-gray); line-height: 1.8;">
+          <p class="mono" style="font-size: 0.85rem; color: var(--off-white); line-height: 1.8;">
             Centro Histórico<br>
             Santa Marta, Magdalena<br>
             Colombia
@@ -110,7 +110,7 @@
               <tr><td>Domingo</td><td>5:00 PM – 12:00 AM</td></tr>
             </tbody>
           </table>
-          <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1rem; letter-spacing: 0.08em;">
+          <p class="mono" style="font-size: 0.72rem; color: var(--light-gray); margin-top: 1rem; letter-spacing: 0.08em;">
             El laberinto: Miércoles – Domingo · Turnos: 7 PM / 8:30 PM / 10 PM<br>
             Reservas recomendadas para fines de semana.
           </p>
@@ -130,7 +130,7 @@
                   +57 317 437 0575
                 </a>
                 <br>
-                <span class="mono" style="font-size: 0.65rem; color: var(--gray);">WhatsApp · Llamadas</span>
+                <span class="mono" style="font-size: 0.7rem; color: var(--light-gray);">WhatsApp · Llamadas</span>
               </div>
             </div>
             <div class="contact-item">
@@ -143,7 +143,7 @@
                   @elsanatorio.sm
                 </a>
                 <br>
-                <span class="mono" style="font-size: 0.65rem; color: var(--gray);">Instagram</span>
+                <span class="mono" style="font-size: 0.7rem; color: var(--light-gray);">Instagram</span>
               </div>
             </div>
             <div class="contact-item">
@@ -151,7 +151,7 @@
               <div>
                 <span style="color: var(--off-white);">hola@el-sanatorio.com</span>
                 <br>
-                <span class="mono" style="font-size: 0.65rem; color: var(--gray);">Correo electrónico</span>
+                <span class="mono" style="font-size: 0.7rem; color: var(--light-gray);">Correo electrónico</span>
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@
           </iframe>
         </div>
 
-        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-bottom: 2rem; letter-spacing: 0.08em; line-height: 1.8;">
+        <p class="mono" style="font-size: 0.72rem; color: var(--light-gray); margin-bottom: 2rem; letter-spacing: 0.08em; line-height: 1.8;">
           A 5 minutos caminando desde la Plaza Bolívar · 10 minutos del Terminal de Cruceros<br>
           Parking disponible en la Carrera 3 (calle paralela)
         </p>
@@ -189,7 +189,8 @@
         <!-- Quick contact form -->
         <div class="panel panel--red-accent">
           <h4 style="margin-bottom: 1.25rem;">Enviar Mensaje</h4>
-          <form name="contacto-general" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias">
+          <!-- FIX: Removed action="/gracias" to prevent 404 on Netlify form submit. -->
+          <form name="contacto-general" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contacto-general" />
             <p style="display:none;"><label>No llenar: <input name="bot-field" /></label></p>
 
@@ -235,17 +236,17 @@
       <div class="panel" style="padding: 1.5rem; text-align: center;">
         <p style="font-size: 1.5rem; margin-bottom: 0.5rem;" aria-hidden="true">🚶</p>
         <p class="mono" style="font-size: 0.65rem; color: var(--crimson); letter-spacing: 0.2em; margin-bottom: 0.5rem;">A PIE</p>
-        <p style="font-size: 0.85rem; color: var(--light-gray);">5 min desde Plaza Bolívar. Tomar Calle 19 hacia el este.</p>
+        <p style="font-size: 0.9rem; color: var(--off-white);">5 min desde Plaza Bolívar. Tomar Calle 19 hacia el este.</p>
       </div>
       <div class="panel" style="padding: 1.5rem; text-align: center;">
         <p style="font-size: 1.5rem; margin-bottom: 0.5rem;" aria-hidden="true">🚕</p>
         <p class="mono" style="font-size: 0.65rem; color: var(--crimson); letter-spacing: 0.2em; margin-bottom: 0.5rem;">TAXI / MOTOTAXI</p>
-        <p style="font-size: 0.85rem; color: var(--light-gray);">Pedir "El Sanatorio, Calle 19 con Carrera 4, Centro."</p>
+        <p style="font-size: 0.9rem; color: var(--off-white);">Pedir "El Sanatorio, Calle 19 con Carrera 4, Centro."</p>
       </div>
       <div class="panel" style="padding: 1.5rem; text-align: center;">
         <p style="font-size: 1.5rem; margin-bottom: 0.5rem;" aria-hidden="true">🚢</p>
         <p class="mono" style="font-size: 0.65rem; color: var(--crimson); letter-spacing: 0.2em; margin-bottom: 0.5rem;">CRUCERO</p>
-        <p style="font-size: 0.85rem; color: var(--light-gray);">10 min en taxi desde la Terminal de Cruceros.</p>
+        <p style="font-size: 0.9rem; color: var(--off-white);">10 min en taxi desde la Terminal de Cruceros.</p>
       </div>
     </div>
 
@@ -253,7 +254,7 @@
       <p style="font-family: var(--font-type); font-size: 0.9rem; letter-spacing: 0.1em; color: var(--off-white); margin-bottom: 0.5rem;">
         ¿No encuentras el edificio?
       </p>
-      <p class="mono" style="font-size: 0.75rem; color: var(--light-gray);">
+      <p class="mono" style="font-size: 0.78rem; color: var(--off-white);">
         Busca la fachada negra con buganvillas moradas y neón rojo.<br>
         Si no hay luz roja visible, espera — tarde o temprano parpadea.
       </p>
@@ -307,7 +308,8 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia.</p>
+      <!-- FIX: Updated copyright year from 2025 to 2026 -->
+      <p class="footer__copy">© 2026 El Sanatorio — Santa Marta, Colombia.</p>
       <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
     </div>
   </div>

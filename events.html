@@ -3,601 +3,2686 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eventos Privados / Private Events — El Sanatorio, Santa Marta</title>
-  <meta name="description" content="Reserva El Sanatorio para tu evento privado. Fiestas corporativas, cumpleaños, Halloween, eventos de empresa. Ambiente horror único. Capacidad para grupos. Santa Marta, Colombia." />
-  <meta name="keywords" content="eventos privados santa marta, fiestas halloween colombia, bar temático horror, evento corporativo santa marta, cumpleaños bar temático" />
+  <meta name="description" content="El Sanatorio — Eventos privados y corporativos en Santa Marta. Horror yakitori bar en el Centro Histórico. Reserva tu experiencia oscura." />
+  <meta name="robots" content="index, follow" />
+  <title>Eventos Privados | El Sanatorio — Santa Marta</title>
 
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Eventos Privados — El Sanatorio, Santa Marta" />
-  <meta property="og:description" content="Transforma tu evento en una experiencia que nadie olvidará. El Sanatorio disponible para grupos privados, fiestas de Halloween, cumpleaños y eventos corporativos." />
-  <meta property="og:url"         content="https://el-sanatorio.com/events.html" />
-  <meta property="og:image"       content="https://el-sanatorio.com/og-image.jpg" />
-  <meta property="og:locale"      content="es_CO" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Eventos Privados — El Sanatorio" />
-  <meta name="twitter:description" content="El bar de horror más singular de Santa Marta disponible para tu evento." />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://el-sanatorio.com/events.html" />
-
-  <!-- Fonts + Styles -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EventVenue",
-    "name": "El Sanatorio — Eventos Privados",
-    "description": "Venue de horror temático para eventos privados, fiestas corporativas y celebraciones en el Centro Histórico de Santa Marta.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Calle 19 #4-23",
-      "addressLocality": "Centro Histórico, Santa Marta",
-      "addressCountry": "CO"
-    },
-    "telephone": "+19034598763",
-    "url": "https://el-sanatorio.com/events.html"
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    .events-hero {
-      background: var(--black);
-      padding: 8rem 0 5rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --negro:        #080808;
+      --negro-suave:  #0f0f0f;
+      --carbon:       #141414;
+      --humo:         #1a1a1a;
+      --sangre:       #8b0000;
+      --sangre-viva:  #c0392b;
+      --sangre-glow:  #e74c3c;
+      --oro-viejo:    #b8960c;
+      --oro:          #d4a017;
+      --oro-claro:    #e8c44a;
+      --marfil:       #f5f0e8;
+      --gris-ceniza:  #9a9a9a;
+      --gris-oscuro:  #3a3a3a;
+      --borde:        rgba(184, 150, 12, 0.25);
+      --borde-sangre: rgba(139, 0, 0, 0.4);
+      --font-titulo:  'Cinzel Decorative', cursive;
+      --font-subtit:  'Cinzel', serif;
+      --font-cuerpo:  'Raleway', sans-serif;
+      --font-lit:     'IM Fell English', serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--negro);
+      color: var(--marfil);
+      font-family: var(--font-cuerpo);
+      font-weight: 300;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--sangre);
+      color: var(--marfil);
+    }
+
+    /* ============================================================
+       SCROLLBAR
+    ============================================================ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--negro); }
+    ::-webkit-scrollbar-thumb { background: var(--sangre); border-radius: 3px; }
+
+    /* ============================================================
+       TEXTURES & OVERLAYS
+    ============================================================ */
+    .grain-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 180px 180px;
+    }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(8,8,8,0.97) 0%, rgba(8,8,8,0.85) 70%, transparent 100%);
+      backdrop-filter: blur(4px);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .nav-logo {
+      font-family: var(--font-titulo);
+      font-size: 1.1rem;
+      color: var(--oro);
+      text-decoration: none;
+      letter-spacing: 0.12em;
+      text-shadow: 0 0 20px rgba(212, 160, 23, 0.4);
+      transition: color 0.3s;
+    }
+
+    .nav-logo:hover { color: var(--oro-claro); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-subtit);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gris-ceniza);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--oro);
+    }
+
+    .nav-links a.active {
+      border-bottom: 1px solid var(--sangre);
+      padding-bottom: 2px;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
       position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
       overflow: hidden;
     }
-    .events-hero::before {
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 60%, rgba(139,0,0,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 80% at 50% 50%, rgba(8,8,8,0) 0%, var(--negro) 85%),
+        linear-gradient(180deg, var(--negro) 0%, #0a0000 50%, var(--negro) 100%);
+      z-index: 0;
+    }
+
+    /* Decorative candles glow */
+    .hero-bg::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at center top, rgba(180,0,0,0.08) 0%, transparent 70%);
+      background:
+        radial-gradient(circle 150px at 15% 70%, rgba(212,160,23,0.07) 0%, transparent 100%),
+        radial-gradient(circle 150px at 85% 70%, rgba(212,160,23,0.07) 0%, transparent 100%);
+    }
+
+    .hero-ornament {
+      position: relative;
+      z-index: 1;
+      font-size: 1.4rem;
+      color: var(--sangre);
+      letter-spacing: 1rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+      text-shadow: 0 0 15px rgba(192,57,43,0.6);
+    }
+
+    .hero-eyebrow {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-subtit);
+      font-size: 0.65rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--oro);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-titulo);
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--marfil);
+      text-shadow:
+        0 0 60px rgba(139,0,0,0.5),
+        0 0 120px rgba(139,0,0,0.2),
+        2px 2px 0 rgba(0,0,0,0.8);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero h1 span {
+      color: var(--sangre-viva);
+      text-shadow:
+        0 0 30px rgba(192,57,43,0.8),
+        0 0 60px rgba(192,57,43,0.4);
+    }
+
+    .hero-divider {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      width: min(500px, 90%);
+    }
+
+    .hero-divider::before,
+    .hero-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--oro-viejo), transparent);
+    }
+
+    .hero-divider-icon {
+      color: var(--sangre);
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .hero-desc {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      color: var(--gris-ceniza);
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+    }
+
+    .hero-cta-group {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2.2rem;
+      background: var(--sangre);
+      color: var(--marfil);
+      font-family: var(--font-subtit);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--sangre-viva);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--sangre-viva);
+      transform: translateX(-100%);
+      transition: transform 0.35s ease;
+    }
+
+    .btn-primary:hover::before { transform: translateX(0); }
+    .btn-primary span { position: relative; z-index: 1; }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 30px rgba(192,57,43,0.5), 0 0 60px rgba(139,0,0,0.3);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2.2rem;
+      background: transparent;
+      color: var(--oro);
+      font-family: var(--font-subtit);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--borde);
+      transition: all 0.35s ease;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--oro);
+      color: var(--oro-claro);
+      box-shadow: 0 0 25px rgba(184,150,12,0.2);
+      background: rgba(184,150,12,0.05);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.5;
+    }
+
+    .scroll-indicator span {
+      font-family: var(--font-subtit);
+      font-size: 0.55rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gris-ceniza);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(180deg, var(--oro-viejo), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50% { opacity: 0.8; transform: scaleY(1.1); }
+    }
+
+    /* ============================================================
+       SECTION BASE
+    ============================================================ */
+    section {
+      padding: 7rem 2rem;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-subtit);
+      font-size: 0.6rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--sangre-viva);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background: var(--sangre-viva);
+    }
+
+    .section-title {
+      font-family: var(--font-titulo);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: var(--marfil);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 0 40px rgba(139,0,0,0.3);
+    }
+
+    .section-title em {
+      color: var(--oro);
+      font-style: normal;
+    }
+
+    .section-subtitle {
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--gris-ceniza);
+      max-width: 600px;
+      margin-bottom: 4rem;
+      line-height: 1.8;
+    }
+
+    .ornament-line {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .ornament-line::before,
+    .ornament-line::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: var(--borde);
+    }
+
+    .ornament-line-glyph {
+      color: var(--sangre);
+      font-size: 1rem;
+      opacity: 0.6;
+    }
+
+    /* ============================================================
+       ABOUT SECTION (ESPACIO)
+    ============================================================ */
+    .espacio-section {
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 50%, rgba(139,0,0,0.06) 0%, transparent 70%),
+        var(--negro-suave);
+      border-top: 1px solid var(--borde);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .espacio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .espacio-text p {
+      color: var(--gris-ceniza);
+      font-size: 0.95rem;
+      margin-bottom: 1.4rem;
+      line-height: 1.9;
+    }
+
+    .espacio-text p strong {
+      color: var(--marfil);
+      font-weight: 600;
+    }
+
+    .espacio-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .stat-card {
+      padding: 1.8rem 1.5rem;
+      border: 1px solid var(--borde);
+      background: rgba(255,255,255,0.02);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--sangre), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .stat-card:hover {
+      border-color: var(--borde-sangre);
+      background: rgba(139,0,0,0.04);
+    }
+
+    .stat-card:hover::before { opacity: 1; }
+
+    .stat-number {
+      font-family: var(--font-titulo);
+      font-size: 2.4rem;
+      color: var(--sangre-viva);
+      display: block;
+      text-shadow: 0 0 20px rgba(192,57,43,0.4);
+    }
+
+    .stat-label {
+      font-family: var(--font-subtit);
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gris-ceniza);
+      display: block;
+      margin-top: 0.4rem;
+    }
+
+    .espacio-image-area {
+      position: relative;
+    }
+
+    .espacio-image-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background:
+        linear-gradient(135deg, var(--humo) 0%, var(--carbon) 50%, #0a0000 100%);
+      border: 1px solid var(--borde);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .espacio-image-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(139,0,0,0.15) 0%, transparent 60%);
+    }
+
+    .img-glyph {
+      font-size: 4rem;
+      opacity: 0.15;
+      position: relative;
+      z-index: 1;
+    }
+
+    .img-caption {
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--gris-ceniza);
+      opacity: 0.5;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    .espacio-image-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(184,150,12,0.1);
       pointer-events: none;
     }
-    .events-type-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
+
+    /* ============================================================
+       PACKAGES SECTION
+    ============================================================ */
+    .packages-section {
+      background: var(--negro);
     }
-    .event-type-card {
-      background: var(--panel-dark);
-      border: 1px solid var(--border);
-      padding: 2rem 1.75rem;
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--borde);
+      border: 1px solid var(--borde);
+    }
+
+    .package-card {
+      background: var(--negro);
+      padding: 3rem 2.5rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.4s;
+    }
+
+    .package-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,0,0,0.08) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .package-card:hover {
+      background: var(--carbon);
+    }
+
+    .package-card:hover::before { opacity: 1; }
+
+    .package-card.featured {
+      background: linear-gradient(180deg, #0d0000 0%, var(--carbon) 100%);
+    }
+
+    .package-card.featured::before { opacity: 1; }
+
+    .featured-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: var(--sangre);
+      color: var(--marfil);
+      font-family: var(--font-subtit);
+      font-size: 0.55rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid rgba(192,57,43,0.5);
+    }
+
+    .package-icon {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      display: block;
+      filter: drop-shadow(0 0 8px rgba(139,0,0,0.5));
+    }
+
+    .package-name {
+      font-family: var(--font-titulo);
+      font-size: 1.2rem;
+      color: var(--oro);
+      margin-bottom: 0.4rem;
+      text-shadow: 0 0 15px rgba(184,150,12,0.3);
+    }
+
+    .package-tagline {
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--gris-ceniza);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .package-capacity {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.8rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--borde-sangre);
+      background: rgba(139,0,0,0.05);
+    }
+
+    .capacity-icon { font-size: 1rem; }
+
+    .capacity-text {
+      font-family: var(--font-subtit);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gris-ceniza);
+    }
+
+    .capacity-text strong {
+      color: var(--marfil);
+      font-size: 0.8rem;
+    }
+
+    .package-includes {
+      list-style: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .package-includes li {
+      font-size: 0.88rem;
+      color: var(--gris-ceniza);
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      line-height: 1.5;
+    }
+
+    .package-includes li::before {
+      content: '†';
+      color: var(--sangre-viva);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .package-includes li:last-child { border-bottom: none; }
+
+    .package-price {
+      border-top: 1px solid var(--borde);
+      padding-top: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .price-label {
+      font-family: var(--font-subtit);
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gris-ceniza);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .price-value {
+      font-family: var(--font-titulo);
+      font-size: 1.5rem;
+      color: var(--marfil);
+    }
+
+    .price-unit {
+      font-family: var(--font-subtit);
+      font-size: 0.65rem;
+      color: var(--gris-ceniza);
+      margin-left: 0.4rem;
+      letter-spacing: 0.1em;
+    }
+
+    .package-cta {
+      display: block;
+      text-align: center;
+      padding: 0.9rem;
+      background: transparent;
+      border: 1px solid var(--borde);
+      color: var(--gris-ceniza);
+      font-family: var(--font-subtit);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.35s;
+    }
+
+    .package-cta:hover {
+      border-color: var(--sangre);
+      color: var(--marfil);
+      background: rgba(139,0,0,0.15);
+      box-shadow: 0 0 20px rgba(139,0,0,0.2);
+    }
+
+    .package-cta.primary-cta {
+      background: var(--sangre);
+      border-color: var(--sangre-viva);
+      color: var(--marfil);
+    }
+
+    .package-cta.primary-cta:hover {
+      background: var(--sangre-viva);
+      box-shadow: 0 0 30px rgba(192,57,43,0.5);
+    }
+
+    /* ============================================================
+       COCKTAIL MENU SECTION
+    ============================================================ */
+    .cocktails-section {
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(139,0,0,0.07) 0%, transparent 60%),
+        var(--negro-suave);
+      border-top: 1px solid var(--borde);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .cocktails-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: start;
+      margin-bottom: 5rem;
+    }
+
+    .cocktails-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--borde);
+    }
+
+    .cocktail-item {
+      padding: 2rem 2rem 1.8rem;
+      border-right: 1px solid var(--borde);
+      border-bottom: 1px solid var(--borde);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .cocktail-item:nth-child(even) { border-right: none; }
+    .cocktail-item:nth-last-child(-n+2) { border-bottom: none; }
+
+    .cocktail-item:hover { background: rgba(139,0,0,0.04); }
+
+    .cocktail-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 0;
+      background: var(--sangre);
+      transition: height 0.4s ease;
+    }
+
+    .cocktail-item:hover::before { height: 100%; }
+
+    .cocktail-emoji {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .cocktail-name {
+      font-family: var(--font-subtit);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      color: var(--oro);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .cocktail-desc {
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: 0.82rem;
+      color: var(--gris-ceniza);
+      line-height: 1.6;
+    }
+
+    .cocktails-custom {
+      padding: 3rem;
+      border: 1px solid var(--borde);
+      background: rgba(139,0,0,0.04);
+      position: relative;
+    }
+
+    .cocktails-custom::before {
+      content: '"';
+      position: absolute;
+      top: -1.5rem;
+      left: 2rem;
+      font-family: var(--font-lit);
+      font-size: 6rem;
+      color: var(--sangre);
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    .custom-title {
+      font-family: var(--font-titulo);
+      font-size: 1.3rem;
+      color: var(--marfil);
+      margin-bottom: 1rem;
+    }
+
+    .custom-desc {
+      font-size: 0.9rem;
+      color: var(--gris-ceniza);
+      line-height: 1.8;
+      margin-bottom: 1.8rem;
+    }
+
+    .custom-options {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+      margin-bottom: 2rem;
+    }
+
+    .custom-options li {
+      font-size: 0.82rem;
+      color: var(--gris-ceniza);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .custom-options li::before {
+      content: '◆';
+      color: var(--sangre-viva);
+      font-size: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       YAKITORI / FOOD SECTION
+    ============================================================ */
+    .food-section {
+      background: var(--negro);
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--borde);
+      border: 1px solid var(--borde);
+      margin-bottom: 3rem;
+    }
+
+    .food-card {
+      background: var(--negro);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .food-card:hover { background: var(--carbon); }
+
+    .food-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .food-title {
+      font-family: var(--font-subtit);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--oro);
+      margin-bottom: 0.7rem;
+    }
+
+    .food-desc {
+      font-size: 0.82rem;
+      color: var(--gris-ceniza);
+      line-height: 1.7;
+    }
+
+    .food-note {
+      text-align: center;
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--gris-ceniza);
+      opacity: 0.7;
+    }
+
+    /* ============================================================
+       EXPERIENCE TIMELINE
+    ============================================================ */
+    .experience-section {
+      background:
+        radial-gradient(ellipse 60% 70% at 50% 50%, rgba(139,0,0,0.05) 0%, transparent 70%),
+        var(--negro-suave);
+      border-top: 1px solid var(--borde);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 2.5rem;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--sangre), var(--sangre), transparent);
+      opacity: 0.3;
+    }
+
+    .timeline-item {
+      text-align: center;
+      padding: 0 1.5rem 3rem;
+      position: relative;
+    }
+
+    .timeline-dot {
+      width: 5rem;
+      height: 5rem;
+      border: 1px solid var(--borde-sangre);
+      border-radius: 50%;
+      background: var(--carbon);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 1.5rem;
+      position: relative;
+      z-index: 1;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .timeline-item:hover .timeline-dot {
+      border-color: var(--sangre);
+      background: rgba(139,0,0,0.1);
+    }
+
+    .timeline-step {
+      font-family: var(--font-subtit);
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--sangre-viva);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .timeline-title {
+      font-family: var(--font-subtit);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--marfil);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.8rem;
+      color: var(--gris-ceniza);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials-section {
+      background: var(--negro);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--borde);
+      background: rgba(255,255,255,0.01);
       position: relative;
       transition: border-color 0.3s;
     }
-    .event-type-card:hover {
-      border-color: var(--red);
-    }
-    .event-type-card__num {
-      font-family: var(--font-type);
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      color: var(--red);
-      display: block;
-      margin-bottom: 0.75rem;
-    }
-    .event-type-card h3 {
-      font-family: var(--font-type);
-      font-size: 1rem;
-      letter-spacing: 0.12em;
-      color: var(--white);
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-    }
-    .event-type-card p {
-      font-size: 0.88rem;
-      color: var(--light-gray);
-      line-height: 1.7;
-    }
-    .capacity-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    @media (max-width: 700px) {
-      .capacity-grid { grid-template-columns: 1fr; }
-    }
-    .capacity-stat {
-      text-align: center;
-      padding: 2rem;
-      border: 1px solid var(--border);
-      background: var(--black);
-    }
-    .capacity-stat__num {
-      font-family: var(--font-type);
+
+    .testimonial-card::before {
+      content: '❝';
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
       font-size: 2.5rem;
-      color: var(--red);
-      display: block;
-      letter-spacing: 0.05em;
+      color: var(--sangre);
+      opacity: 0.2;
+      line-height: 1;
     }
-    .capacity-stat__label {
-      font-family: var(--font-type);
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      color: var(--gray);
-      text-transform: uppercase;
-      display: block;
-      margin-top: 0.5rem;
+
+    .testimonial-card:hover { border-color: var(--borde-sangre); }
+
+    .testimonial-text {
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--gris-ceniza);
+      line-height: 1.8;
+      margin-bottom: 1.8rem;
     }
-    .cocktail-list {
-      list-style: none;
-      padding: 0;
-      margin: 1.5rem 0 0;
-    }
-    .cocktail-list li {
+
+    .testimonial-author {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      font-family: var(--font-type);
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .author-avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: var(--carbon);
+      border: 1px solid var(--borde-sangre);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .author-name {
+      font-family: var(--font-subtit);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--marfil);
+      display: block;
+    }
+
+    .author-role {
+      font-size: 0.72rem;
+      color: var(--gris-ceniza);
+      display: block;
+    }
+
+    .stars {
+      color: var(--oro-viejo);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    .faq-section {
+      background: var(--negro-suave);
+      border-top: 1px solid var(--borde);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .faq-item {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .faq-question {
+      font-family: var(--font-subtit);
       font-size: 0.8rem;
       letter-spacing: 0.08em;
-    }
-    .cocktail-list li:last-child { border-bottom: none; }
-    .cocktail-list .c-name { color: var(--white); }
-    .cocktail-list .c-tag  { color: var(--gold); font-size: 0.7rem; }
-    .process-steps {
-      counter-reset: steps;
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0 0;
-    }
-    .process-steps li {
-      counter-increment: steps;
-      display: flex;
-      gap: 1.5rem;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .process-steps li:last-child { border-bottom: none; }
-    .process-steps li::before {
-      content: "0" counter(steps);
-      font-family: var(--font-type);
-      font-size: 1.5rem;
-      color: var(--red);
-      letter-spacing: 0.05em;
-      min-width: 2.5rem;
-      padding-top: 0.1rem;
-    }
-    .process-steps li h4 {
-      font-family: var(--font-type);
-      letter-spacing: 0.1em;
-      font-size: 0.85rem;
-      color: var(--white);
-      margin-bottom: 0.4rem;
       text-transform: uppercase;
+      color: var(--oro);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      line-height: 1.5;
     }
-    .process-steps li p {
+
+    .faq-question::before {
+      content: '?';
+      background: var(--sangre);
+      color: var(--marfil);
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .faq-answer {
       font-size: 0.88rem;
-      color: var(--light-gray);
-      line-height: 1.7;
-      margin: 0;
+      color: var(--gris-ceniza);
+      line-height: 1.8;
+      padding-left: 2.1rem;
     }
-    .cta-box {
-      background: var(--black);
-      border: 1px solid var(--red);
-      padding: 3rem 2rem;
+
+    /* ============================================================
+       BOOKING / CTA SECTION
+    ============================================================ */
+    .booking-section {
+      background: var(--negro);
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .cta-box::before {
+
+    .booking-section::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at center, rgba(180,0,0,0.06) 0%, transparent 70%);
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(139,0,0,0.12) 0%, transparent 70%);
+    }
+
+    .booking-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .booking-crown {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 20px rgba(212,160,23,0.4));
+    }
+
+    .booking-section .section-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .booking-desc {
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--gris-ceniza);
+      max-width: 550px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+    }
+
+    .booking-cta-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.4rem 3rem;
+      background: var(--sangre);
+      color: var(--marfil);
+      font-family: var(--font-subtit);
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--sangre-viva);
+      margin-bottom: 2rem;
+      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .booking-cta-main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--sangre-viva);
+      transform: translateX(-100%);
+      transition: transform 0.4s;
+    }
+
+    .booking-cta-main:hover::before { transform: translateX(0); }
+    .booking-cta-main span { position: relative; z-index: 1; }
+
+    .booking-cta-main:hover {
+      box-shadow:
+        0 0 40px rgba(192,57,43,0.6),
+        0 0 80px rgba(139,0,0,0.3);
+    }
+
+    .whatsapp-icon {
+      width: 1.4rem;
+      height: 1.4rem;
+      fill: currentColor;
+    }
+
+    .booking-meta {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-subtit);
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gris-ceniza);
+    }
+
+    .meta-icon {
+      font-size: 0.9rem;
+      color: var(--oro-viejo);
+    }
+
+    .booking-divider {
+      margin: 2rem auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      max-width: 400px;
+    }
+
+    .booking-divider::before,
+    .booking-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--borde);
+    }
+
+    .booking-or {
+      font-family: var(--font-subtit);
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gris-ceniza);
+    }
+
+    .booking-alt {
+      font-size: 0.88rem;
+      color: var(--gris-ceniza);
+    }
+
+    .booking-alt a {
+      color: var(--oro);
+      text-decoration: none;
+      border-bottom: 1px solid var(--borde);
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .booking-alt a:hover {
+      color: var(--oro-claro);
+      border-color: var(--oro);
+    }
+
+    /* ============================================================
+       LOCATION SECTION
+    ============================================================ */
+    .location-section {
+      background: var(--negro-suave);
+      border-top: 1px solid var(--borde);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .location-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .location-detail {
+      padding: 1.5rem;
+      border: 1px solid var(--borde);
+      background: rgba(255,255,255,0.01);
+    }
+
+    .detail-icon { font-size: 1.4rem; display: block; margin-bottom: 0.7rem; }
+
+    .detail-label {
+      font-family: var(--font-subtit);
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--sangre-viva);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .detail-value {
+      font-size: 0.85rem;
+      color: var(--gris-ceniza);
+      line-height: 1.5;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--carbon);
+      border: 1px solid var(--borde);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 29px,
+          rgba(255,255,255,0.02) 30px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 29px,
+          rgba(255,255,255,0.02) 30px
+        );
+    }
+
+    .map-pin {
+      font-size: 3rem;
+      position: relative;
+      z-index: 1;
+      animation: mapPulse 2s ease-in-out infinite;
+      filter: drop-shadow(0 0 15px rgba(192,57,43,0.7));
+    }
+
+    @keyframes mapPulse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .map-label {
+      font-family: var(--font-subtit);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gris-ceniza);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: #050505;
+      border-top: 1px solid var(--borde);
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--borde);
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand-logo {
+      font-family: var(--font-titulo);
+      font-size: 1.4rem;
+      color: var(--oro);
+      text-shadow: 0 0 20px rgba(212,160,23,0.3);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand-desc {
+      font-family: var(--font-lit);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--gris-ceniza);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.7rem;
+    }
+
+    .social-btn {
+      width: 2.2rem;
+      height: 2.2rem;
+      border: 1px solid var(--borde);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--gris-ceniza);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--sangre);
+      color: var(--marfil);
+      background: rgba(139,0,0,0.1);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-subtit);
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--oro-viejo);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .footer-col-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--borde);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      font-size: 0.82rem;
+      color: var(--gris-ceniza);
+      text-decoration: none;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-links a::before {
+      content: '›';
+      color: var(--sangre);
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover { color: var(--marfil); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: var(--gris-oscuro);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-legal a {
+      font-size: 0.72rem;
+      color: var(--gris-oscuro);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+
+    .footer-legal a:hover { color: var(--gris-ceniza); }
+
+    /* ============================================================
+       FLOATING WHATSAPP
+    ============================================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+
+    .wa-bubble {
+      background: #128C7E;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      font-family: var(--font-subtit);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all 0.3s;
+      white-space: nowrap;
       pointer-events: none;
+    }
+
+    .whatsapp-float:hover .wa-bubble {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .wa-btn {
+      width: 3.5rem;
+      height: 3.5rem;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: waBounce 3s ease-in-out infinite;
+    }
+
+    .whatsapp-float:hover .wa-btn {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37,211,102,0.6);
+    }
+
+    @keyframes waBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    /* ============================================================
+       DECORATIVE ELEMENTS
+    ============================================================ */
+    .section-deco {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    .section-deco::before,
+    .section-deco::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--borde), transparent);
+    }
+
+    .deco-glyph {
+      color: var(--sangre);
+      font-size: 1.2rem;
+      opacity: 0.5;
+    }
+
+    /* Drip effect top border */
+    .drip-top {
+      position: relative;
+    }
+
+    .drip-top::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--sangre) 20%, var(--sangre-viva) 50%, var(--sangre) 80%, transparent);
+      box-shadow: 0 0 15px rgba(139,0,0,0.5);
+    }
+
+    /* ============================================================
+       ANIMATIONS
+    ============================================================ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline::before { display: none; }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cocktails-intro {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+
+      .nav-links { display: none; }
+
+      .espacio-grid,
+      .location-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .espacio-stats { grid-template-columns: 1fr 1fr; }
+
+      .cocktails-menu { grid-template-columns: 1fr; }
+      .cocktail-item:nth-child(even) { border-right: 1px solid var(--borde); }
+      .cocktail-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--borde); }
+      .cocktail-item:last-child { border-bottom: none; }
+
+      .food-grid { grid-template-columns: 1fr 1fr; }
+
+      .booking-meta { gap: 1.5rem; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      section { padding: 5rem 1.5rem; }
+
+      .timeline {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .location-details { grid-template-columns: 1fr; }
+
+      .custom-options { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2rem; }
+      .espacio-stats { grid-template-columns: 1fr; }
+      .food-grid { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; }
+      .hero-cta-group { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; justify-content: center; }
+      .footer-bottom { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
+
 <body>
 
-<!-- ── Navigation ──────────────────────────────────────────── -->
-<nav class="nav" role="navigation" aria-label="Navegación principal">
-  <div class="nav__inner">
-    <a href="index.html" class="nav__logo" aria-label="El Sanatorio — inicio">
-      <span class="nav__logo-num">PACIENTE 013</span>
-      <span class="nav__logo-name">EL SANATORIO</span>
-    </a>
-    <div class="nav__monitor" aria-hidden="true">
-      <svg viewBox="0 0 300 36" preserveAspectRatio="none">
-        <path class="ekg-line" d="M 0,18 L 30,18 L 45,12 L 60,27 L 66,0 L 75,34 L 90,18 L 120,18 L 135,12 L 150,27 L 156,0 L 165,34 L 180,18 L 300,18" />
-      </svg>
-    </div>
-    <ul class="nav__links" role="list">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="menu.html">Menú</a></li>
-      <li><a href="experience.html">Experiencia</a></li>
-      <li><a href="events.html" class="active">Eventos</a></li>
-      <li><a href="tours.html">Tours</a></li>
-      <li><a href="historia.html">Historia</a></li>
-      <li><a href="contact.html">Contacto</a></li>
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20reservar%20un%20evento%20en%20El%20Sanatorio"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="whatsapp-float"
+     aria-label="Contáctanos por WhatsApp">
+    <span class="wa-bubble">Reservar Evento</span>
+    <span class="wa-btn" aria-hidden="true">🟢</span>
+  </a>
+
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Navegación principal">
+    <a href="/" class="nav-logo">El Sanatorio</a>
+    <ul class="nav-links">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/menu.html">Menú</a></li>
+      <li><a href="/events.html" class="active">Eventos</a></li>
+      <li><a href="/reservas.html">Reservas</a></li>
+      <li><a href="/nosotros.html">El Lugar</a></li>
     </ul>
-    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="nav__mobile-menu" role="navigation" aria-label="Menú móvil">
-  <a href="index.html">Inicio</a>
-  <a href="menu.html">Menú</a>
-  <a href="experience.html">Experiencia</a>
-  <a href="events.html">Eventos</a>
-  <a href="tours.html">Tours</a>
-  <a href="historia.html">Historia</a>
-  <a href="contact.html">Contacto</a>
-</div>
+  </nav>
 
-<!-- ── Hero ──────────────────────────────────────────────────── -->
-<div class="events-hero">
-  <div class="container--sm">
-    <div class="maze-warning" role="alert">⚠ ÁREA DE EVENTOS — ACCESO RESTRINGIDO</div>
-    <div class="section-label" style="justify-content: center;"><span>Protocolo de Celebración</span></div>
-    <h1 class="section-title section-title--center neon-red" style="font-size: clamp(2rem, 6vw, 4rem);">
-      Eventos Privados
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <p class="hero-ornament" aria-hidden="true">✦ ✦ ✦</p>
+    <p class="hero-eyebrow">Centro Histórico · Santa Marta · Colombia</p>
+
+    <h1 id="hero-heading">
+      Eventos<br /><span>Privados</span><br />&amp; Corporativos
     </h1>
-    <p class="serif" style="color: var(--light-gray); margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto;">
-      Hay lugares donde celebrar. Y hay lugares donde la celebración se convierte en algo
-      que nadie va a olvidar. El Sanatorio es lo segundo.
-    </p>
-    <p class="mono" style="font-size: 0.72rem; letter-spacing: 0.18em; color: var(--gray); margin-top: 1rem;">
-      PRIVATE EVENTS &nbsp;·&nbsp; CORPORATE &nbsp;·&nbsp; HALLOWEEN &nbsp;·&nbsp; BIRTHDAYS
-    </p>
-  </div>
-</div>
 
-<!-- ── Tipos de Evento ────────────────────────────────────── -->
-<section style="background: var(--panel-dark); padding: 5rem 0;" aria-labelledby="tipos-title">
-  <div class="container">
-    <div class="section-label"><span>Clasificación de Ingreso</span></div>
-    <h2 class="section-title" id="tipos-title">Tipos de Evento</h2>
-    <p class="serif" style="color: var(--light-gray); max-width: 540px; margin-bottom: 2rem;">
-      Desde cumpleaños íntimos hasta tomas completas del edificio.
-      El Sanatorio se adapta — siempre dentro de su protocolo.
-    </p>
-
-    <div class="events-type-grid fade-in-section">
-      <div class="event-type-card">
-        <span class="event-type-card__num">TIPO 01</span>
-        <h3>Cumpleaños & Celebraciones</h3>
-        <p>Una noche que no parece cumpleaños normal — porque no lo es. Mesa reservada
-           para tu grupo, menú personalizado, coctelería a medida. El Doctor de turno
-           prescribirá el trago del festejado.</p>
-      </div>
-      <div class="event-type-card">
-        <span class="event-type-card__num">TIPO 02</span>
-        <h3>Fiestas Corporativas</h3>
-        <p>Team building de otro tipo. Cenas de empresa, lanzamientos de producto,
-           celebraciones de cierre. El ambiente hace el trabajo — nadie sale igual que entró,
-           y eso es exactamente lo que se busca.</p>
-      </div>
-      <div class="event-type-card">
-        <span class="event-type-card__num">TIPO 03</span>
-        <h3>Halloween Especiales</h3>
-        <p>El Sanatorio no se disfraza en Halloween — ya es Halloween todo el año. Pero
-           en octubre desbloqueamos el modo completo: laberinto de terror activado,
-           actores en escena, coctelería de edición limitada.</p>
-      </div>
-      <div class="event-type-card">
-        <span class="event-type-card__num">TIPO 04</span>
-        <h3>Toma Total del Espacio</h3>
-        <p>El edificio entero para tu grupo. Bar, patio interior, salas superiores,
-           acceso a zonas normalmente cerradas. Para cuando la ocasión lo merece y el
-           presupuesto lo permite.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Capacidad ──────────────────────────────────────────── -->
-<section style="background: var(--black); padding: 5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);" aria-labelledby="cap-title">
-  <div class="container">
-    <div class="section-label" style="justify-content: center;"><span>Informe de Capacidad</span></div>
-    <h2 class="section-title section-title--center" id="cap-title">Capacidad & Espacios</h2>
-
-    <div class="capacity-grid fade-in-section">
-      <div class="capacity-stat">
-        <span class="capacity-stat__num">80</span>
-        <span class="capacity-stat__label">Aforo total del bar</span>
-      </div>
-      <div class="capacity-stat">
-        <span class="capacity-stat__num">30</span>
-        <span class="capacity-stat__label">Zona VIP / reservada</span>
-      </div>
-      <div class="capacity-stat">
-        <span class="capacity-stat__num">120+</span>
-        <span class="capacity-stat__label">Toma total del edificio</span>
-      </div>
+    <div class="hero-divider" aria-hidden="true">
+      <span class="hero-divider-icon">☽</span>
     </div>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem;" class="fade-in-section">
-      <div class="panel panel--red-accent">
-        <h4 style="margin-bottom: 0.75rem; color: var(--gold);">Zona del Bar Principal</h4>
-        <p style="font-size: 0.88rem; color: var(--light-gray);">
-          La planta baja del sanatorio. Barra de acero inoxidable, zona de cocina yakitori,
-          mesas clínicas, patio interior con buganvillas. Ideal para eventos de hasta 80 personas
-          en modalidad cóctel o hasta 50 en configuración de cena.
-        </p>
-      </div>
-      <div class="panel panel--gold-accent">
-        <h4 style="margin-bottom: 0.75rem; color: var(--gold);">Pisos Superiores</h4>
-        <p style="font-size: 0.88rem; color: var(--light-gray);">
-          Los tres pisos del laberinto disponibles para eventos con experiencia de terror incluida.
-          El grupo recorre las instalaciones antes de la cena. Grupos de hasta 40 personas para
-          la experiencia inmersiva combinada con evento privado.
-        </p>
-      </div>
-      <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem;">
-        <h4 style="margin-bottom: 0.75rem; color: var(--gold);">Patio Interior Colonial</h4>
-        <p style="font-size: 0.88rem; color: var(--light-gray);">
-          El patio del edificio colonial, con buganvillas moradas y la luz que se filtra entre
-          los muros de cal. Espacio al aire libre para aperitivos, fotografías, o ceremonias
-          breves. Capacidad: 40 personas sentadas.
-        </p>
-      </div>
-      <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem;">
-        <h4 style="margin-bottom: 0.75rem; color: var(--gold);">Sala Privada — "El Quirófano"</h4>
-        <p style="font-size: 0.88rem; color: var(--light-gray);">
-          Sala separada en el primer piso para grupos de hasta 20 personas. Mesa larga de acero,
-          cajas de luz con radiografías decorativas, iluminación de sala de operaciones.
-          Privacidad total. Disponible para cenas privadas y reuniones.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Coctelería Personalizada ───────────────────────────── -->
-<section style="background: var(--panel-dark); padding: 5rem 0;" aria-labelledby="cocktails-title">
-  <div class="container">
-    <div class="section-label"><span>Prescripciones Especiales</span></div>
-    <h2 class="section-title" id="cocktails-title">Menú de Coctelería a Medida</h2>
-    <p class="serif" style="color: var(--light-gray); max-width: 520px; margin-bottom: 0.5rem;">
-      Para eventos privados, el Doctor de turno formula prescripciones exclusivas.
-      Tragos con el nombre del homenajeado. Cócteles temáticos para la empresa.
-      Menú de barra abierta con selección curada.
+    <p class="hero-desc">
+      Donde la oscuridad tiene sabor. Celebra en las entrañas de un edificio
+      colonial del siglo XVIII, entre brasas de yakitori, cócteles de autor
+      y una atmósfera que no olvidarás.
     </p>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem;" class="fade-in-section">
-      <div>
-        <p class="mono" style="font-size: 0.65rem; letter-spacing: 0.18em; color: var(--gray); margin-bottom: 1rem;">
-          — PRESCRIPCIONES ESTÁNDAR DEL BAR —
-        </p>
-        <ul class="cocktail-list">
-          <li><span class="c-name">La Morfina</span><span class="c-tag">Vodka · Lychee · Jengibre</span></li>
-          <li><span class="c-name">El Paracetamol</span><span class="c-tag">Gin · Pepino · Albahaca</span></li>
-          <li><span class="c-name">La Transfusión</span><span class="c-tag">Ron · Granadina · Lima</span></li>
-          <li><span class="c-name">El Sedante Mayor</span><span class="c-tag">Whisky · Amaro · Naranja</span></li>
-          <li><span class="c-name">Dosis Letal</span><span class="c-tag">Mezcal · Mole · Sal de Gusano</span></li>
-          <li><span class="c-name">El Antídoto</span><span class="c-tag">Sake · Yuzu · Soda</span></li>
-        </ul>
-      </div>
-      <div>
-        <p class="mono" style="font-size: 0.65rem; letter-spacing: 0.18em; color: var(--gray); margin-bottom: 1rem;">
-          — OPCIONES PARA EVENTO PRIVADO —
-        </p>
-        <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1rem;">
-          <h4 style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--white); margin-bottom: 0.5rem;">Barra Abierta Premium</h4>
-          <p style="font-size: 0.82rem; color: var(--light-gray);">Selección completa del bar durante la duración del evento. Incluye coctelería de firma, cervezas y selección de vinos.</p>
+    <div class="hero-cta-group">
+      <a href="https://wa.me/19034598763?text=Quiero%20informaci%C3%B3n%20sobre%20eventos%20privados%20en%20El%20Sanatorio"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn-primary">
+        <span>💬 Reservar por WhatsApp</span>
+      </a>
+      <a href="#paquetes" class="btn-outline">Ver Paquetes</a>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Descender</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ESPACIO SECTION
+  ============================================================ -->
+  <section class="espacio-section" id="espacio" aria-labelledby="espacio-heading">
+    <div class="container">
+      <div class="espacio-grid">
+
+        <div class="espacio-text">
+          <p class="section-label">El Espacio</p>
+          <h2 class="section-title" id="espacio-heading">
+            Un Sanatorio<br />para tus <em>Celebraciones</em>
+          </h2>
+
+          <p>
+            Situado en el corazón del <strong>Centro Histórico de Santa Marta</strong>,
+            El Sanatorio ocupa un soberbio edificio colonial del siglo XVIII —
+            paredes de piedra coralina, arcos centenarios, techos altos que guardan
+            siglos de secretos.
+          </p>
+          <p>
+            Nuestro espacio ha sido diseñado para crear <strong>experiencias únicas</strong>:
+            la penumbra calculada, el humo de las brasas, los sonidos ambientales
+            y una decoración de horror curado convierten cada evento en algo
+            entre lo memorable y lo perturbador.
+          </p>
+          <p>
+            Ideal para <strong>cumpleaños de alto impacto</strong>, cenas corporativas
+            con carácter, despedidas de soltero/a, lanzamientos de marca, sesiones
+            creativas y cualquier evento que se niegue a ser ordinario.
+          </p>
+
+          <div class="espacio-stats">
+            <div class="stat-card">
+              <span class="stat-number">120</span>
+              <span class="stat-label">Personas máx.</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Zonas privadas</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">S.XVIII</span>
+              <span class="stat-label">Edificio colonial</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">24h</span>
+              <span class="stat-label">Personalización</span>
+            </div>
+          </div>
         </div>
-        <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1rem;">
-          <h4 style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--white); margin-bottom: 0.5rem;">Cóctel de Bienvenida Personalizado</h4>
-          <p style="font-size: 0.82rem; color: var(--light-gray);">El Doctor formula una prescripción exclusiva para tu evento. Nombre, historia, y presentación personalizada.</p>
+
+        <div class="espacio-image-area">
+          <div class="espacio-image-placeholder" role="img" aria-label="Interior de El Sanatorio — edificio colonial con atmósfera de horror">
+            <span class="img-glyph" aria-hidden="true">🕯️</span>
+            <p class="img-caption">Paredes de piedra coralina. Sombras vivas. Centro Histórico, Santa Marta.</p>
+          </div>
         </div>
-        <div class="panel" style="border: 1px solid var(--border); padding: 1.5rem;">
-          <h4 style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--white); margin-bottom: 0.5rem;">Menú Yakitori Cerrado</h4>
-          <p style="font-size: 0.82rem; color: var(--light-gray);">Selección de brochetas al carbón diseñada por el chef para tu grupo. Opciones vegetarianas disponibles bajo prescripción médica.</p>
-        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── Proceso de Reserva ─────────────────────────────────── -->
-<section style="background: var(--black); padding: 5rem 0; border-top: 1px solid var(--border);" aria-labelledby="process-title">
-  <div class="container--sm">
-    <div class="section-label"><span>Protocolo de Admisión</span></div>
-    <h2 class="section-title" id="process-title">Cómo Reservar</h2>
-    <p class="serif" style="color: var(--light-gray); margin-bottom: 0.5rem;">
-      El proceso es directo. Nosotros hacemos el resto.
-    </p>
-
-    <ol class="process-steps fade-in-section">
-      <li>
-        <div>
-          <h4>Primer Contacto</h4>
-          <p>Escríbenos por WhatsApp o completa el formulario con la fecha, número de personas y tipo de evento. Respondemos en menos de 24 horas con disponibilidad.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h4>Diagnóstico del Evento</h4>
-          <p>Una llamada o reunión breve para entender qué necesitas: espacio, menú, horario, decoración adicional, si quieres la experiencia de terror incluida. Sin compromisos.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h4>Propuesta y Presupuesto</h4>
-          <p>Te enviamos una propuesta detallada con opciones de espacio, menú y precios. El depósito de reserva asegura la fecha — la clínica no puede garantizar disponibilidad sin él.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h4>Preparativos Finales</h4>
-          <p>72 horas antes confirmamos el menú definitivo, número exacto de asistentes y cualquier requerimiento especial. El Doctor estará de turno a tiempo.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h4>La Noche del Evento</h4>
-          <p>Tu grupo llega. El sanatorio los recibe. Lo que pase dentro queda bajo expediente sellado.</p>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ── CTA Principal ──────────────────────────────────────── -->
-<section style="padding: 5rem 0;" aria-labelledby="cta-events">
-  <div class="container--sm">
-    <div class="cta-box fade-in-section">
-      <div class="maze-warning" role="presentation" style="margin-bottom: 1.5rem;">⚠ SOLICITUD DE EVENTO PRIVADO</div>
-      <h2 class="section-title section-title--center" id="cta-events" style="font-size: clamp(1.5rem, 4vw, 2.5rem);">
-        Cuéntanos Tu Evento
+  <!-- ============================================================
+       PACKAGES SECTION
+  ============================================================ -->
+  <section class="packages-section drip-top" id="paquetes" aria-labelledby="paquetes-heading">
+    <div class="container">
+      <p class="section-label">Paquetes</p>
+      <h2 class="section-title" id="paquetes-heading">
+        Elige tu <em>Condena</em>
       </h2>
-      <p class="serif" style="color: var(--light-gray); margin: 1rem auto 2rem; max-width: 460px;">
-        El Doctor de turno está disponible. Una consulta sin costo para evaluar si tu caso
-        califica para tratamiento en nuestras instalaciones.
+      <p class="section-subtitle">
+        Tres rituales diseñados para distintas almas. Todos incluyen la
+        esencia de El Sanatorio: oscuridad, fuego y sabor.
       </p>
 
-      <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
-        <a href="https://wa.me/19034598763?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20un%20evento%20privado%20en%20El%20Sanatorio"
-           target="_blank" rel="noopener noreferrer"
-           class="btn btn--red"
-           style="font-size: 0.9rem; padding: 1rem 2.5rem;">
-          Escribir por WhatsApp
-        </a>
-        <p class="mono" style="font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gray);">
-          +1 (903) 459-8763 &nbsp;·&nbsp; EVENTOS Y GRUPOS PRIVADOS
-        </p>
+      <div class="packages-grid" role="list">
+
+        <!-- Package 1 -->
+        <article class="package-card" role="listitem">
+          <span class="package-icon" aria-hidden="true">🦇</span>
+          <h3 class="package-name">La Cripta</h3>
+          <p class="package-tagline">
+            Para grupos íntimos que buscan vivir la experiencia en su
+            forma más pura. Oscuridad a escala humana.
+          </p>
+
+          <div class="package-capacity">
+            <span class="capacity-icon" aria-hidden="true">👥</span>
+            <span class="capacity-text">
+              Hasta <strong>20 personas</strong> · Zona Cripta Baja
+            </span>
+          </div>
+
+          <ul class="package-includes" aria-label="Incluye">
+            <li>Reserva exclusiva de la Zona Cripta Baja (3 horas)</li>
+            <li>Bienvenida con shot de sake negro por persona</li>
+            <li>Mesa de yakitori compartida — 6 brochetas por persona</li>
+            <li>Cóctel de bienvenida temático (1 por persona)</li>
+            <li>Decoración oscura básica incluida</li>
+            <li>Soundtrack de horror curado por nuestra residente</li>
+            <li>Coordinador de evento dedicado</li>
+          </ul>
+
+          <div class="package-price">
+            <span class="price-label">Desde</span>
+            <span class="price-value">Consultar<span class="price-unit">/ cotización personalizada</span></span>
+          </div>
+
+          <a href="https://wa.me/19034598763?text=Quiero%20cotizar%20el%20paquete%20La%20Cripta%20en%20El%20Sanatorio"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="package-cta">
+            Solicitar Cotización
+          </a>
+        </article>
+
+        <!-- Package 2 - Featured -->
+        <article class="package-card featured" role="listitem">
+          <span class="featured-badge" aria-label="Más popular">Más Solicitado</span>
+          <span class="package-icon" aria-hidden="true">💀</span>
+          <h3 class="package-name">El Purgatorio</h3>
+          <p class="package-tagline">
+            La experiencia completa. El equilibrio perfecto entre horror
+            refinado, gastronomía yakitori y alquimia líquida.
+          </p>
+
+          <div class="package-capacity">
+            <span class="capacity-icon" aria-hidden="true">👥</span>
+            <span class="capacity-text">
+              <strong>21 a 60 personas</strong> · Salón Principal + Terraza
+            </span>
+          </div>
+
+          <ul class="package-includes" aria-label="Incluye">
+            <li>Reserva exclusiva del Salón Principal y Terraza (4 horas)</li>
+            <li>Cóctel de bienvenida personalizado + menú de degustación de sake</li>
+            <li>Menú yakitori de 5 tiempos — selección completa de brochetas</li>
+            <li>Barra de cócteles abierta temática (2 horas)</li>
+            <li>Decoración de horror personalizada con tu temática</li>
+            <li>Instalación de velas y arreglos florales oscuros</li>
+            <li>Sistema de audio profesional + DJ o playlist curada</li>
+            <li>Sesión fotográfica de 30 min con nuestro fotógrafo</li>
+            <li>Coordinador de evento + personal de servicio exclusivo</li>
+            <li>Menú impreso personalizado con el nombre del evento</li>
+          </ul>
+
+          <div class="package-price">
+            <span class="price-label">Desde</span>
+            <span class="price-value">Consultar<span class="price-unit">/ cotización personalizada</span></span>
+          </div>
+
+          <a href="https://wa.me/19034598763?text=Quiero%20cotizar%20el%20paquete%20El%20Purgatorio%20en%20El%20Sanatorio"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="package-cta primary-cta">
+            💬 Reservar Ahora
+          </a>
+        </article>
+
+        <!-- Package 3 -->
+        <article class="package-card" role="listitem">
+          <span class="package-icon" aria-hidden="true">🕷️</span>
+          <h3 class="package-name">El Infierno Total</h3>
+          <p class="package-tagline">
+            La toma completa del Sanatorio. Para quienes no conocen
+            límites ni presupuestos. Experiencia máxima.
+          </p>
+
+          <div class="package-capacity">
+            <span class="capacity-icon" aria-hidden="true">👥</span>
+            <span class="capacity-text">
+              <strong>61 a 120 personas</strong> · Todo el establecimiento
+            </span>
+          </div>
+
+          <ul class="package-includes" aria-label="Incluye">
+            <li>Toma completa y exclusiva del Sanatorio (5 horas + montaje)</li>
+            <li>Menú de degustación yakitori premium de 7 tiempos</li>
+            <li>Barra abierta ilimitada — cócteles + sake + cerveza artesanal</li>
+            <li>Cóctel de autor creado exclusivamente para tu evento</li>
+            <li>Diseño de producción completo: iluminación, decoración, sonido</li>
+            <li>Actor o performer temático de horror en vivo</li>
+            <li>Cobertura fotográfica y video completa del evento</li>
+            <li>Mesa de dulces oscuros personalizada</li>
+            <li>Branding del evento: menús, señalización, backdrops</li>
+            <li>Gerente de evento + equipo de servicio completo</li>
+            <li>Hora extra disponible con costo adicional</li>
+          </ul>
+
+          <div class="package-price">
+            <span class="price-label">Desde</span>
+            <span class="price-value">Consultar<span class="price-unit">/ cotización a medida</span></span>
+          </div>
+
+          <a href="https://wa.me/19034598763?text=Quiero%20cotizar%20el%20paquete%20El%20Infierno%20Total%20en%20El%20Sanatorio"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="package-cta">
+            Solicitar Cotización
+          </a>
+        </article>
+
       </div>
+
+      <p style="text-align:center; margin-top:2.5rem; font-size:0.82rem; color:var(--gris-ceniza); font-family:var(--font-lit); font-style:italic;">
+        * Todos los paquetes son personalizables. Contáctanos para adaptar cualquier ritual a tus necesidades específicas.
+      </p>
     </div>
+  </section>
 
-    <!-- Inquiry Form -->
-    <div class="form-panel" style="margin-top: 3rem;">
-      <div class="form-panel__header">
-        <span class="form-panel__title">FORMULARIO DE SOLICITUD — EVENTO PRIVADO</span>
-        <span class="form-panel__ref">PROT-EVT-013</span>
-      </div>
+  <!-- ============================================================
+       COCKTAIL SECTION
+  ============================================================ -->
+  <section class="cocktails-section" id="cocktails" aria-labelledby="cocktails-heading">
+    <div class="container">
 
-      <form name="evento-privado" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias">
-        <input type="hidden" name="form-name" value="evento-privado" />
-        <p style="display:none;"><label>No llenar: <input name="bot-field" /></label></p>
+      <div class="cocktails-intro">
+        <div>
+          <p class="section-label">Coctelería</p>
+          <h2 class="section-title" id="cocktails-heading">
+            Alquimia<br /><em>Líquida</em>
+          </h2>
+          <p class="section-subtitle">
+            Nuestro bartender crea pociones diseñadas para alterar
+            los sentidos. Cada trago lleva una historia oscura.
+          </p>
 
-        <div class="form-grid">
-          <div class="form-group">
-            <label class="form-label" for="ev-name">Nombre de Contacto *</label>
-            <input class="form-input" type="text" id="ev-name" name="nombre" required placeholder="Nombre completo" />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="ev-phone">WhatsApp / Teléfono *</label>
-            <input class="form-input" type="tel" id="ev-phone" name="telefono" required placeholder="+57 300 000 0000" />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="ev-email">Correo Electrónico</label>
-            <input class="form-input" type="email" id="ev-email" name="email" placeholder="correo@ejemplo.com" />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="ev-type">Tipo de Evento *</label>
-            <select class="form-select" id="ev-type" name="tipo_evento" required>
-              <option value="" disabled selected>Seleccionar</option>
-              <option value="cumpleanos">Cumpleaños / Celebración</option>
-              <option value="corporativo">Evento Corporativo</option>
-              <option value="halloween">Halloween Especial</option>
-              <option value="toma-total">Toma Total del Espacio</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="ev-guests">Número de Personas *</label>
-            <select class="form-select" id="ev-guests" name="personas" required>
-              <option value="" disabled selected>Seleccionar</option>
-              <option value="10-20">10 – 20 personas</option>
-              <option value="20-40">20 – 40 personas</option>
-              <option value="40-80">40 – 80 personas</option>
-              <option value="80+">Más de 80 personas</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="ev-date">Fecha Tentativa *</label>
-            <input class="form-input" type="date" id="ev-date" name="fecha" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="ev-budget">Presupuesto Aproximado</label>
-            <select class="form-select" id="ev-budget" name="presupuesto">
-              <option value="" disabled selected>Seleccionar</option>
-              <option value="500k-1m">$500.000 – $1.000.000</option>
-              <option value="1m-3m">$1.000.000 – $3.000.000</option>
-              <option value="3m-5m">$3.000.000 – $5.000.000</option>
-              <option value="5m+">Más de $5.000.000</option>
-              <option value="consultar">Prefiero consultar primero</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="ev-experience">¿Incluir Experiencia de Terror?</label>
-            <select class="form-select" id="ev-experience" name="experiencia_terror">
-              <option value="si">Sí — queremos el laberinto</option>
-              <option value="no">No — solo el bar y el ambiente</option>
-              <option value="consultar">Consultar opciones</option>
-            </select>
-          </div>
-          <div class="form-group form-group--full">
-            <label class="form-label" for="ev-notes">Descripción del Evento</label>
-            <textarea class="form-textarea" id="ev-notes" name="descripcion" placeholder="Cuéntanos sobre tu evento: ocasión, qué tiene en mente, requerimientos especiales, decoración adicional..."></textarea>
+          <div class="cocktails-custom">
+            <h3 class="custom-title">Menú de Cócteles Personalizado</h3>
+            <p class="custom-desc">
+              Para eventos privados diseñamos un menú de cócteles exclusivo
+              con el nombre de tu evento, temática y hasta el nombre de los
+              invitados si lo deseas. Trabajamos con destilados premium,
+              infusiones artesanales y técnicas de coctelería de vanguardia.
+            </p>
+            <ul class="custom-options" aria-label="Opciones de personalización">
+              <li>Cóctel de autor con nombre del evento</li>
+              <li>Selección de base alcohólica y sin alcohol</li>
+              <li>Infusiones botánicas propias</li>
+              <li>Presentación con hielo esculpido</li>
+              <li>Garnish temático de horror</li>
+              <li>Carta de cócteles impresa</li>
+            </ul>
+            <a href="https://wa.me/19034598763?text=Quiero%20un%20men%C3%BA%20de%20c%C3%B3cteles%20personalizado%20para%20mi%20evento"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-primary">
+              <span>Diseñar Mi Menú</span>
+            </a>
           </div>
         </div>
 
-        <button type="submit" class="form-submit">ENVIAR SOLICITUD DE EVENTO</button>
-      </form>
-    </div>
-  </div>
-</section>
+        <div>
+          <div class="cocktails-menu" role="list">
 
-<!-- ── Footer ─────────────────────────────────────────────────── -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__inner">
-      <div>
-        <p class="footer__logo">EL SANATORIO</p>
-        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
-        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 1rem; line-height: 1.8;">
-          Calle 19 #4-23 · Centro Histórico<br>Santa Marta, Colombia
+            <article class="cocktail-item" role="listitem">
+              <span class="cocktail-emoji" aria-hidden="true">🩸</span>
+              <h3 class="cocktail-name">Sangre de Bruja</h3>
+              <p class="cocktail-desc">
+                Mezcal artesanal, hibisco reducido, chile negro, sal de gusano,
+                espuma de maracuyá. Fuego que no avisa.
+              </p>
+            </article>
+
+            <article class="cocktail-item" role="listitem">
+              <span class="cocktail-emoji" aria-hidden="true">☠️</span>
+              <h3 class="cocktail-name">Veneno del Pacífico</h3>
+              <p class="cocktail-desc">
+                Gin japonés, aloe vera, menta carbonizada, agua de mar,
+                perlas de caviar. Elegante y letal.
+              </p>
+            </article>
+
+            <article class="cocktail-item" role="listitem">
+              <span class="cocktail-emoji" aria-hidden="true">🕯️</span>
+              <h3 class="cocktail-name">Exorcismo Blanco</h3>
+              <p class="cocktail-desc">
+                Vodka infusionado en jazmín, sake junmai, limón negro,
+                clara de huevo, ceniza activada. Lo oscuro en lo puro.
+              </p>
+            </article>
+
+            <article class="cocktail-item" role="listitem">
+              <span class="cocktail-emoji" aria-hidden="true">🌑</span>
+              <h3 class="cocktail-name">Eclipse Negroni</h3>
+              <p class="cocktail-desc">
+                Gin añejo, Campari negro, vermut de café, twist de
+                naranja quemada. Un clásico corrompido.
+              </p>
+            </article>
+
+            <article class="cocktail-item" role="listitem">
+              <span class="cocktail-emoji" aria-hidden="true">🔮</span>
+              <h3 class="cocktail-name">Visión del Abismo</h3>
+              <p class="cocktail-desc">
+                Whisky japonés, miel de trufa, jengibre negro, limoncello
+                y humo de mezquite. Para ver el futuro.
+              </p>
+            </article>
+
+            <article class="cocktail-item" role="listitem">
+              <span class="cocktail-emoji" aria-hidden="true">🦇</span>
+              <h3 class="cocktail-name">Sin Alcohol: La Sombra</h3>
+              <p class="cocktail-desc">
+                Agua de tamarindo, reducción de remolacha, jengibre,
+                kombucha negra, espuma de coco. Todo el ritual, cero alcohol.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOD / YAKITORI SECTION
+  ============================================================ -->
+  <section class="food-section" id="menu" aria-labelledby="food-heading">
+    <div class="container">
+      <p class="section-label">Gastronomía</p>
+      <h2 class="section-title" id="food-heading">
+        Yakitori de las <em>Tinieblas</em>
+      </h2>
+      <p class="section-subtitle">
+        Brochetas sobre brasas de binchotan. Técnica japonesa,
+        alma caribeña, presentación que perturba.
+      </p>
+
+      <div class="food-grid" role="list">
+
+        <article class="food-card" role="listitem">
+          <span class="food-icon" aria-hidden="true">🔥</span>
+          <h3 class="food-title">Brochetas de Brasas</h3>
+          <p class="food-desc">
+            Muslo de pollo con tare negra, panza de cerdo miso,
+            res wagyu colombiano, tofu de ceniza.
+            Cocción lenta sobre carbón blanco japonés.
+          </p>
+        </article>
+
+        <article class="food-card" role="listitem">
+          <span class="food-icon" aria-hidden="true">🦑</span>
+          <h3 class="food-title">Mariscos del Caribe</h3>
+          <p class="food-desc">
+            Camarón negro del golfo, pulpo braseado con sake,
+            calamar en tinta con chili, ostras glaseadas.
+            El mar de Santa Marta en cada mordida.
+          </p>
+        </article>
+
+        <article class="food-card" role="listitem">
+          <span class="food-icon" aria-hidden="true">🥢</span>
+          <h3 class="food-title">Acompañantes Oscuros</h3>
+          <p class="food-desc">
+            Arroz negro de bambú, onigiri de tinta de calamar,
+            edamame con sal de roca negra, miso soup
+            con setas shiitake del Caribe.
+          </p>
+        </article>
+
+        <article class="food-card" role="listitem">
+          <span class="food-icon" aria-hidden="true">🌿</span>
+          <h3 class="food-title">Opciones Vegetarianas</h3>
+          <p class="food-desc">
+            Champiñones portobello en tare, espárragos con
+            mantequilla de miso, tofu premium glaseado,
+            pimientos de Padrón caramelizados.
+          </p>
+        </article>
+
+      </div>
+
+      <p class="food-note">
+        Los menús para eventos se diseñan según el paquete elegido y pueden personalizarse
+        para restricciones dietéticas, alergias y preferencias del grupo.
+        Consultamos sin costo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE TIMELINE
+  ============================================================ -->
+  <section class="experience-section" aria-labelledby="experience-heading">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:4rem;">
+        <p class="section-label" style="justify-content:center;">El Ritual</p>
+        <h2 class="section-title" id="experience-heading">
+          Cómo Funciona tu <em>Evento</em>
+        </h2>
+        <p class="section-subtitle" style="margin:0 auto; text-align:center;">
+          De la primera consulta al último cóctel. Así nace un evento en El Sanatorio.
         </p>
       </div>
-      <div>
-        <p class="footer__col-title">Instalaciones</p>
-        <ul class="footer__links" role="list">
-          <li><a href="menu.html">El Menú / Expediente</a></li>
-          <li><a href="experience.html">La Experiencia</a></li>
-          <li><a href="events.html">Eventos Privados</a></li>
-          <li><a href="tours.html">Tours Históricos</a></li>
-          <li><a href="historia.html">La Historia</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
+
+      <div class="timeline" role="list">
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot" aria-hidden="true">💬</div>
+          <span class="timeline-step">01</span>
+          <h3 class="timeline-title">Consulta</h3>
+          <p class="timeline-desc">
+            Contáctanos por WhatsApp. Hablamos de tu visión,
+            número de personas, fecha y presupuesto.
+          </p>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot" aria-hidden="true">📋</div>
+          <span class="timeline-step">02</span>
+          <h3 class="timeline-title">Propuesta</h3>
+          <p class="timeline-desc">
+            En 24 horas recibes una cotización personalizada
+            con menú, decoración y detalles del paquete.
+          </p>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot" aria-hidden="true">✍️</div>
+          <span class="timeline-step">03</span>
+          <h3 class="timeline-title">Confirmación</h3>
+          <p class="timeline-desc">
+            Reservas con un anticipo del 50%. Comenzamos
+            la producción y personalización de tu evento.
+          </p>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot" aria-hidden="true">🎭</div>
+          <span class="timeline-step">04</span>
+          <h3 class="timeline-title">Montaje</h3>
+          <p class="timeline-desc">
+            El día del evento, nuestro equipo transforma
+            el espacio 2 horas antes de que lleguen tus invitados.
+          </p>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot" aria-hidden="true">🔥</div>
+          <span class="timeline-step">05</span>
+          <h3 class="timeline-title">La Experiencia</h3>
+          <p class="timeline-desc">
+            Tu evento comienza. Nosotros manejamos todo.
+            Tú solo disfrutas el ritual.
+          </p>
+        </div>
+
       </div>
-      <div>
-        <p class="footer__col-title">Contacto</p>
-        <ul class="footer__links" role="list">
-          <li><a href="https://wa.me/573174370575" target="_blank" rel="noopener">WhatsApp Bar</a></li>
-          <li><a href="https://wa.me/19034598763" target="_blank" rel="noopener">WhatsApp Eventos</a></li>
-          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="index.html#reservar">Reservar Mesa</a></li>
-        </ul>
-        <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1.5rem; line-height: 1.8;">
-          Mié – Dom &nbsp;·&nbsp; 6 PM – 2 AM
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section class="testimonials-section" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:4rem;">
+        <p class="section-label" style="justify-content:center;">Testimonios</p>
+        <h2 class="section-title" id="testimonials-heading">
+          Voces de los <em>Sobrevivientes</em>
+        </h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="testimonial-text">
+            "Organizamos el lanzamiento de nuestra nueva colección aquí y fue
+            absolutamente perfecto. La atmósfera es incomparable en Santa Marta.
+            Nuestros clientes todavía hablan del evento meses después.
+            El equipo fue impecable y los cócteles personalizados con el nombre
+            de la marca fue un toque que nadie esperaba."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">👁️</div>
+            <div>
+              <span class="author-name">Valentina Restrepo</span>
+              <span class="author-role">Directora Creativa · Bogotá</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="testimonial-text">
+            "Mi cumpleaños 30 en El Sanatorio fue la mejor decisión de mi vida.
+            Escogimos el paquete Purgatorio para 45 personas. El yakitori
+            estaba en otro nivel, los cócteles eran una obra de arte y
+            la decoración nos transportó. Impresionante que esto exista
+            en el Caribe colombiano."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">🕷️</div>
+            <div>
+              <span class="author-name">Sebastián Morales</span>
+              <span class="author-role">Arquitecto · Barranquilla</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="testimonial-text">
+            "Hicimos la cena anual de nuestra empresa aquí y rompimos
+            completamente el molde. El equipo del Sanatorio coordinó
+            todo con una profesionalidad sorprendente. El menú de
+            yakitori fue una revelación para muchos de nuestros
+            colaboradores. Definitivamente volveremos."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">🦇</div>
+            <div>
+              <span class="author-name">Carolina Jiménez</span>
+              <span class="author-role">Gerente de RRHH · Santa Marta</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div style="text-align:left; margin-bottom:4rem;">
+        <p class="section-label">Preguntas</p>
+        <h2 class="section-title" id="faq-heading">
+          Todo lo que Necesitas <em>Saber</em>
+        </h2>
+      </div>
+
+      <div class="faq-grid">
+
+        <div class="faq-item">
+          <h3 class="faq-question">¿Con cuánta anticipación debo reservar?</h3>
+          <p class="faq-answer">
+            Recomendamos contactarnos con mínimo <strong>2 semanas de anticipación</strong>
+            para eventos pequeños (hasta 20 personas) y al menos <strong>4 semanas</strong>
+            para eventos medianos y grandes. Para eventos corporativos de alto nivel,
+            un mes o más garantiza la mejor experiencia posible.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">¿Puedo traer mi propio DJ o músico?</h3>
+          <p class="faq-answer">
+            Sí, con previo acuerdo. Contamos con equipo de sonido profesional
+            integrado al espacio. Tu artista deberá adaptarse a nuestro sistema
+            y a las restricciones de volumen del Centro Histórico.
+            También ofrecemos DJs residentes con set lists curados.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">¿Ofrecen opciones sin alcohol?</h3>
+          <p class="faq-answer">
+            Absolutamente. Nuestra coctelería incluye una línea completa de
+            <strong>mocktails de autor</strong> con la misma complejidad y presentación
+            que los cócteles alcohólicos. Nadie notará la diferencia, excepto
+            por la ausencia de resaca al día siguiente.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">¿El espacio es accesible para personas con movilidad reducida?</h3>
+          <p class="faq-answer">
+            Al ser un edificio colonial del siglo XVIII, algunas áreas tienen
+            limitaciones arquitectónicas. Sin embargo, el área principal del
+            salón es accesible. Consúltanos con anticipación para adaptar
+            la disposición del evento a las necesidades de todos tus invitados.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">¿Puedo decorar el espacio con mis propios elementos?</h3>
+          <p class="faq-answer">
+            Sí, dentro de los parámetros acordados. Trabajamos contigo para
+            integrar tus elementos en nuestra estética. No aceptamos decoraciones
+            que dañen la estructura del edificio patrimonial ni elementos de llama
+            abierta fuera de nuestras instalaciones de seguridad.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">¿Qué pasa si necesito cancelar o reprogramar?</h3>
+          <p class="faq-answer">
+            Cancelaciones con más de 15 días de anticipación reciben devolución
+            del 80% del anticipo. Entre 7 y 14 días, 50%. Menos de 7 días,
+            el anticipo no es reembolsable pero puede usarse como crédito para
+            reprogramación. Cada caso se evalúa con flexibilidad.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">¿Tienen opciones para eventos corporativos formales?</h3>
+          <p class="faq-answer">
+            Sí. Aunque nuestra identidad es oscura e irreverente, adaptamos
+            el nivel de intensidad temática según el contexto. Hemos organizado
+            desde juntas directivas hasta lanzamientos de producto con un look
+            elegante y minimalista dentro de nuestra estética.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">¿Aceptan eventos temáticos específicos (Halloween, etc.)?</h3>
+          <p class="faq-answer">
+            El Sanatorio es el lugar más natural del mundo para Halloween
+            y eventos de terror temático. También organizamos eventos de
+            vampiros, brujas, noir, cyberpunk oscuro, gore elegante y cualquier
+            temática que habite en las sombras. Consúltanos tu visión.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LOCATION SECTION
+  ============================================================ -->
+  <section class="location-section" id="ubicacion" aria-labelledby="location-heading">
+    <div class="container">
+      <div class="location-grid">
+
+        <div>
+          <p class="section-label">Ubicación</p>
+          <h2 class="section-title" id="location-heading">
+            Encuéntranos en el<br /><em>Centro Histórico</em>
+          </h2>
+          <p style="color:var(--gris-ceniza); font-size:0.9rem; line-height:1.8; margin-bottom:2rem;">
+            A pasos de la catedral, entre calles empedradas y fachadas coloniales.
+            El Sanatorio vive donde Santa Marta guarda sus misterios más antiguos.
+          </p>
+
+          <div class="location-details">
+
+            <div class="location-detail">
+              <span class="detail-icon" aria-hidden="true">📍</span>
+              <span class="detail-label">Dirección</span>
+              <span class="detail-value">Centro Histórico<br />Santa Marta, Colombia</span>
+            </div>
+
+            <div class="location-detail">
+              <span class="detail-icon" aria-hidden="true">🕰️</span>
+              <span class="detail-label">Horario Eventos</span>
+              <span class="detail-value">Lun–Dom<br />Previa reserva</span>
+            </div>
+
+            <div class="location-detail">
+              <span class="detail-icon" aria-hidden="true">📞</span>
+              <span class="detail-label">WhatsApp</span>
+              <span class="detail-value">
+                <a href="https://wa.me/19034598763"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="color:var(--oro); text-decoration:none;">
+                  +1 (903) 459-8763
+                </a>
+              </span>
+            </div>
+
+            <div class="location-detail">
+              <span class="detail-icon" aria-hidden="true">🌐</span>
+              <span class="detail-label">Web</span>
+              <span class="detail-value">
+                <a href="https://el-sanatorio.com"
+                   style="color:var(--oro); text-decoration:none;">
+                  el-sanatorio.com
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="map-placeholder" role="img" aria-label="Mapa — El Sanatorio, Centro Histórico, Santa Marta">
+          <span class="map-pin" aria-hidden="true">📍</span>
+          <span class="map-label">Centro Histórico · Santa Marta</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOOKING CTA
+  ============================================================ -->
+  <section class="booking-section" id="reservar" aria-labelledby="booking-heading">
+    <div class="container">
+      <div class="booking-inner">
+        <span class="booking-crown" aria-hidden="true">👑</span>
+
+        <h2 class="section-title" id="booking-heading">
+          Inicia tu <em>Ritual</em>
+        </h2>
+
+        <p class="booking-desc">
+          Cada gran evento comienza con un mensaje en la oscuridad.
+          El nuestro. Cuéntanos tu visión y construimos juntos
+          la experiencia que te mereces.
+        </p>
+
+        <a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20reservar%20un%20evento%20privado%20en%20El%20Sanatorio%20de%20Santa%20Marta.%20Me%20pueden%20dar%20informaci%C3%B3n%3F"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="booking-cta-main"
+           aria-label="Reservar evento privado por WhatsApp">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          <span>Reservar por WhatsApp</span>
+        </a>
+
+        <div class="booking-meta" role="list">
+          <div class="meta-item" role="listitem">
+            <span class="meta-icon" aria-hidden="true">⚡</span>
+            Respuesta en menos de 2 horas
+          </div>
+          <div class="meta-item" role="listitem">
+            <span class="meta-icon" aria-hidden="true">🎯</span>
+            Cotización sin compromiso
+          </div>
+          <div class="meta-item" role="listitem">
+            <span class="meta-icon" aria-hidden="true">🔒</span>
+            Reserva segura con anticipo
+          </div>
+        </div>
+
+        <div class="booking-divider" aria-hidden="true">
+          <span class="booking-or">o</span>
+        </div>
+
+        <p class="booking-alt">
+          Escríbenos directamente a
+          <a href="mailto:eventos@el-sanatorio.com">eventos@el-sanatorio.com</a>
+          o visítanos en el Centro Histórico de Santa Marta.
         </p>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados.</p>
-      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
-    </div>
-  </div>
-</footer>
+  </section>
 
-<script src="js/main.js"></script>
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-grid">
+
+      <div>
+        <span class="footer-brand-logo">El Sanatorio</span>
+        <p class="footer-brand-desc">
+          Horror yakitori bar en el Centro Histórico de Santa Marta.
+          Donde el miedo tiene sabor y cada noche es un ritual diferente.
+          Colombia, siglo XXI — en un edificio del XVIII.
+        </p>
+        <div class="footer-social" aria-label="Redes sociales">
+          <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+          <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+          <a href="https://wa.me/19034598763" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-col-title">Eventos</h3>
+        <ul class="footer-links">
+          <li><a href="#paquetes">Paquetes</a></li>
+          <li><a href="#cocktails">Coctelería</a></li>
+          <li><a href="#menu">Menú Yakitori</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#reservar">Reservar</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-col-title">El Lugar</h3>
+        <ul class="footer-links">
+          <li><a href="/nosotros.html">Nuestra Historia</a></li>
+          <li><a href="/menu.html">Menú General</a></li>
+          <li><a href="/reservas.html">Reserva Mesa</a></li>
+          <li><a href="/galeria.html">Galería</a></li>
+          <li><a href="/prensa.html">Prensa</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-col-title">Contacto</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/19034598763" target="_blank" rel="noopener noreferrer">
+              WhatsApp +1 903 459 8763
+            </a>
+          </li>
+          <li>
+            <a href="mailto:eventos@el-sanatorio.com">
+              eventos@el-sanatorio.com
+            </a>
+          </li>
+          <li>
+            <a href="#ubicacion">Centro Histórico, Santa Marta</a>
+          </li>
+          <li>
+            <a href="https://el-sanatorio.com" aria-label="Sitio web principal">
+              el-sanatorio.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        © 2025 El Sanatorio · Santa Marta, Colombia · Todos los derechos reservados.
+      </p>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/terminos.html">Términos</a>
+        <a href="/cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "El Sanatorio",
+    "description": "Horror-themed yakitori bar con servicio de eventos privados y corporativos en el Centro Histórico de Santa Marta, Colombia.",
+    "url": "https://el-sanatorio.com/events.html",
+    "telephone": "+19034598763",
+    "email": "eventos@el-sanatorio.com",
+    "servesCuisine": ["Japanese", "Yakitori", "Cocktail Bar"],
+    "priceRange": "$$-$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santa Marta",
+      "addressRegion": "Magdalena",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "11.2408",
+      "longitude": "-74.2110"
+    },
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Eventos Privados", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Eventos Corporativos", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Bar de Cócteles", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Edificio Colonial", "value": true}
+    ],
+    "maximumAttendeeCapacity": 120
+  }
+  </script>
+
 </body>
 </html>

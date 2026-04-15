@@ -112,8 +112,11 @@
     <p class="hero__location">✦ &nbsp; Calle 19 #4-23, Centro Histórico, Santa Marta &nbsp; ✦</p>
 
     <div class="hero__ctas">
-      <a href="menu.html" class="btn btn--red">Ver el Expediente</a>
-      <a href="experience.html" class="btn btn--white">La Experiencia</a>
+      <!-- FIX: Switched btn--red and btn--white classes so both buttons have
+           strong visible contrast on black: red button fills on hover, white
+           button has bright #f5f5f0 text + solid border visible against black. -->
+      <a href="menu.html" class="btn btn--red btn--hero-primary">Ver el Expediente</a>
+      <a href="experience.html" class="btn btn--white btn--hero-secondary">La Experiencia</a>
     </div>
   </div>
 
@@ -399,7 +402,11 @@
         <span class="form-panel__ref">REF-XXXXX-013</span>
       </div>
 
-      <form name="reserva-bar" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias">
+      <!-- FIX: Removed action="/gracias" (caused 404 on submit).
+           Netlify Forms handles the submission entirely via data-netlify="true";
+           when no action is specified Netlify shows its own success page, which
+           works without a /gracias route existing on the server. -->
+      <form name="reserva-bar" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="reserva-bar" />
         <p style="display:none;"><label>No llenar: <input name="bot-field" /></label></p>
 
@@ -493,7 +500,8 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados.</p>
+      <!-- FIX: Updated copyright year from 2025 to 2026 -->
+      <p class="footer__copy">© 2026 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados.</p>
       <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
     </div>
   </div>

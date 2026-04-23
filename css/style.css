@@ -388,7 +388,7 @@ p  { font-family: var(--font-fell); line-height: 1.8; font-size: 1rem; color: va
   font-family: var(--font-fell);
   font-style: italic;
   font-size: clamp(1rem, 2vw, 1.3rem);
-  color: rgba(245,245,240,0.5);
+  color: rgba(245,245,240,0.88); /* raised from 0.5 → 0.88 for WCAG AA contrast */
   animation: fade-in 1s 1.5s ease forwards;
   opacity: 0;
 }

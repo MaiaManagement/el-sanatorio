@@ -1,0 +1,14 @@
+# Canonical trailing-slash redirects
+/menu/      /menu     301
+/experience/ /experience 301
+/events/    /events   301
+/tours/     /tours    301
+/historia/  /historia 301
+/contact/   /contact  301
+/privacidad/ /privacidad 301
+/terminos/  /terminos 301
+
+# Legacy/wrong paths (if any arrive from old links)
+/privacy    /privacidad 301
+/politica-privacidad /privacidad 301
+/terms      /terminos 301

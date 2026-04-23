@@ -29,26 +29,114 @@
   <!-- Fonts + Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <!-- Load non-critical fonts async to reduce render-blocking -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+  </noscript>
+  <!-- Remaining fonts — async load -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  </noscript>
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Schema.org -->
+  <!-- Schema.org — @graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BarOrPub",
-    "name": "El Sanatorio",
-    "description": "Yakitori gastro bar con cócteles de inspiración médica y experiencia de terror inmersiva.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Calle 19 #4-23",
-      "addressLocality": "Centro Histórico, Santa Marta",
-      "addressCountry": "CO"
-    },
-    "telephone": "+573174370575",
-    "url": "https://el-sanatorio.com",
-    "servesCuisine": "Yakitori, Japanese, Cocktail Bar",
-    "priceRange": "$$"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://maia-management.com/#organization",
+        "name": "MAIA MANAGEMENT GROUP S.A.S.",
+        "legalName": "MAIA MANAGEMENT GROUP S.A.S.",
+        "vatID": "901.862.977-7",
+        "taxID": "901.862.977-7",
+        "url": "https://maia-management.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "CR 1 #19-61",
+          "addressLocality": "Santa Marta",
+          "addressRegion": "Magdalena",
+          "postalCode": "470007",
+          "addressCountry": "CO"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+57-321-392-2272",
+          "contactType": "customer service",
+          "availableLanguage": ["Spanish"]
+        }
+      },
+      {
+        "@type": ["BarOrPub", "FoodEstablishment", "TouristAttraction"],
+        "@id": "https://el-sanatorio.com/#establishment",
+        "name": "El Sanatorio",
+        "legalName": "El Sanatorio (operado por MAIA MANAGEMENT GROUP S.A.S.)",
+        "description": "Yakitori gastro bar con cócteles de inspiración médica y experiencia de terror inmersiva en el Centro Histórico de Santa Marta, Colombia.",
+        "url": "https://el-sanatorio.com",
+        "telephone": "+57-321-392-2272",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle 19 #4-23",
+          "addressLocality": "Santa Marta",
+          "addressRegion": "Magdalena",
+          "postalCode": "470001",
+          "addressCountry": "CO"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "11.2408",
+          "longitude": "-74.2110"
+        },
+        "hasMap": "https://maps.google.com/maps?q=Calle+19+%234-23+Santa+Marta+Colombia",
+        "menu": "https://el-sanatorio.com/menu",
+        "servesCuisine": ["Yakitori", "Japanese", "Cocktail Bar"],
+        "priceRange": "$$",
+        "currenciesAccepted": "COP",
+        "paymentAccepted": "Cash, Credit Card",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Wednesday", "Thursday"],
+            "opens": "18:00",
+            "closes": "01:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Friday", "Saturday"],
+            "opens": "18:00",
+            "closes": "02:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "17:00",
+            "closes": "00:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/elsanatorio.sm/"
+        ],
+        "image": "https://el-sanatorio.com/og-image.jpg",
+        "parentOrganization": {
+          "@id": "https://maia-management.com/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://el-sanatorio.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://el-sanatorio.com/"
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -79,7 +167,7 @@
       <li><a href="contact.html">Contacto</a></li>
     </ul>
 
-    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -97,13 +185,22 @@
 </div>
 
 <!-- ── Hero ──────────────────────────────────────────────────── -->
-<section class="hero" aria-label="Bienvenida" style="background-image: url('images/fachada.jpg'); background-size: cover; background-position: center top;">
+<section class="hero" aria-label="Bienvenida">
+  <img
+    src="images/fachada.jpg"
+    alt="Fachada de El Sanatorio: edificio negro con buganvillas moradas y neón rojo, Centro Histórico Santa Marta"
+    class="hero__bg-img"
+    fetchpriority="high"
+    decoding="async"
+    width="1920"
+    height="1080"
+  />
   <div class="hero__content">
     <p class="hero__cross" aria-hidden="true">✛ &nbsp;&nbsp; ✛ &nbsp;&nbsp; ✛</p>
 
-    <h1 class="hero__title neon-red neon-pulse">
-      <span class="hero__title-line">EL</span>
-      <span class="hero__title-line neon-flicker">SANATORIO</span>
+    <h1 class="hero__title neon-red neon-pulse" aria-label="El Sanatorio">
+      <span class="hero__title-line" aria-hidden="true">EL</span>
+      <span class="hero__title-line neon-flicker" aria-hidden="true">SANATORIO</span>
     </h1>
 
     <div class="hero__divider" aria-hidden="true"></div>
@@ -341,8 +438,14 @@
             </div>
             <div class="contact-item">
               <div class="contact-item__icon">📱</div>
-              <a href="https://wa.me/19034598763?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener noreferrer" style="transition: color 0.2s;">
-                WhatsApp: +57 317 437 0575
+              <a href="tel:+573213922272" style="transition: color 0.2s;">
+                +57 321 392 2272
+              </a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon">💬</div>
+              <a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener noreferrer" style="transition: color 0.2s;">
+                WhatsApp (mensaje directo)
               </a>
             </div>
             <div class="contact-item">
@@ -376,11 +479,15 @@
             loading="lazy">
           </iframe>
         </div>
-        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 0.75rem; letter-spacing: 0.1em;">
-          CALLE 19 #4-23 — CENTRO HISTÓRICO — SANTA MARTA, MAGDALENA, COLOMBIA
-        </p>
+        <p class="footer__legal-entity" style="font-size: 0.65rem; color: rgba(245,245,240,0.45); font-family: 'Share Tech Mono', monospace; letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+        MAIA MANAGEMENT GROUP S.A.S. — NIT 901.862.977-7 — MATRÍCULA 218217 C.C.S.M.
+        &nbsp;|&nbsp; CR 1 #19-61, Barrio Rodadero, Santa Marta, Magdalena, Colombia
+        &nbsp;|&nbsp; <a href="tel:+573213922272" style="color: rgba(245,245,240,0.55); text-decoration: underline;">+57 321 392 2272</a>
+        &nbsp;|&nbsp; <a href="/privacidad" style="color: rgba(245,245,240,0.55); text-decoration: underline;">Política de Privacidad</a>
+        &nbsp;|&nbsp; <a href="/terminos" style="color: rgba(245,245,240,0.55); text-decoration: underline;">Términos de Uso</a>
+      </p>
         <div style="margin-top: 1.5rem;">
-          <a href="https://wa.me/19034598763?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio"
+          <a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio"
              target="_blank" rel="noopener noreferrer" class="btn btn--white" style="width: 100%; display: block; text-align: center;">
             Escribir por WhatsApp
           </a>
@@ -471,11 +578,11 @@
       <div>
         <p class="footer__logo">EL SANATORIO</p>
         <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
-        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 1rem; line-height: 1.8;">
+        <address class="mono" style="font-size: 0.75rem; color: var(--gray); margin-top: 1rem; line-height: 1.8; font-style: normal;">
           Calle 19 #4-23<br>
           Centro Histórico<br>
-          Santa Marta, Colombia
-        </p>
+          Santa Marta, Magdalena, Colombia
+        </address>
       </div>
       <div>
         <p class="footer__col-title">Instalaciones</p>
@@ -490,7 +597,7 @@
       <div>
         <p class="footer__col-title">Protocolo</p>
         <ul class="footer__links" role="list">
-          <li><a href="https://wa.me/19034598763?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
           <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="#historia">La Historia</a></li>
           <li><a href="experience.html#rules">Normas del Laberinto</a></li>
@@ -510,6 +617,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

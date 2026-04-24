@@ -4,15 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tours Históricos — Centro Histórico de Santa Marta | El Sanatorio</title>
-  <meta name="description" content="Walking tour bilingüe del Centro Histórico de Santa Marta. 2.5–3 horas. Historia colonial, la muerte de Bolívar, y una visita final a El Sanatorio. $55 USD por persona. Ideal para cruceristas." />
+  <meta name="description" content="Walking tour bilingüe del Centro Histórico de Santa Marta. ~2.5 horas. Plaza Bolívar, Catedral, Casa de la Aduana (donde murió Bolívar), arquitectura colonial e historias locales. $55 USD por persona. Ideal para cruceristas." />
+  <meta name="keywords" content="tour santa marta, walking tour santa marta, centro histórico santa marta, tour bolívar, tour colonial, cruceristas santa marta" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
   <meta property="og:title"       content="Tours Históricos del Centro — El Sanatorio, Santa Marta" />
-  <meta property="og:description" content="Bilingual walking tour of Santa Marta's historic center ending at El Sanatorio. $55 USD. Cruise ship passengers welcome." />
+  <meta property="og:description" content="Bilingual guided walking tour of Santa Marta's historic centre. ~2.5 hours. $55 USD per person. Cruise ship passengers welcome. Daily at 9 AM and 3 PM." />
   <meta property="og:url"         content="https://el-sanatorio.com/tours.html" />
+  <meta property="og:image"       content="https://el-sanatorio.com/images/og-image.jpg" />
+  <meta property="og:locale"      content="es_CO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Tours Históricos — Santa Marta | El Sanatorio" />
+  <meta name="twitter:description" content="Walking tour bilingüe del Centro Histórico. $55 USD. Diario 9 AM y 3 PM. Cruceristas bienvenidos." />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://el-sanatorio.com/tours.html" />
+
+  <!-- Cookie Consent Banner — must be first script -->
+  <script src="/consent-banner.js"></script>
+
+  <!-- Fonts + Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+  </noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  </noscript>
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Tour Histórico del Centro de Santa Marta",
+    "description": "Walking tour bilingüe (ES/EN) del Centro Histórico de Santa Marta. ~2.5 horas. Guía experto local. Grupos de 2–12 personas.",
+    "url": "https://el-sanatorio.com/tours.html",
+    "touristType": ["Cultural tourists", "Cruise ship passengers", "History enthusiasts"],
+    "availableLanguage": ["Spanish", "English"],
+    "provider": {
+      "@type": "Organization",
+      "name": "El Sanatorio",
+      "url": "https://el-sanatorio.com",
+      "telephone": "+57-317-437-0575"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "55",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "itinerary": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Plaza de Bolívar"},
+        {"@type": "ListItem", "position": 2, "name": "Catedral Basílica de Santa Marta"},
+        {"@type": "ListItem", "position": 3, "name": "Casa de la Aduana (muerte de Bolívar)"},
+        {"@type": "ListItem", "position": 4, "name": "Centro Histórico — arquitectura colonial"},
+        {"@type": "ListItem", "position": 5, "name": "El Sanatorio"}
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -21,7 +81,7 @@
   <div class="nav__inner">
     <a href="index.html" class="nav__logo" aria-label="El Sanatorio — inicio">
       <span class="nav__logo-num">PACIENTE 013</span>
-      <span class="nav__logo-name">EL SANATORIO</span>
+      <span class="nav__logo-name" data-glitch="EL SANATORIO">EL SANATORIO</span>
     </a>
     <div class="nav__monitor" aria-hidden="true">
       <svg viewBox="0 0 300 36" preserveAspectRatio="none">
@@ -37,12 +97,12 @@
       <li><a href="historia.html">Historia</a></li>
       <li><a href="contact.html">Contacto</a></li>
     </ul>
-    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-<div class="nav__mobile-menu" role="navigation">
+<div class="nav__mobile-menu" id="mobile-menu" role="navigation" aria-label="Menú móvil">
   <a href="index.html">Inicio</a>
   <a href="menu.html">Menú</a>
   <a href="experience.html">Experiencia</a>
@@ -55,15 +115,18 @@
 <!-- ── Hero ──────────────────────────────────────────────────── -->
 <div class="tours-hero page-hero">
   <div class="container--sm text-center" style="position: relative; z-index: 1;">
-    <div class="section-label" style="justify-content: center;"><span>Recorridos</span></div>
-    <h1 class="section-title section-title--center" style="font-size: clamp(2rem, 6vw, 4rem);">
-      Tours del Centro Histórico
+    <div class="section-label" style="justify-content: center;"><span>Recorridos Históricos</span></div>
+    <h1 class="section-title section-title--center" style="font-size: clamp(1.8rem, 5vw, 3.5rem); line-height: 1.2;">
+      Recorre la Historia<br>
+      <span style="font-size: 0.65em; color: var(--gold);">de Santa Marta</span>
     </h1>
-    <p class="serif" style="color: var(--light-gray); margin-top: 1rem; max-width: 560px; margin-left: auto; margin-right: auto;">
+    <p class="serif" style="color: var(--light-gray); margin-top: 1.5rem; max-width: 560px; margin-left: auto; margin-right: auto;">
       Dos horas y media de historia colonial, arquitectura republicana y el peso
-      de una ciudad que vio morir a Bolívar. El tour termina donde termina todo:
-      en El Sanatorio.
+      de una ciudad que vio morir a Bolívar. Guía experto local, disponible en
+      español e inglés. El tour termina donde termina todo: en El Sanatorio.
     </p>
+
+    <!-- Stats cards -->
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
       <div class="panel" style="padding: 12px 24px; border-color: var(--gold); text-align: center;">
         <p class="mono" style="font-size: 0.62rem; color: var(--gray); letter-spacing: 0.2em;">PRECIO</p>
@@ -72,26 +135,38 @@
       </div>
       <div class="panel" style="padding: 12px 24px; text-align: center;">
         <p class="mono" style="font-size: 0.62rem; color: var(--gray); letter-spacing: 0.2em;">DURACIÓN</p>
-        <p style="font-family: var(--font-type); font-size: 1.8rem; color: var(--off-white);">2.5–3h</p>
-        <p class="mono" style="font-size: 0.62rem; color: var(--gray);">bilingüe</p>
+        <p style="font-family: var(--font-type); font-size: 1.8rem; color: var(--off-white);">~2.5h</p>
+        <p class="mono" style="font-size: 0.62rem; color: var(--gray);">a pie</p>
       </div>
       <div class="panel" style="padding: 12px 24px; text-align: center;">
         <p class="mono" style="font-size: 0.62rem; color: var(--gray); letter-spacing: 0.2em;">IDIOMAS</p>
         <p style="font-family: var(--font-type); font-size: 1.8rem; color: var(--off-white);">ES/EN</p>
         <p class="mono" style="font-size: 0.62rem; color: var(--gray);">Español · English</p>
       </div>
+      <div class="panel" style="padding: 12px 24px; text-align: center;">
+        <p class="mono" style="font-size: 0.62rem; color: var(--gray); letter-spacing: 0.2em;">HORARIOS</p>
+        <p style="font-family: var(--font-type); font-size: 1.8rem; color: var(--off-white);">9 / 3</p>
+        <p class="mono" style="font-size: 0.62rem; color: var(--gray);">AM · PM — Diario</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <a href="https://wa.me/573174370575?text=Hola!%20Quiero%20reservar%20el%20tour%20hist%C3%B3rico"
+         target="_blank" rel="noopener noreferrer" class="btn btn--hero-primary">
+        Reservar por WhatsApp
+      </a>
     </div>
   </div>
 </div>
 
 <figure style="margin: 0; overflow: hidden; max-height: 500px;">
-  <img loading="lazy" src="images/santa-marta.jpg" alt="Calle colonial de Santa Marta de noche con lámparas de gas, flores moradas y edificio imponente al fondo" style="width: 100%; display: block; max-height: 500px; object-fit: cover; object-position: center;" width="2816" height="1536">
+  <img loading="lazy" src="images/santa-marta.jpg" alt="Calle colonial de Santa Marta de noche con lámparas de gas, flores moradas y edificio imponente al fondo" style="width: 100%; display: block; max-height: 500px; object-fit: cover; object-position: center;" width="2816" height="1536" />
 </figure>
 
 <!-- ── Tour Details ───────────────────────────────────────────── -->
-<section style="background: var(--panel-dark); padding: 4rem 0;" aria-labelledby="tour-title">
+<section class="fade-in-section" style="background: var(--panel-dark); padding: 4rem 0;" aria-labelledby="tour-title">
   <div class="container">
-    <div class="tour-card fade-in-section">
+    <div class="tour-card">
       <div class="tour-card__info">
         <p class="mono" style="font-size: 0.62rem; color: var(--crimson); letter-spacing: 0.3em; margin-bottom: 0.5rem;">RECORRIDO PRINCIPAL</p>
         <h2 class="section-title" id="tour-title" style="font-size: 1.6rem; margin-bottom: 1rem;">
@@ -101,23 +176,29 @@
         <p style="color: var(--light-gray); font-size: 0.9rem; margin-bottom: 1.5rem;">
           Santa Marta es la ciudad más antigua de Suramérica todavía habitada. Fundada en 1525,
           fue puerto de esclavos, cuartel general de conquistadores, y la ciudad donde murió
-          el hombre que liberó seis naciones — con una enfermedad de pulmones que ningún
+          el hombre que liberó seis naciones — con una enfermedad de pulmón que ningún
           médico de la época pudo curar.
         </p>
 
         <div class="tour-highlights" role="list">
           <div class="tour-highlight" role="listitem">
-            Plaza Bolívar y la Catedral — el centro de poder colonial desde el siglo XVI</div>
+            <strong style="color: var(--off-white);">Plaza de Bolívar</strong> — el corazón colonial desde el siglo XVI, con la Catedral Basílica al frente
+          </div>
           <div class="tour-highlight" role="listitem">
-            La Quinta de San Pedro Alejandrino — donde murió Simón Bolívar de tuberculosis en 1830</div>
+            <strong style="color: var(--off-white);">Casa de la Aduana</strong> — donde pasó sus últimas horas Simón Bolívar antes de morir en 1830
+          </div>
           <div class="tour-highlight" role="listitem">
-            Arquitectura republicana del Centro Histórico — casas de bahareque y patios interiores</div>
+            <strong style="color: var(--off-white);">Arquitectura republicana</strong> — casas de bahareque, patios interiores, callejones que el turista promedio nunca ve
+          </div>
           <div class="tour-highlight" role="listitem">
-            El antiguo Barrio Chino — los comerciantes que llegaron y se quedaron</div>
+            <strong style="color: var(--off-white);">Historias locales y leyendas</strong> — lo que los libros de historia omiten, narrado por quien creció aquí
+          </div>
           <div class="tour-highlight" role="listitem">
-            La historia de los sanatorios en Colombia — tuberculosis, miedo y segregación</div>
+            <strong style="color: var(--off-white);">Rincones escondidos</strong> — plazas secretas, fachadas olvidadas, el Santa Marta que los turistas nunca descubren
+          </div>
           <div class="tour-highlight" role="listitem">
-            Llegada final a El Sanatorio — coctel de bienvenida incluido en el precio del tour</div>
+            <strong style="color: var(--off-white);">Llegada a El Sanatorio</strong> — cóctel de bienvenida incluido al final del recorrido
+          </div>
         </div>
 
         <div class="tour-meta">
@@ -127,11 +208,15 @@
           </div>
           <div class="tour-meta__item">
             <span class="tour-meta__key">Horarios</span>
-            <span class="tour-meta__val">9:00 AM / 3:00 PM (diario)</span>
+            <span class="tour-meta__val">9:00 AM / 3:00 PM — diario</span>
           </div>
           <div class="tour-meta__item">
-            <span class="tour-meta__key">Grupo máximo</span>
-            <span class="tour-meta__val">12 personas</span>
+            <span class="tour-meta__key">Tamaño del grupo</span>
+            <span class="tour-meta__val">2–12 personas</span>
+          </div>
+          <div class="tour-meta__item">
+            <span class="tour-meta__key">Idiomas</span>
+            <span class="tour-meta__val">Español · English (bilingüe)</span>
           </div>
           <div class="tour-meta__item">
             <span class="tour-meta__key">Incluye</span>
@@ -149,14 +234,27 @@
       </div>
 
       <!-- Booking form -->
-      <div class="tour-card__booking">
-        <p class="mono" style="font-size: 0.62rem; color: var(--crimson); letter-spacing: 0.3em; margin-bottom: 1.5rem;">SOLICITUD DE RESERVA</p>
+      <div class="tour-card__booking" id="booking-tour">
+        <p class="mono" style="font-size: 0.62rem; color: var(--crimson); letter-spacing: 0.3em; margin-bottom: 1rem;">RESERVAR AHORA</p>
+
+        <!-- WhatsApp CTA -->
+        <a href="https://wa.me/573174370575?text=Hola!%20Quiero%20reservar%20el%20tour%20hist%C3%B3rico"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--hero-primary"
+           style="display: block; text-align: center; margin-bottom: 1.5rem; padding: 14px 20px;">
+          💬 &nbsp; Reservar por WhatsApp
+        </a>
+        <p class="mono" style="font-size: 0.62rem; color: var(--gray); text-align: center; margin-bottom: 1.5rem; letter-spacing: 0.08em;">
+          +57 317 437 0575 · Confirmación en 12h
+        </p>
+
+        <div class="hr-label"><span>o formulario</span></div>
 
         <form name="reserva-tour" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias">
           <input type="hidden" name="form-name" value="reserva-tour" />
           <p style="display:none;"><label>No llenar: <input name="bot-field" /></label></p>
 
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
             <div class="form-group">
               <label class="form-label" for="tour-name">Nombre / Name *</label>
               <input class="form-input" type="text" id="tour-name" name="nombre" required placeholder="Full name" />
@@ -170,9 +268,9 @@
               <input class="form-input" type="tel" id="tour-phone" name="telefono" placeholder="+1 / +57..." />
             </div>
             <div class="form-group">
-              <label class="form-label" for="tour-people">Number of People *</label>
+              <label class="form-label" for="tour-people">Number of People / Personas *</label>
               <select class="form-select" id="tour-people" name="personas" required>
-                <option value="" disabled selected>Select</option>
+                <option value="" disabled selected>Select / Seleccionar</option>
                 <option value="1">1 person</option>
                 <option value="2">2 people</option>
                 <option value="3">3 people</option>
@@ -194,14 +292,14 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label" for="tour-cruise">Cruise Ship / Ship Name</label>
+              <label class="form-label" for="tour-cruise">Cruise Ship Name (if applicable)</label>
               <input class="form-input" type="text" id="tour-cruise" name="crucero" placeholder="MSC Armonia / none" />
             </div>
             <div class="form-group">
               <label class="form-label" for="tour-lang">Preferred Language</label>
               <select class="form-select" id="tour-lang" name="idioma">
-                <option value="es">Español</option>
                 <option value="en">English</option>
+                <option value="es">Español</option>
                 <option value="es-en">Both / Ambos</option>
               </select>
             </div>
@@ -211,120 +309,30 @@
         </form>
 
         <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1rem; line-height: 1.7; letter-spacing: 0.08em;">
-          Payment on the day of the tour.<br>
-          WhatsApp: <a href="https://wa.me/573195962773?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" style="color: var(--crimson);">+57 319 596 2773</a><br>
-          We confirm within 12 hours.
+          Pago el día del tour / Payment on the day.<br>
+          WhatsApp: <a href="https://wa.me/573174370575" style="color: var(--crimson);">+57 317 437 0575</a>
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── The Bolivar Connection ─────────────────────────────────── -->
-<section style="background: var(--black); padding: 4rem 0;" aria-labelledby="hist-title">
-  <div class="container--sm fade-in-section">
-    <div class="section-label"><span>Archivo Histórico</span></div>
-    <h2 class="section-title" id="hist-title">La Conexión</h2>
+<!-- ── Perfect For ─────────────────────────────────────────────── -->
+<section class="fade-in-section" style="background: var(--black); padding: 4rem 0;" aria-labelledby="for-title">
+  <div class="container--sm">
+    <div class="section-label"><span>Ideal Para</span></div>
+    <h2 class="section-title" id="for-title">¿Para Quién Es Este Tour?</h2>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
       <div class="panel panel--gold-accent">
-        <h3 style="color: var(--gold); margin-bottom: 0.75rem; font-family: var(--font-type); font-size: 1rem; letter-spacing: 0.1em;">Bolívar y la TB</h3>
+        <h3 style="color: var(--gold); margin-bottom: 0.75rem; font-family: var(--font-type); font-size: 1rem; letter-spacing: 0.1em;">🚢 Cruceristas</h3>
         <p style="color: var(--light-gray); font-size: 0.9rem; line-height: 1.8;">
-          Simón Bolívar murió en Santa Marta el 17 de diciembre de 1830, en la hacienda
-          San Pedro Alejandrino. La causa oficial: tuberculosis pulmonar. La misma enfermedad
-          que décadas después llenaría los sanatorios de Colombia. La misma que convirtió
-          edificios como el nuestro en lugares de aislamiento, miedo y olvido.
+          El puerto de Santa Marta está a minutos del Centro Histórico. El tour está
+          cronometrado para los horarios de los barcos — su guía lleva el schedule del
+          crucero y le garantizamos el regreso a bordo con tiempo de sobra.
         </p>
       </div>
       <div class="panel panel--gold-accent">
-        <h3 style="color: var(--gold); margin-bottom: 0.75rem; font-family: var(--font-type); font-size: 1rem; letter-spacing: 0.1em;">Los Sanatorios de Colombia</h3>
+        <h3 style="color: var(--gold); margin-bottom: 0.75rem; font-family: var(--font-type); font-size: 1rem; letter-spacing: 0.1em;">🌍 Visitantes Internacionales</h3>
         <p style="color: var(--light-gray); font-size: 0.9rem; line-height: 1.8;">
-          Entre 1920 y 1970, Colombia construyó decenas de sanatorios para pacientes
-          de tuberculosis — la epidemia silenciosa. Muchos fueron construidos lejos
-          de los centros urbanos. Cuando llegaron los antibióticos, los cerraron rápido.
-          No siempre verificaron que estuvieran vacíos.
-        </p>
-      </div>
-    </div>
-
-    <blockquote style="margin: 2.5rem 0; font-family: var(--font-fell); font-style: italic; font-size: 1.05rem; color: rgba(245,245,240,0.5); border-left: 2px solid var(--gold); padding-left: 1.5rem;">
-      "Santa Marta tiene la gloria de poseer sus restos."<br>
-      <span style="font-size: 0.82rem; color: var(--gray); font-style: normal;">— Últimas palabras registradas de Simón Bolívar, 1830</span>
-    </blockquote>
-
-    <p style="color: var(--light-gray); font-size: 0.9rem;">
-      Nuestro tour une estos hilos: la ciudad colonial, la muerte del Libertador, la epidemia
-      que nadie quería nombrar, y el edificio que se quedó en pie cuando todos los demás
-      cerraron. El tour termina aquí porque aquí termina la historia — o comienza, según
-      a quién le pregunten.
-    </p>
-  </div>
-</section>
-
-<!-- ── Cruise CTA ──────────────────────────────────────────────── -->
-<section style="background: var(--panel-dark); padding: 3rem 0;" aria-label="Información para cruceristas">
-  <div class="container--sm fade-in-section">
-    <div class="panel" style="border-color: var(--gold); text-align: center; padding: 2.5rem;">
-      <p class="mono" style="font-size: 0.65rem; color: var(--gold); letter-spacing: 0.3em; margin-bottom: 0.75rem;">PARA CRUCERISTAS / FOR CRUISE PASSENGERS</p>
-      <h3 style="font-family: var(--font-type); font-size: 1.3rem; letter-spacing: 0.1em; margin-bottom: 1rem; color: var(--white);">
-        Back on Board — Guaranteed
-      </h3>
-      <p style="color: var(--light-gray); font-size: 0.9rem; max-width: 480px; margin: 0 auto 1.5rem;">
-        All tours are timed to cruise schedules. We know the docking times. We know the city.
-        If your ship is in Santa Marta, we will have you back at the port with time to spare.
-        Your guide carries the ship schedule.
-      </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="https://wa.me/573195962773?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio"
-           target="_blank" rel="noopener noreferrer" class="btn btn--gold">
-          WhatsApp para Cruceristas
-        </a>
-        <a href="#booking-tour" class="btn btn--white">Reservar Online</a>
-      </div>
-      <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1.5rem; letter-spacing: 0.1em;">
-        PUERTO DE SANTA MARTA — TERMINAL DE CRUCEROS<br>
-        Transfers disponibles desde el puerto · Transfers available from port
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ── Footer ─────────────────────────────────────────────────── -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__inner">
-      <div>
-        <p class="footer__logo">EL SANATORIO</p>
-        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
-        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 1rem; line-height: 1.8;">
-          Calle 19 #4-23 · Centro Histórico<br>Santa Marta, Colombia
-        </p>
-      </div>
-      <div>
-        <p class="footer__col-title">Instalaciones</p>
-        <ul class="footer__links" role="list">
-          <li><a href="menu.html">El Menú / Expediente</a></li>
-          <li><a href="experience.html">La Experiencia</a></li>
-          <li><a href="tours.html">Tours Históricos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer__col-title">Contacto</p>
-        <ul class="footer__links" role="list">
-          <li><a href="https://wa.me/573195962773?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="index.html#reservar">Reservar Mesa</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia.</p>
-      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+          El tour es completamente bil

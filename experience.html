@@ -3,16 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Experiencia — Horror Inmersivo | El Sanatorio, Santa Marta</title>
-  <meta name="description" content="El laberinto de horror inmersivo de El Sanatorio. Pisos superiores. Sanatorio abandonado. Grupos reducidos. No todo el mundo sale por el mismo camino. Santa Marta, Colombia." />
-  <meta property="og:title"       content="La Experiencia — Horror Inmersivo | El Sanatorio" />
-  <meta property="og:description" content="Los pisos superiores no fueron renovados. Se dejaron como estaban. Grupos de máximo 8 personas. Ella sabe que estás aquí." />
+  <title>El Laberinto: La Experiencia de Horror | El Sanatorio, Santa Marta</title>
+  <meta name="description" content="El Laberinto: experiencia de terror inmersivo y teatral en el corazón del Centro Histórico de Santa Marta. No es una casa de sustos — es una historia. Grupos reducidos. Adultos. $45.000–$480.000 COP." />
+  <meta name="keywords" content="el laberinto, horror experience, terror inmersivo, santa marta, experiencia de terror, escape room, colombia" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="El Laberinto: La Experiencia de Horror | El Sanatorio, Santa Marta" />
+  <meta property="og:description" content="Una experiencia de terror inmersivo ambientada en un sanatorio psiquiátrico real, parcialmente abandonado. Ella sabe que estás aquí." />
   <meta property="og:url"         content="https://el-sanatorio.com/experience.html" />
+  <meta property="og:image"       content="https://el-sanatorio.com/images/og-image.jpg" />
+  <meta property="og:locale"      content="es_CO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="El Laberinto — Horror Experience | El Sanatorio" />
+  <meta name="twitter:description" content="Los pisos superiores no fueron renovados. Grupos de máximo 8 personas. No todos salen por el mismo camino." />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://el-sanatorio.com/experience.html" />
+
+  <!-- Cookie Consent Banner — must be first script -->
+  <script src="/consent-banner.js"></script>
+
+  <!-- Fonts + Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+  </noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  </noscript>
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "El Laberinto: La Experiencia de Horror",
+    "description": "Experiencia de terror inmersivo y teatral ambientada en el edificio histórico de El Sanatorio, Santa Marta. Story-driven, para adultos.",
+    "url": "https://el-sanatorio.com/experience.html",
+    "location": {
+      "@type": "Place",
+      "name": "El Sanatorio",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 19 #4-23",
+        "addressLocality": "Santa Marta",
+        "addressRegion": "Magdalena",
+        "addressCountry": "CO"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "El Sanatorio",
+      "url": "https://el-sanatorio.com"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Paciente Estándar",
+        "price": "45000",
+        "priceCurrency": "COP"
+      },
+      {
+        "@type": "Offer",
+        "name": "Paciente VIP",
+        "price": "75000",
+        "priceCurrency": "COP"
+      },
+      {
+        "@type": "Offer",
+        "name": "Grupo Privado",
+        "price": "480000",
+        "priceCurrency": "COP"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -21,7 +93,7 @@
   <div class="nav__inner">
     <a href="index.html" class="nav__logo" aria-label="El Sanatorio — inicio">
       <span class="nav__logo-num">PACIENTE 013</span>
-      <span class="nav__logo-name">EL SANATORIO</span>
+      <span class="nav__logo-name" data-glitch="EL SANATORIO">EL SANATORIO</span>
     </a>
     <div class="nav__monitor" aria-hidden="true">
       <svg viewBox="0 0 300 36" preserveAspectRatio="none">
@@ -37,12 +109,12 @@
       <li><a href="historia.html">Historia</a></li>
       <li><a href="contact.html">Contacto</a></li>
     </ul>
-    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-<div class="nav__mobile-menu" role="navigation">
+<div class="nav__mobile-menu" id="mobile-menu" role="navigation" aria-label="Menú móvil">
   <a href="index.html">Inicio</a>
   <a href="menu.html">Menú</a>
   <a href="experience.html">Experiencia</a>
@@ -57,27 +129,38 @@
   <div class="container--sm text-center">
     <div class="maze-warning" role="alert">⚠ ZONA RESTRINGIDA — ACCESO SOLO CON AUTORIZACIÓN</div>
     <div class="section-label" style="justify-content: center;"><span>Pisos Superiores</span></div>
-    <h1 class="section-title section-title--center neon-red" style="font-size: clamp(2rem, 6vw, 4rem);">
-      La Experiencia
+    <h1 class="section-title section-title--center neon-red" style="font-size: clamp(1.8rem, 5vw, 3.5rem); line-height: 1.2;">
+      El Laberinto<br>
+      <span style="font-size: 0.6em; color: var(--off-white); text-shadow: none;">La Experiencia de Horror</span>
     </h1>
-    <p class="serif" style="color: var(--light-gray); margin-top: 1rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-      Una experiencia de horror inmersivo ambientada en un sanatorio psiquiátrico real,
-      parcialmente abandonado. No todo lo que encuentren es decorado.
+    <p class="serif" style="color: var(--light-gray); margin-top: 1.5rem; max-width: 520px; margin-left: auto; margin-right: auto;">
+      Una experiencia de terror inmersivo y teatral en el corazón del Centro Histórico de Santa Marta.
+      No es una casa de sustos — es una historia. Y ella lleva décadas esperando contarla.
     </p>
+    <div style="margin-top: 2rem;">
+      <a href="https://wa.me/573174370575?text=Hola!%20Quiero%20reservar%20El%20Laberinto"
+         target="_blank" rel="noopener noreferrer" class="btn btn--hero-primary">
+        Reservar por WhatsApp
+      </a>
+    </div>
   </div>
 </div>
 
 <figure style="margin: 0; overflow: hidden; max-height: 480px;">
-  <img loading="lazy" src="images/admisiones.jpg" alt="Pasillo oscuro del sanatorio con enfermero en el escritorio de Admisiones bajo luz fluorescente" style="width: 100%; display: block; max-height: 480px; object-fit: cover; object-position: center 30%;" width="2816" height="1536">
+  <img loading="lazy" src="images/admisiones.jpg" alt="Pasillo oscuro del sanatorio con enfermero en el escritorio de Admisiones bajo luz fluorescente" style="width: 100%; display: block; max-height: 480px; object-fit: cover; object-position: center 30%;" width="2816" height="1536" />
 </figure>
 
 <!-- ── What It Is ─────────────────────────────────────────────── -->
-<section style="background: var(--panel-dark); padding: 4rem 0;" aria-labelledby="what-title">
+<section class="fade-in-section" style="background: var(--panel-dark); padding: 4rem 0;" aria-labelledby="what-title">
   <div class="container--sm">
     <div class="section-label"><span>Informe de Admisión</span></div>
     <h2 class="section-title" id="what-title">Qué Esperar</h2>
+    <p class="serif" style="color: var(--light-gray); margin-bottom: 2rem; max-width: 560px;">
+      El Laberinto no es una atracción de feria. Es una experiencia teatral ambientada en un edificio real,
+      con una historia real, y con un personal que se toma su trabajo muy en serio.
+    </p>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;" class="fade-in-section">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
       <div class="panel panel--red-accent">
         <h4 style="margin-bottom: 0.75rem; color: var(--gold);">El Espacio</h4>
         <p style="font-size: 0.9rem; color: var(--light-gray);">
@@ -97,9 +180,8 @@
       <div class="panel panel--red-accent">
         <h4 style="margin-bottom: 0.75rem; color: var(--gold);">La Duración</h4>
         <p style="font-size: 0.9rem; color: var(--light-gray);">
-          45 a 70 minutos, dependiendo del grupo. Algunos terminan antes.
-          Nadie ha terminado después sin querer salir. La experiencia es lineal
-          pero el camino no siempre lo parece.
+          45 a 60 minutos dependiendo del grupo. La experiencia es story-driven y lineal,
+          aunque el camino no siempre lo parece. Orientada a adultos. Recomendamos 15+ años.
         </p>
       </div>
       <div class="panel panel--red-accent">
@@ -112,13 +194,14 @@
       </div>
     </div>
 
-    <div class="warning-box fade-in-section" style="margin-top: 2.5rem;">
+    <div class="warning-box" style="margin-top: 2.5rem;">
       <p class="warning-box__title">⚠ AVISO MÉDICO OFICIAL</p>
       <p class="warning-box__text">
         Esta experiencia contiene oscuridad total, efectos de sonido intensos, espacios reducidos,
         escenas de contenido psicológico perturbador y actores en contacto físico moderado
-        (tocado de hombros, guía de brazo). No recomendada para personas con claustrofobia severa,
-        enfermedades cardíacas, epilepsia fotosensible, ni para menores de 16 años sin acompañante adulto.
+        (tocado de hombros, guía de brazo). No recomendada para personas con enfermedades cardíacas,
+        claustrofobia severa, epilepsia fotosensible ni mujeres embarazadas. No se recomienda para
+        menores de 15 años; menores entre 15 y 17 años deben ir acompañados de un adulto responsable.
         <strong style="color: var(--crimson);">Una vez dentro, no hay salida anticipada sin escolta del personal.</strong>
       </p>
     </div>
@@ -131,7 +214,7 @@
     <div class="section-label"><span>Aranceles Clínicos</span></div>
     <h2 class="section-title" id="pricing-title">Tarifas de Ingreso</h2>
     <p class="serif" style="color: var(--light-gray); margin-bottom: 2.5rem;">
-      Precios por paciente. Grupos mínimo de 4 personas, máximo 8 por turno.
+      Precios por paciente. Grupos entre 4 y 8 personas por turno.
     </p>
 
     <div class="pricing-grid fade-in-section">
@@ -153,6 +236,7 @@
         <p class="pricing-card__currency">COP por persona</p>
         <div class="pricing-card__features">
           <p>Acceso a pisos superiores</p>
+          <p>Grupos más reducidos</p>
           <p>Cóctel de bienvenida incluido</p>
           <p>Mesa reservada post-experiencia</p>
           <p>Foto de grupo como "internos"</p>
@@ -172,14 +256,28 @@
       </div>
     </div>
 
-    <p class="mono text-center" style="font-size: 0.68rem; color: var(--gray); margin-top: 1.5rem; letter-spacing: 0.1em;">
-      TURNOS: Miércoles a Domingo · 7 PM / 8:30 PM / 10 PM · Último ingreso: 10:30 PM
-    </p>
+    <div class="panel" style="margin-top: 1.5rem; border-color: var(--border-mid); text-align: center; padding: 1.25rem 2rem;">
+      <p class="mono" style="font-size: 0.7rem; color: var(--light-gray); letter-spacing: 0.12em; line-height: 1.9;">
+        <span style="color: var(--crimson);">TURNOS</span> &nbsp;·&nbsp; Miércoles a Domingo<br>
+        7:00 PM &nbsp;/&nbsp; 8:30 PM &nbsp;/&nbsp; 10:00 PM<br>
+        <span style="color: var(--gray); font-size: 0.65rem;">Último ingreso: 10:30 PM</span>
+      </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="https://wa.me/573174370575?text=Hola!%20Quiero%20reservar%20El%20Laberinto"
+         target="_blank" rel="noopener noreferrer" class="btn btn--red">
+        Reservar por WhatsApp →
+      </a>
+      <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 0.75rem; letter-spacing: 0.08em;">
+        +57 317 437 0575 · Confirmación en menos de 12 horas
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- ── Rules ──────────────────────────────────────────────────── -->
-<section id="rules" style="background: var(--panel-dark); padding: 4rem 0;" aria-labelledby="rules-title">
+<section id="rules" class="fade-in-section" style="background: var(--panel-dark); padding: 4rem 0;" aria-labelledby="rules-title">
   <div class="container--sm">
     <div class="section-label"><span>Reglamento Interno</span></div>
     <h2 class="section-title" id="rules-title">Normas del Paciente</h2>
@@ -188,7 +286,7 @@
       y por la de los demás. El incumplimiento resulta en expulsión sin reembolso.
     </p>
 
-    <div class="rules-list fade-in-section" role="list">
+    <div class="rules-list" role="list">
       <div class="rule-item" role="listitem">
         <span class="rule-item__num">01</span>
         <p class="rule-item__text">Prohibido fotografiar o grabar dentro de la experiencia. El flash interrumpe la inmersión y molesta al personal. Las fotos "de salida" están permitidas en el patio.</p>
@@ -211,7 +309,7 @@
       </div>
       <div class="rule-item" role="listitem">
         <span class="rule-item__num">06</span>
-        <p class="rule-item__text">Menores de 16 años solo con acompañante adulto. El establecimiento se reserva el derecho a denegar el ingreso a menores de 14 años bajo cualquier circunstancia.</p>
+        <p class="rule-item__text">No se recomienda para menores de 15 años. Menores entre 15 y 17 años deben asistir con acompañante adulto. El establecimiento se reserva el derecho de denegar el ingreso bajo cualquier circunstancia.</p>
       </div>
       <div class="rule-item" role="listitem">
         <span class="rule-item__num">07</span>
@@ -230,10 +328,25 @@
   <div class="container--sm">
     <div class="section-label"><span>Solicitud de Ingreso</span></div>
     <h2 class="section-title section-title--center" id="booking-title">Reservar Experiencia</h2>
-    <p class="text-center serif" style="color: var(--light-gray); margin-bottom: 2.5rem;">
+    <p class="text-center serif" style="color: var(--light-gray); margin-bottom: 2rem;">
       Complete su solicitud de admisión. El personal confirmará disponibilidad
       en un plazo de 24 horas. <em>No se garantiza la salida.</em>
     </p>
+
+    <!-- WhatsApp CTA — primary booking method -->
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <a href="https://wa.me/573174370575?text=Hola!%20Quiero%20reservar%20El%20Laberinto"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn--hero-primary"
+         style="font-size: 0.82rem; padding: 16px 40px; letter-spacing: 0.2em;">
+        💬 &nbsp; Reservar por WhatsApp
+      </a>
+      <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 0.75rem; letter-spacing: 0.08em;">
+        +57 317 437 0575 · Respuesta rápida · Pago el día de la experiencia
+      </p>
+    </div>
+
+    <div class="hr-label"><span>o completa el formulario</span></div>
 
     <div class="form-panel fade-in-section">
       <div class="form-panel__header">
@@ -260,102 +373,4 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="exp-size">Tamaño del Grupo *</label>
-            <select class="form-select" id="exp-size" name="grupo" required>
-              <option value="" disabled selected>Seleccionar</option>
-              <option value="4">4 personas (mínimo)</option>
-              <option value="5">5 personas</option>
-              <option value="6">6 personas</option>
-              <option value="7">7 personas</option>
-              <option value="8">8 personas (máximo)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="exp-date">Fecha *</label>
-            <input class="form-input" type="date" id="exp-date" name="fecha" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="exp-time">Turno *</label>
-            <select class="form-select" id="exp-time" name="turno" required>
-              <option value="" disabled selected>Seleccionar</option>
-              <option value="19:00">7:00 PM</option>
-              <option value="20:30">8:30 PM</option>
-              <option value="22:00">10:00 PM</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="exp-tier">Tipo de Experiencia *</label>
-            <select class="form-select" id="exp-tier" name="tipo" required>
-              <option value="" disabled selected>Seleccionar</option>
-              <option value="estandar">Paciente Estándar — $45.000/persona</option>
-              <option value="vip">Paciente VIP — $75.000/persona</option>
-              <option value="privado">Grupo Privado — $480.000 total</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="exp-age">¿Menores de 16 en el grupo?</label>
-            <select class="form-select" id="exp-age" name="menores">
-              <option value="no">No</option>
-              <option value="si-acompanados">Sí, con adulto responsable</option>
-            </select>
-          </div>
-          <div class="form-group form-group--full">
-            <label class="form-label" for="exp-medical">Condiciones Médicas Relevantes</label>
-            <textarea class="form-textarea" id="exp-medical" name="condiciones" placeholder="Claustrofobia, condiciones cardíacas, epilepsia, embarazo u otras condiciones que el personal deba conocer..."></textarea>
-          </div>
-        </div>
-
-        <div class="warning-box" style="margin: 1.5rem 0;">
-          <p class="warning-box__title">DECLARACIÓN DE CONSENTIMIENTO</p>
-          <p class="warning-box__text">
-            Al enviar este formulario confirmo que he leído y acepto las normas del paciente,
-            entiendo que se trata de una experiencia de terror inmersivo para adultos, y libero
-            a El Sanatorio de responsabilidad por angustia psicológica, pesadillas subsiguientes,
-            o incapacidad temporal de dormir con las luces apagadas.
-          </p>
-        </div>
-
-        <button type="submit" class="form-submit">SOLICITAR ADMISIÓN — PISOS SUPERIORES</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ── Footer ─────────────────────────────────────────────────── -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__inner">
-      <div>
-        <p class="footer__logo">EL SANATORIO</p>
-        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
-        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 1rem; line-height: 1.8;">
-          Calle 19 #4-23 · Centro Histórico<br>Santa Marta, Colombia
-        </p>
-      </div>
-      <div>
-        <p class="footer__col-title">Instalaciones</p>
-        <ul class="footer__links" role="list">
-          <li><a href="menu.html">El Menú / Expediente</a></li>
-          <li><a href="experience.html">La Experiencia</a></li>
-          <li><a href="tours.html">Tours Históricos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer__col-title">Contacto</p>
-        <ul class="footer__links" role="list">
-          <li><a href="https://wa.me/573195962773?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="index.html#reservar">Reservar Mesa</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia.</p>
-      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+            <select class="form-select" id="exp-size" name="gr

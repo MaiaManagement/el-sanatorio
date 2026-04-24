@@ -1,719 +1,1322 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Historia — El Origen de El Sanatorio | Santa Marta</title>
-  <meta name="description" content="La historia de El Sanatorio: un edificio colonial en el Centro Histórico de Santa Marta convertido en yakitori gastro bar y experiencia de terror inmersiva por el Grupo Maia." />
-  <meta name="keywords" content="historia el sanatorio, origen, maia group, santa marta, centro histórico, yakitori bar colombia" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La historia de El Sanatorio — yakitori gastrobar de horror. Descubre el origen de este lugar donde la comida japonesa de calle se encuentra con lo macabro.">
+    <meta name="author" content="The Maia Group">
+    <title>Historia | El Sanatorio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=IM+Fell+English:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
 
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="La Historia — El Origen de El Sanatorio" />
-  <meta property="og:description" content="Un edificio colonial abandonado. Una niña que nunca se fue. Un grupo que decidió abrir las puertas. La historia de El Sanatorio, Santa Marta." />
-  <meta property="og:url"         content="https://el-sanatorio.com/historia.html" />
-  <meta property="og:image"       content="https://el-sanatorio.com/og-image.jpg" />
-  <meta property="og:locale"      content="es_CO" />
+        /* ─── RESET & BASE ─────────────────────────────────────────────── */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="La Historia — El Sanatorio, Santa Marta" />
-  <meta name="twitter:description" content="La historia detrás del bar de horror más singular del Caribe colombiano." />
+        :root {
+            --black:        #070707;
+            --deep:         #0d0d0d;
+            --surface:      #111111;
+            --panel:        #181818;
+            --border:       #2a2a2a;
+            --ash:          #3a3a3a;
+            --mist:         #7a7a7a;
+            --smoke:        #a8a8a8;
+            --bone:         #d4cfc8;
+            --cream:        #e8e2d8;
+            --blood:        #8b1a1a;
+            --rust:         #a0341a;
+            --ember:        #c4501a;
+            --amber:        #d4821a;
+            --gold:         #b8941a;
+            --pale-gold:    #d4a830;
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://el-sanatorio.com/historia.html" />
+            --font-display: 'Cinzel', serif;
+            --font-body:    'IM Fell English', serif;
+            --font-ui:      'Inter', sans-serif;
 
-  <!-- Fonts + Styles -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+            --max-width: 1100px;
+            --section-gap: 120px;
+        }
 
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "La Historia de El Sanatorio",
-    "description": "El origen de El Sanatorio: un edificio colonial en el Centro Histórico de Santa Marta transformado en yakitori gastro bar y experiencia de terror inmersiva por el Grupo Maia.",
-    "author": {
-      "@type": "Organization",
-      "name": "Grupo Maia"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "El Sanatorio",
-      "url": "https://el-sanatorio.com"
-    },
-    "about": {
-      "@type": "BarOrPub",
-      "name": "El Sanatorio",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle 19 #4-23",
-        "addressLocality": "Centro Histórico, Santa Marta",
-        "addressCountry": "CO"
-      }
-    }
-  }
-  </script>
+        html {
+            scroll-behavior: smooth;
+        }
 
-  <style>
-    /* Language toggle */
-    .lang-toggle {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      justify-content: flex-end;
-      margin-bottom: 2rem;
-    }
-    .lang-btn {
-      font-family: var(--font-type);
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      padding: 0.35rem 0.9rem;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--gray);
-      cursor: pointer;
-      transition: all 0.2s;
-      text-transform: uppercase;
-    }
-    .lang-btn.active {
-      border-color: var(--red);
-      color: var(--white);
-      background: rgba(180,0,0,0.12);
-    }
-    .lang-btn:hover:not(.active) {
-      border-color: var(--light-gray);
-      color: var(--light-gray);
-    }
-    [data-lang] { display: none; }
-    [data-lang].visible { display: block; }
+        body {
+            background-color: var(--black);
+            color: var(--bone);
+            font-family: var(--font-body);
+            font-size: 18px;
+            line-height: 1.85;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    /* Historia hero */
-    .historia-hero {
-      background: var(--black);
-      padding: 8rem 0 5rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-    .historia-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at center bottom, rgba(180,0,0,0.07) 0%, transparent 65%);
-      pointer-events: none;
-    }
+        /* ─── NOISE TEXTURE OVERLAY ────────────────────────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+            opacity: 0.028;
+            pointer-events: none;
+            z-index: 9999;
+        }
 
-    /* Timeline */
-    .timeline {
-      position: relative;
-      padding-left: 2.5rem;
-      margin-top: 2.5rem;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, var(--red), transparent);
-    }
-    .timeline-item {
-      position: relative;
-      padding-bottom: 2.5rem;
-    }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -2.5rem;
-      top: 0.4rem;
-      width: 8px;
-      height: 8px;
-      background: var(--red);
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(180,0,0,0.6);
-    }
-    .timeline-year {
-      font-family: var(--font-type);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      color: var(--red);
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-    .timeline-item h4 {
-      font-family: var(--font-type);
-      font-size: 0.9rem;
-      letter-spacing: 0.1em;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-    .timeline-item p {
-      font-size: 0.88rem;
-      color: var(--light-gray);
-      line-height: 1.75;
-      margin: 0;
-    }
+        /* ─── SCROLLBAR ────────────────────────────────────────────────── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--deep); }
+        ::-webkit-scrollbar-thumb { background: var(--blood); border-radius: 3px; }
 
-    /* Pull quote */
-    .pull-quote {
-      border-left: 3px solid var(--red);
-      padding: 1.25rem 1.5rem;
-      margin: 2.5rem 0;
-      background: rgba(180,0,0,0.04);
-    }
-    .pull-quote p {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1.15rem;
-      color: var(--white);
-      line-height: 1.6;
-      margin: 0 0 0.5rem;
-    }
-    .pull-quote cite {
-      font-family: var(--font-type);
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      color: var(--gray);
-    }
+        /* ─── SELECTION ────────────────────────────────────────────────── */
+        ::selection {
+            background: var(--blood);
+            color: var(--cream);
+        }
 
-    /* Maia group panel */
-    .maia-panel {
-      background: var(--panel-dark);
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      position: relative;
-    }
-    .maia-panel__label {
-      font-family: var(--font-type);
-      font-size: 0.6rem;
-      letter-spacing: 0.22em;
-      color: var(--gold);
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 1rem;
-    }
+        /* ─── NAVIGATION ───────────────────────────────────────────────── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 48px;
+            background: linear-gradient(to bottom, rgba(7,7,7,0.98), rgba(7,7,7,0));
+            transition: background 0.4s ease;
+        }
 
-    /* Story section layout */
-    .historia-body {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 4rem;
-      align-items: start;
-    }
-    @media (max-width: 900px) {
-      .historia-body { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--pale-gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-    /* Vision cards */
-    .vision-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin-top: 2rem;
-    }
-    @media (max-width: 600px) {
-      .vision-grid { grid-template-columns: 1fr; }
-    }
-    .vision-card {
-      border: 1px solid var(--border);
-      padding: 1.5rem;
-      background: var(--black);
-    }
-    .vision-card__icon {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-    .vision-card h4 {
-      font-family: var(--font-type);
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      color: var(--white);
-      margin-bottom: 0.4rem;
-      text-transform: uppercase;
-    }
-    .vision-card p {
-      font-size: 0.84rem;
-      color: var(--light-gray);
-      line-height: 1.65;
-      margin: 0;
-    }
-  </style>
+        .nav-logo:hover { color: var(--cream); }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--smoke);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--ember);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--cream); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--pale-gold); }
+        .nav-links a.active::after { width: 100%; background: var(--pale-gold); }
+
+        /* ─── HERO ─────────────────────────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 50% 60%, rgba(139,26,26,0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 30% at 30% 70%, rgba(196,80,26,0.06) 0%, transparent 60%),
+                linear-gradient(180deg, #070707 0%, #0d0508 40%, #0a0303 70%, #070707 100%);
+            z-index: 0;
+        }
+
+        /* Candle flicker dots */
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle 2px at 20% 45%, rgba(212,130,26,0.6) 0%, transparent 100%),
+                radial-gradient(circle 2px at 80% 38%, rgba(212,130,26,0.5) 0%, transparent 100%),
+                radial-gradient(circle 1px at 50% 55%, rgba(212,130,26,0.4) 0%, transparent 100%);
+            animation: flicker 4s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%   { opacity: 0.6; }
+            25%  { opacity: 1; }
+            50%  { opacity: 0.7; }
+            75%  { opacity: 0.9; }
+            100% { opacity: 0.5; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: var(--ember);
+            margin-bottom: 32px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero-eyebrow::before,
+        .hero-eyebrow::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 1px;
+            background: var(--ember);
+            opacity: 0.5;
+        }
+        .hero-eyebrow::before { right: 100%; }
+        .hero-eyebrow::after  { left: 100%; }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(52px, 10vw, 110px);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: 0.02em;
+            color: var(--cream);
+            margin-bottom: 12px;
+            text-shadow:
+                0 0 80px rgba(139,26,26,0.4),
+                0 2px 40px rgba(0,0,0,0.8);
+        }
+
+        .hero-title span {
+            display: block;
+            color: var(--pale-gold);
+            font-size: 0.38em;
+            letter-spacing: 0.5em;
+            font-weight: 400;
+            margin-top: 18px;
+        }
+
+        .hero-rule {
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, var(--ember), transparent);
+            margin: 48px auto 0;
+            animation: pulse-line 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-line {
+            0%, 100% { opacity: 0.4; height: 60px; }
+            50%       { opacity: 1;   height: 90px; }
+        }
+
+        /* ─── ORNAMENT ─────────────────────────────────────────────────── */
+        .ornament {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 0 auto 60px;
+            max-width: 340px;
+        }
+
+        .ornament-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--ash), transparent);
+        }
+
+        .ornament-symbol {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--blood);
+            line-height: 1;
+        }
+
+        /* ─── MAIN CONTENT ─────────────────────────────────────────────── */
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* ─── SECTION GENERIC ──────────────────────────────────────────── */
+        section {
+            padding: var(--section-gap) 0;
+        }
+
+        .section-label {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: var(--ember);
+            display: block;
+            margin-bottom: 24px;
+        }
+
+        .section-heading {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 46px);
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--cream);
+            margin-bottom: 36px;
+        }
+
+        .section-heading em {
+            font-style: italic;
+            color: var(--pale-gold);
+        }
+
+        p {
+            color: var(--smoke);
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+
+        p:last-child { margin-bottom: 0; }
+
+        strong {
+            color: var(--bone);
+            font-style: normal;
+        }
+
+        /* ─── OPENING ACT ──────────────────────────────────────────────── */
+        .opening {
+            background: var(--deep);
+            border-top: 1px solid var(--border);
+        }
+
+        .opening-inner {
+            display: grid;
+            grid-template-columns: 1fr 2px 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .opening-divider {
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--blood), transparent);
+            margin: 0 auto;
+        }
+
+        .opening-col blockquote {
+            font-family: var(--font-body);
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--bone);
+            padding-left: 24px;
+            border-left: 2px solid var(--blood);
+            margin-bottom: 32px;
+        }
+
+        /* ─── CONCEPT SECTION ──────────────────────────────────────────── */
+        .concept {
+            position: relative;
+            background: var(--black);
+        }
+
+        .concept::before {
+            content: '焼き鳥';
+            position: absolute;
+            top: 60px;
+            right: 48px;
+            font-size: clamp(60px, 12vw, 140px);
+            color: rgba(139,26,26,0.06);
+            font-family: serif;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .concept-text { order: 2; }
+        .concept-visual { order: 1; }
+
+        .concept-visual-box {
+            position: relative;
+            padding: 48px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        .concept-visual-box::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 40px;
+            right: 40px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--blood), transparent);
+        }
+
+        .concept-visual-box::after {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            border: 1px solid var(--border);
+            pointer-events: none;
+        }
+
+        .japanese-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .japanese-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        .japanese-list .kanji {
+            font-size: 1.6rem;
+            line-height: 1;
+            color: var(--blood);
+            min-width: 36px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        .japanese-list .meaning {
+            flex: 1;
+        }
+
+        .japanese-list .meaning strong {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--pale-gold);
+            margin-bottom: 4px;
+        }
+
+        .japanese-list .meaning span {
+            color: var(--mist);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* ─── BUILDING SECTION ─────────────────────────────────────────── */
+        .building {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .building-layout {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .building-sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .fact-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 32px;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .fact-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--blood);
+        }
+
+        .fact-card-label {
+            font-family: var(--font-ui);
+            font-size: 9px;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--ember);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .fact-card-value {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--cream);
+            line-height: 1.2;
+        }
+
+        .fact-card-sub {
+            font-size: 0.82rem;
+            color: var(--mist);
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        /* ─── PHILOSOPHY SECTION ───────────────────────────────────────── */
+        .philosophy {
+            background: var(--black);
+            text-align: center;
+        }
+
+        .philosophy-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .manifesto {
+            font-family: var(--font-body);
+            font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+            font-style: italic;
+            line-height: 1.8;
+            color: var(--bone);
+            margin-bottom: 48px;
+        }
+
+        .manifesto em {
+            color: var(--pale-gold);
+            font-style: normal;
+        }
+
+        /* ─── MAIA GROUP SECTION ───────────────────────────────────────── */
+        .maia {
+            background: var(--deep);
+            border-top: 1px solid var(--border);
+        }
+
+        .maia-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .maia-brand {
+            text-align: center;
+            padding: 60px 40px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            position: relative;
+        }
+
+        .maia-brand::before,
+        .maia-brand::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-color: var(--blood);
+            border-style: solid;
+        }
+
+        .maia-brand::before {
+            top: -1px; left: -1px;
+            border-width: 2px 0 0 2px;
+        }
+
+        .maia-brand::after {
+            bottom: -1px; right: -1px;
+            border-width: 0 2px 2px 0;
+        }
+
+        .maia-logo-text {
+            font-family: var(--font-display);
+            font-size: 11px;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: var(--mist);
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .maia-name {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 5vw, 52px);
+            font-weight: 900;
+            color: var(--pale-gold);
+            letter-spacing: 0.08em;
+            line-height: 1;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .maia-sub {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--ash);
+        }
+
+        /* ─── TIMELINE ─────────────────────────────────────────────────── */
+        .timeline-section {
+            background: var(--black);
+            border-top: 1px solid var(--border);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 48px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, var(--blood) 20%, var(--blood) 80%, transparent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 56px;
+        }
+
+        .timeline-item:last-child { margin-bottom: 0; }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -54px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border: 1px solid var(--blood);
+            background: var(--black);
+            transform: rotate(45deg);
+        }
+
+        .timeline-date {
+            font-family: var(--font-display);
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            color: var(--ember);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .timeline-heading {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--cream);
+            margin-bottom: 12px;
+        }
+
+        .timeline-body {
+            color: var(--mist);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* ─── PULL QUOTES ──────────────────────────────────────────────── */
+        .pull-quote {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        .pull-quote-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        .pull-quote blockquote {
+            font-family: var(--font-body);
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-style: italic;
+            line-height: 1.75;
+            color: var(--bone);
+        }
+
+        .pull-quote cite {
+            display: block;
+            font-family: var(--font-ui);
+            font-size: 10px;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--ember);
+            margin-top: 24px;
+            font-style: normal;
+        }
+
+        /* ─── CTA SECTION ──────────────────────────────────────────────── */
+        .cta-section {
+            background: var(--black);
+            text-align: center;
+            padding: 100px 48px;
+        }
+
+        .cta-section .section-heading {
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            max-width: 520px;
+            margin: 0 auto 48px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 16px 40px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--blood);
+            color: var(--cream);
+            border: 1px solid var(--blood);
+        }
+
+        .btn-primary:hover {
+            background: var(--rust);
+            border-color: var(--rust);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(139,26,26,0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--smoke);
+            border: 1px solid var(--ash);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--pale-gold);
+            color: var(--pale-gold);
+            transform: translateY(-2px);
+        }
+
+        /* ─── FOOTER ───────────────────────────────────────────────────── */
+        footer {
+            background: var(--deep);
+            border-top: 1px solid var(--border);
+            padding: 60px 48px 40px;
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .footer-brand-name {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--pale-gold);
+            letter-spacing: 0.08em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: var(--mist);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .footer-col-title {
+            font-family: var(--font-display);
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--cream);
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: var(--mist);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--ember); }
+
+        .footer-bottom {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            color: var(--ash);
+            margin-bottom: 0;
+        }
+
+        .footer-maia-credit {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            color: var(--ash);
+        }
+
+        .footer-maia-credit span {
+            color: var(--blood);
+        }
+
+        /* ─── DECORATIVE ELEMENTS ──────────────────────────────────────── */
+        .skull-divider {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            color: var(--blood);
+            letter-spacing: 1em;
+            opacity: 0.5;
+        }
+
+        .red-drop {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--blood);
+            border-radius: 50%;
+            box-shadow: 0 0 12px var(--blood);
+        }
+
+        /* ─── RESPONSIVE ───────────────────────────────────────────────── */
+        @media (max-width: 900px) {
+            nav { padding: 20px 24px; }
+            .nav-links { display: none; }
+
+            .container { padding: 0 24px; }
+            :root { --section-gap: 80px; }
+
+            .opening-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .opening-divider { display: none; }
+
+            .concept-grid,
+            .building-layout,
+            .maia-layout {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .concept-text { order: 2; }
+            .concept-visual { order: 1; }
+
+            .building-sidebar { position: static; }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .concept::before { display: none; }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title { font-size: 52px; }
+            footer { padding: 48px 24px 32px; }
+            .cta-section { padding: 80px 24px; }
+            .pull-quote-inner { padding: 0 24px; }
+        }
+
+    </style>
 </head>
 <body>
 
-<!-- ── Navigation ──────────────────────────────────────────── -->
-<nav class="nav" role="navigation" aria-label="Navegación principal">
-  <div class="nav__inner">
-    <a href="index.html" class="nav__logo" aria-label="El Sanatorio — inicio">
-      <span class="nav__logo-num">PACIENTE 013</span>
-      <span class="nav__logo-name">EL SANATORIO</span>
-    </a>
-    <div class="nav__monitor" aria-hidden="true">
-      <svg viewBox="0 0 300 36" preserveAspectRatio="none">
-        <path class="ekg-line" d="M 0,18 L 30,18 L 45,12 L 60,27 L 66,0 L 75,34 L 90,18 L 120,18 L 135,12 L 150,27 L 156,0 L 165,34 L 180,18 L 300,18" />
-      </svg>
-    </div>
-    <ul class="nav__links" role="list">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="menu.html">Menú</a></li>
-      <li><a href="experience.html">Experiencia</a></li>
-      <li><a href="events.html">Eventos</a></li>
-      <li><a href="tours.html">Tours</a></li>
-      <li><a href="historia.html" class="active">Historia</a></li>
-      <li><a href="contact.html">Contacto</a></li>
-    </ul>
-    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="nav__mobile-menu" role="navigation" aria-label="Menú móvil">
-  <a href="index.html">Inicio</a>
-  <a href="menu.html">Menú</a>
-  <a href="experience.html">Experiencia</a>
-  <a href="events.html">Eventos</a>
-  <a href="tours.html">Tours</a>
-  <a href="historia.html">Historia</a>
-  <a href="contact.html">Contacto</a>
-</div>
-
-<!-- ── Hero ──────────────────────────────────────────────────── -->
-<div class="historia-hero">
-  <div class="container--sm">
-    <div class="section-label" style="justify-content: center;"><span>Archivo Fundacional</span></div>
-    <h1 class="section-title section-title--center neon-red" style="font-size: clamp(2rem, 6vw, 4rem);">
-      La Historia
-    </h1>
-    <p class="serif" style="color: var(--light-gray); margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto;">
-      Todo edificio carga con lo que pasó dentro. Este más que la mayoría.
-    </p>
-    <p class="mono" style="font-size: 0.7rem; letter-spacing: 0.18em; color: var(--gray); margin-top: 1rem;">
-      CENTRO HISTÓRICO · SANTA MARTA · COLOMBIA · EST. 2024
-    </p>
-  </div>
-</div>
-
-<!-- ── Main Story ─────────────────────────────────────────── -->
-<section style="background: var(--panel-dark); padding: 5rem 0;" aria-labelledby="historia-main">
-  <div class="container">
-
-    <!-- Language toggle -->
-    <div class="lang-toggle" role="group" aria-label="Seleccionar idioma">
-      <button class="lang-btn active" id="btn-es" onclick="setLang('es')" aria-pressed="true">ES — Español</button>
-      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false">EN — English</button>
-    </div>
-
-    <div class="historia-body">
-
-      <!-- Main text column -->
-      <div>
-
-        <!-- SPANISH VERSION -->
-        <div data-lang="es" class="visible">
-          <div class="section-label"><span>Expediente Fundacional</span></div>
-          <h2 class="section-title" id="historia-main">El Edificio</h2>
-
-          <p style="margin-bottom: 1.5rem;">
-            En el Centro Histórico de Santa Marta, entre las calles coloniales y el calor
-            del Caribe, había un edificio que la ciudad había aprendido a ignorar.
-            Fachada descascarada. Portón de madera. Buganvillas que crecían sin permiso.
-            Los vecinos sabían que algo había sido — no sabían exactamente qué.
-          </p>
-
-          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
-            Los archivos municipales lo registran como un edificio de uso mixto del
-            siglo XIX, ampliado a principios del XX. Lo que se sabe con certeza:
-            durante décadas sirvió como centro de atención médica informal para el barrio.
-            Lo que no figura en los archivos es igual de interesante.
-          </p>
-
-          <div class="pull-quote">
-            <p>"El edificio no estaba abandonado. Estaba esperando."</p>
-            <cite>— Registro de obra, Grupo Maia, 2023</cite>
-          </div>
-
-          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
-            Cuando el Grupo Maia adquirió la propiedad en 2022, la idea inicial era
-            straightforward: rehabilitar un edificio colonial en el centro histórico,
-            abrir un concepto gastronómico diferente. Lo que encontraron durante las obras
-            cambió el plan — no el proyecto, sino el tono.
-          </p>
-
-          <p style="color: var(--light-gray);">
-            Los albañiles abrieron una pared en el segundo piso y encontraron una habitación
-            que no figuraba en los planos. Pequeña. Con una silla. Una ventana tapiada.
-            Y en el suelo, trazado con algo que nadie quiso identificar, un número: 013.
-          </p>
-
-          <h2 class="section-title" style="margin-top: 3.5rem;" id="vision-title">La Visión</h2>
-
-          <p style="margin-bottom: 1.5rem;">
-            El Sanatorio nació de una pregunta: ¿qué pasa cuando combinas la disciplina
-            y la precisión de la cocina japonesa de calle con la atmósfera cargada de un
-            edificio que claramente tiene algo que contar?
-          </p>
-
-          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
-            El yakitori — brochetas al carbón, cocina lenta, ingredientes precisos, ritual
-            de fuego — tiene su propio tipo de solemnidad. No es comida rápida. Es comida
-            con proceso. El Sanatorio tomó ese proceso y lo instaló en un espacio donde
-            cada detalle habla de otro tipo de rituales: los de la medicina, los del cuidado,
-            los del diagnóstico. Y los que la historia del edificio sugiere pero nunca confirma.
-          </p>
-
-          <p style="color: var(--light-gray);">
-            El resultado no es un bar de terror. Es un lugar donde la experiencia de cenar
-            tiene capas: el fuego del carbón, el trago prescrito, el pasillo que crujas
-            al llegar al baño, la canción que suena desde arriba y que nadie puso.
-          </p>
-
-          <h2 class="section-title" style="margin-top: 3.5rem;">El Grupo Maia</h2>
-
-          <p style="margin-bottom: 1.5rem;">
-            El Sanatorio es un proyecto del Grupo Maia — empresa de gestión de conceptos
-            gastronómicos y de entretenimiento con presencia en el Caribe colombiano.
-          </p>
-
-          <p style="color: var(--light-gray);">
-            La filosofía del grupo es consistente: identificar espacios con historia,
-            con carácter, con algo que no se puede construir desde cero — y desarrollar
-            conceptos que amplifiquen lo que el espacio ya tiene en lugar de borrarlo.
-            El Sanatorio es la expresión más completa de esa filosofía hasta la fecha.
-          </p>
-
-          <div class="pull-quote" style="margin-top: 2.5rem;">
-            <p>"No diseñamos el ambiente. Lo encontramos. Lo limpiamos. Lo abrimos."</p>
-            <cite>— Grupo Maia</cite>
-          </div>
-        </div>
-
-        <!-- ENGLISH VERSION -->
-        <div data-lang="en">
-          <div class="section-label"><span>Founding File</span></div>
-          <h2 class="section-title" id="historia-main-en">The Building</h2>
-
-          <p style="margin-bottom: 1.5rem;">
-            In Santa Marta's Centro Histórico — among the colonial streets and Caribbean heat —
-            there was a building the city had learned to overlook. Peeling facade. Wooden gate.
-            Bougainvillea growing without permission. The neighbors knew it had been something once.
-            They just couldn't say exactly what.
-          </p>
-
-          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
-            Municipal records list it as a mixed-use building from the 19th century, expanded
-            in the early 20th. What's certain: for decades it served as an informal medical
-            care center for the neighborhood. What doesn't appear in the records is equally
-            interesting.
-          </p>
-
-          <div class="pull-quote">
-            <p>"The building wasn't abandoned. It was waiting."</p>
-            <cite>— Construction log, Grupo Maia, 2023</cite>
-          </div>
-
-          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
-            When Grupo Maia acquired the property in 2022, the initial concept was
-            straightforward: restore a colonial building in the historic center, open
-            a different kind of dining concept. What they found during construction
-            changed the plan — not the project, but the tone.
-          </p>
-
-          <p style="color: var(--light-gray);">
-            Workers opened a wall on the second floor and found a room that didn't appear
-            in the floor plans. Small. A chair. A bricked-up window. And on the floor,
-            traced in something no one wanted to identify, a number: 013.
-          </p>
-
-          <h2 class="section-title" style="margin-top: 3.5rem;">The Vision</h2>
-
-          <p style="margin-bottom: 1.5rem;">
-            El Sanatorio grew out of a question: what happens when you combine the discipline
-            and precision of Japanese street food with the charged atmosphere of a building
-            that clearly has something to say?
-          </p>
-
-          <p style="margin-bottom: 1.5rem; color: var(--light-gray);">
-            Yakitori — charcoal skewers, slow cooking, precise ingredients, a ritual of fire —
-            has its own kind of solemnity. It's not fast food. It's food with process.
-            El Sanatorio took that process and installed it in a space where every detail
-            speaks of another kind of ritual: medicine, care, diagnosis. And whatever the
-            building's history suggests but never confirms.
-          </p>
-
-          <p style="color: var(--light-gray);">
-            The result isn't a horror bar. It's a place where the dining experience has
-            layers: the heat of the charcoal, the prescribed cocktail, the hallway that
-            creaks on the way to the bathroom, the song coming from upstairs that nobody
-            put on.
-          </p>
-
-          <h2 class="section-title" style="margin-top: 3.5rem;">The Maia Group</h2>
-
-          <p style="margin-bottom: 1.5rem;">
-            El Sanatorio is a Grupo Maia project — a company specializing in gastronomic
-            and entertainment concepts in the Colombian Caribbean.
-          </p>
-
-          <p style="color: var(--light-gray);">
-            The group's philosophy is consistent: find spaces with history, with character,
-            with something that can't be built from scratch — then develop concepts that
-            amplify what the space already holds rather than erasing it. El Sanatorio is
-            the fullest expression of that philosophy to date.
-          </p>
-
-          <div class="pull-quote" style="margin-top: 2.5rem;">
-            <p>"We didn't design the atmosphere. We found it. We cleaned it. We opened it."</p>
-            <cite>— Grupo Maia</cite>
-          </div>
-        </div>
-
-      </div><!-- /main text column -->
-
-      <!-- Sidebar -->
-      <div>
-        <!-- Timeline -->
-        <div class="maia-panel" style="margin-bottom: 2rem;">
-          <span class="maia-panel__label">Cronología / Timeline</span>
-
-          <div data-lang="es" class="visible">
-            <div class="timeline">
-              <div class="timeline-item">
-                <span class="timeline-year">S. XIX</span>
-                <h4>El Edificio Original</h4>
-                <p>Construcción colonial en el centro histórico de Santa Marta. Uso mixto: vivienda y comercio.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">ca. 1920s</span>
-                <h4>Centro de Atención Médica</h4>
-                <p>El edificio comienza a funcionar como punto de atención de salud informal para el barrio.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">ca. 1952</span>
-                <h4>Paciente 013</h4>
-                <p>Los registros sugieren que algo ocurrió en el ala norte. Los detalles figuran como clasificados.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">1969</span>
-                <h4>Cierre</h4>
-                <p>El edificio cierra. No todos salen. Nadie regresa a buscar lo que quedó.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">2022</span>
-                <h4>Grupo Maia</h4>
-                <p>Adquisición de la propiedad. Inicio de obras de rehabilitación. Hallazgo en el segundo piso.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">2024</span>
-                <h4>El Sanatorio Abre</h4>
-                <p>Yakitori gastro bar & horror experience. Calle 19 #4-23. Ella sigue aquí.</p>
-              </div>
-            </div>
-          </div>
-
-          <div data-lang="en">
-            <div class="timeline">
-              <div class="timeline-item">
-                <span class="timeline-year">19th C.</span>
-                <h4>The Original Building</h4>
-                <p>Colonial construction in Santa Marta's historic center. Mixed-use: residential and commercial.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">ca. 1920s</span>
-                <h4>Medical Care Center</h4>
-                <p>The building begins operating as an informal neighborhood health post.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">ca. 1952</span>
-                <h4>Patient 013</h4>
-                <p>Records suggest something occurred in the north wing. Details are classified.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">1969</span>
-                <h4>Closure</h4>
-                <p>The building closes. Not everyone leaves. Nobody comes back for what remained.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">2022</span>
-                <h4>Grupo Maia</h4>
-                <p>Property acquisition. Restoration begins. Discovery on the second floor.</p>
-              </div>
-              <div class="timeline-item">
-                <span class="timeline-year">2024</span>
-                <h4>El Sanatorio Opens</h4>
-                <p>Yakitori gastro bar & horror experience. Calle 19 #4-23. She's still here.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Patient file -->
-        <div class="patient-file" role="complementary" aria-label="Expediente Paciente 013">
-          <div class="patient-file__header">
-            <span class="patient-file__num">PACIENTE 013</span>
-            <span class="patient-file__stamp">CLASIFICADO</span>
-          </div>
-          <div class="patient-file__body">
-            <div class="patient-file__row">
-              <span class="patient-file__key">Nombre</span>
-              <span class="patient-file__val">"Trece"</span>
-            </div>
-            <div class="patient-file__row">
-              <span class="patient-file__key">Ingreso</span>
-              <span class="patient-file__val">ca. 1952</span>
-            </div>
-            <div class="patient-file__row">
-              <span class="patient-file__key">Alta</span>
-              <span class="patient-file__val">Nunca</span>
-            </div>
-            <div class="patient-file__row">
-              <span class="patient-file__key">Diagnóstico</span>
-              <span class="patient-file__val redacted" title="[REDACTADO]">[REDACTADO]</span>
-            </div>
-            <div class="patient-file__row">
-              <span class="patient-file__key">Estado</span>
-              <span class="patient-file__val" style="color: var(--green-bright);">ACTIVA</span>
-            </div>
-            <div class="patient-file__row">
-              <span class="patient-file__key">Ubicación</span>
-              <span class="patient-file__val" style="color: var(--gold); font-style: italic;">Conocida</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="mono" style="font-size: 0.6rem; color: var(--gray); margin-top: 1rem; letter-spacing: 0.1em; line-height: 1.8;">
-          ARCHIVO: SANATORIO DEL NORTE<br>
-          SANTA MARTA — COLOMBIA<br>
-          CLAUSURADO: 1969 / REABIERTO: 2024
-        </p>
-      </div><!-- /sidebar -->
-
-    </div><!-- /historia-body -->
-  </div>
-</section>
-
-<!-- ── La Visión en Detalle ───────────────────────────────── -->
-<section style="background: var(--black); padding: 5rem 0; border-top: 1px solid var(--border);" aria-labelledby="vision-detail">
-  <div class="container">
-    <div class="section-label" style="justify-content: center;"><span>Protocolo de Concepto</span></div>
-    <h2 class="section-title section-title--center" id="vision-detail">Yakitori + Horror: El Concepto</h2>
-    <p class="serif text-center" style="color: var(--light-gray); max-width: 540px; margin: 0 auto 0.5rem; font-size: 1rem;">
-      Dos tradiciones con más en común de lo que parece. Fuego. Ritual. Precisión.
-      La diferencia está en qué tipo de paciencia requieren.
-    </p>
-
-    <div class="vision-grid fade-in-section">
-      <div class="vision-card">
-        <span class="vision-card__icon" aria-hidden="true">🔥</span>
-        <h4>Yakitori al Carbón</h4>
-        <p>Brochetas japonesas sobre carbón de marabú. Cocina lenta, temperatura
-           controlada, tare de la casa. La disciplina de la calle Shinjuku en el
-           corazón colonial del Caribe.</p>
-      </div>
-      <div class="vision-card">
-        <span class="vision-card__icon" aria-hidden="true">🧪</span>
-        <h4>Coctelería Médica</h4>
-        <p>Tragos con nombre de diagnóstico. Prescripciones del Doctor de turno.
-           Grifos en forma de jeringa. La farmacia reconvertida en barra —
-           la terapia de la noche.</p>
-      </div>
-      <div class="vision-card">
-        <span class="vision-card__icon" aria-hidden="true">🏚</span>
-        <h4>El Edificio Real</h4>
-        <p>No es un set de película. Es un edificio colonial con historia real.
-           Los pisos superiores no se renovaron. Lo que hay dentro es lo que había.
-           Nosotros solo encendimos las luces — las que funcionan.</p>
-      </div>
-      <div class="vision-card">
-        <span class="vision-card__icon" aria-hidden="true">👁</span>
-        <h4>Horror Inmersivo</h4>
-        <p>Una experiencia de terror de guión que usa el espacio real como escenario.
-           Los actores conocen los pasillos. Los visitantes no. Esa es la diferencia
-           que importa cuando las luces se van.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA ────────────────────────────────────────────────── -->
-<section style="background: var(--panel-dark); padding: 5rem 0; border-top: 1px solid var(--border);" aria-labelledby="historia-cta">
-  <div class="container--sm text-center">
-    <div class="section-label" style="justify-content: center;"><span>Próximo Paso</span></div>
-    <h2 class="section-title section-title--center" id="historia-cta">Ahora Que Lo Sabes</h2>
-    <p class="serif" style="color: var(--light-gray); margin: 1rem auto 2.5rem; max-width: 460px;">
-      La historia no termina aquí. La historia empieza cuando tú llegas.
-    </p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="experience.html" class="btn btn--red">La Experiencia</a>
-      <a href="index.html#reservar" class="btn btn--white">Reservar Mesa</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── Footer ─────────────────────────────────────────────────── -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__inner">
-      <div>
-        <p class="footer__logo">EL SANATORIO</p>
-        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
-        <p class="mono" style="font-size: 0.65rem; color: var(--gray); margin-top: 1rem; line-height: 1.8;">
-          Calle 19 #4-23 · Centro Histórico<br>Santa Marta, Colombia
-        </p>
-      </div>
-      <div>
-        <p class="footer__col-title">Instalaciones</p>
-        <ul class="footer__links" role="list">
-          <li><a href="menu.html">El Menú / Expediente</a></li>
-          <li><a href="experience.html">La Experiencia</a></li>
-          <li><a href="events.html">Eventos Privados</a></li>
-          <li><a href="tours.html">Tours Históricos</a></li>
-          <li><a href="historia.html">La Historia</a></li>
-          <li><a href="contact.html">Contacto</a></li>
+    <!-- ─── NAVIGATION ──────────────────────────────────────────────────── -->
+    <nav aria-label="Navegación principal">
+        <a href="/" class="nav-logo">El Sanatorio</a>
+        <ul class="nav-links">
+            <li><a href="historia.html" class="active">Historia</a></li>
+            <li><a href="carta.html">Carta</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
-      </div>
-      <div>
-        <p class="footer__col-title">Contacto</p>
-        <ul class="footer__links" role="list">
-          <li><a href="https://wa.me/573174370575" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="index.html#reservar">Reservar Mesa</a></li>
-        </ul>
-        <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1.5rem; line-height: 1.8;">
-          Mié – Dom &nbsp;·&nbsp; 6 PM – 2 AM
-        </p>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados.</p>
-      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
-    </div>
-  </div>
-</footer>
+    </nav>
 
-<script src="js/main.js"></script>
-<script>
-  function setLang(lang) {
-    // Toggle content blocks
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      el.classList.toggle('visible', el.dataset.lang === lang);
-    });
-    // Toggle button states
-    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
-    document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
-    // Update html lang attribute
-    document.documentElement.lang = lang === 'en' ? 'en' : 'es';
-  }
-</script>
+    <!-- ─── HERO ────────────────────────────────────────────────────────── -->
+    <header class="hero" role="banner">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">El Origen</span>
+            <h1 class="hero-title">
+                Historia
+                <span>Del Otro Lado</span>
+            </h1>
+        </div>
+        <div class="hero-rule" aria-hidden="true"></div>
+    </header>
+
+    <!-- ─── MAIN ─────────────────────────────────────────────────────────── -->
+    <main>
+
+        <!-- ─── OPENING ─────────────────────────────────────────────────── -->
+        <section class="opening" aria-labelledby="opening-heading">
+            <div class="container">
+                <div class="opening-inner">
+                    <div class="opening-col">
+                        <span class="section-label">Prólogo</span>
+                        <h2 class="section-heading" id="opening-heading">
+                            Hay lugares que<br>
+                            no se construyen.<br>
+                            <em>Se invocan.</em>
+                        </h2>
+                    </div>
+                    <div class="opening-divider" aria-hidden="true"></div>
+                    <div class="opening-col">
+                        <blockquote>
+                            "Llegamos buscando un edificio. Encontramos algo que llevaba décadas esperando ser despertado."
+                        </blockquote>
+                        <p>
+                            No todas las ideas nacen de un plano o de una reunión de negocios. Algunas emergen de una obsesión, de la certeza inquietante de que dos mundos aparentemente incompatibles —la precisión ceremonial de la cocina japonesa de calle y la oscuridad fascinante del horror— no solo podían coexistir, sino que <strong>siempre habían estado destinados a encontrarse.</strong>
+                        </p>
+                        <p>
+                            Esta es la historia de El Sanatorio. No la que leerás en un comunicado de prensa. La verdadera.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── CONCEPT ─────────────────────────────────────────────────── -->
+        <section class="concept" aria-labelledby="concept-heading">
+            <div class="container">
+                <div class="concept-grid">
+
+                    <div class="concept-visual">
+                        <div class="concept-visual-box">
+                            <ul class="japanese-list" aria-label="Pilares del concepto">
+                                <li>
+                                    <span class="kanji" aria-hidden="true">焼</span>
+                                    <div class="meaning">
+                                        <strong>Yaki — Fuego</strong>
+                                        <span>La brasa viva. El humo que sube. El calor de las brasas de binchotan que transforma lo crudo en ritual. Cada pincho es un acto de alquimia.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="kanji" aria-hidden="true">鳥</span>
+                                    <div class="meaning">
+                                        <strong>Tori — El ave</strong>
+                                        <span>Símbolo de tránsito entre mundos. En la mitología japonesa, el cuervo guía a los espíritus. En nuestra parrilla, se convierte en algo sublime.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="kanji" aria-hidden="true">怪</span>
+                                    <div class="meaning">
+                                        <strong>Kai — Lo extraño</strong>
+                                        <span>El kaidan. El cuento de fantasmas. La sensación de que algo acecha en el rabillo del ojo. La incomodidad placentera de lo desconocido.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="kanji" aria-hidden="true">宴</span>
+                                    <div class="meaning">
+                                        <strong>Utage — El banquete</strong>
+                                        <span>Comer es un acto social, casi sagrado. Pero los mejores banquetes tienen algo de transgresión. Aquí, la mesa es un umbral.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="concept-text">
+                        <span class="section-label">El Concepto</span>
+                        <h2 class="section-heading" id="concept-heading">
+                            Comida de calle<br>
+                            japonesa para<br>
+                            <em>almas inquietas</em>
+                        </h2>
+                        <p>
+                            El yakitori es, en esencia, democrático. Nació en los callejones de Tokio, entre farolillos de papel y el humo perfumado de las parrillas de carbón. Obreros, oficinistas, poetas y vagabundos compartían los mismos taburetes altos, los mismos pinchos de muslo y piel, la misma botella de sake barato que hacía posible la conversación honesta.
+                        </p>
+                        <p>
+                            El horror, en cambio, nació de lo que los humanos no pueden controlar. Del miedo a la oscuridad, a lo que habita más allá, a las casas con historia, a los pasillos que crujen. Pero también —y esto es lo que muy poca gente admite— de una fascinación profunda. De ese impulso irresistible de <strong>asomarse al abismo.</strong>
+                        </p>
+                        <p>
+                            En El Sanatorio no tratamos el horror como decoración. Lo tratamos como <strong>lenguaje.</strong> Un idioma con el que construimos atmósfera, narrativa y experiencia. Porque una buena comida y una buena historia de terror comparten la misma estructura: tensión, desarrollo, liberación, y una conclusión que no se olvida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── PULL QUOTE ───────────────────────────────────────────────── -->
+        <div class="pull-quote" role="complementary">
+            <div class="pull-quote-inner">
+                <blockquote>
+                    "No queríamos hacer un restaurante temático. Queríamos hacer un lugar que <em style="color: var(--pale-gold);">tuviera alma.</em> Aunque esa alma fuera un poco oscura."
+                </blockquote>
+                <cite>— Los fundadores, sobre el origen del proyecto</cite>
+            </div>
+        </div>
+
+        <!-- ─── BUILDING ─────────────────────────────────────────────────── -->
+        <section class="building" aria-labelledby="building-heading">
+            <div class="container">
+                <div class="building-layout">
+
+                    <div class="building-main">
+                        <span class="section-label">El Espacio</span>
+                        <h2 class="section-heading" id="building-heading">
+                            Un edificio colonial<br>
+                            que <em>no quería</em><br>
+                            ser silenciado
+                        </h2>
+
+                        <p>
+                            Cuando el equipo de The Maia Group comenzó a buscar ubicación, el brief era específico: necesitaban un espacio con carácter, con capas, con historia visible en sus paredes. Nada construido ayer. Nada aséptico. Algo que ya tuviera sus propios secretos.
+                        </p>
+
+                        <p>
+                            Lo que encontraron superó cualquier expectativa. Un edificio de arquitectura colonial que había atravesado décadas de vida, de abandono y de renacimiento. Techos altos con molduras desgastadas. Suelos que guardan memoria bajo sus capas de pintura. Ventanas que miran hacia afuera como ojos que llevan demasiado tiempo observando.
+                        </p>
+
+                        <p>
+                            La decisión de diseño fue radical desde el principio: <strong>no restaurar para borrar el pasado, sino intervenir para exaltarlo.</strong> Las grietas que cuentan historias se dejaron visibles. Los rincones oscuros se convirtieron en rincones deliberados. La imperfección arquitectónica se transformó en virtud estética.
+                        </p>
+
+                        <p>
+                            El resultado es un espacio en el que lo japonés y lo colonial dialogan sin tensión aparente. Las barras de madera oscura, los pinchos sobre las brasas, la luz ámbar de las lámparas de aceite modernizadas —todo convive con los arcos coloniales, los techos altos y esa sensación persistente de que el edificio tiene más que decir de lo que estamos dispuestos a escuchar.
+                        </p>
+
+                        <div class="ornament" style="margin-top: 48px; margin-bottom: 0;">
+                            <div class="ornament-line"></div>
+                            <span class="ornament-symbol" aria-hidden="true">✦</span>
+                            <div class="ornament-line"></div>
+                        </div>
+
+                        <p style="margin-top: 32px; font-style: italic; color: var(--mist);">
+                            Porque los mejores espacios no se diseñan desde cero. Se descubren, se escuchan, y se responden a lo que ya está ahí esperando.
+                        </p>
+                    </div>
+
+                    <div class="building-sidebar" aria-label="Datos del espacio">
+                        <div class="fact-card">
+                            <span class="fact-card-label">Arquitectura</span>
+                            <div class="fact-card-value">Colonial</div>
+                            <div class="fact-card-sub">Patrimonio arquitectónico con intervención contemporánea</div>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-card-label">Filosofía de diseño</span>
+                            <div class="fact-card-value">Conservar para revelar</div>
+                            <div class="fact-card-sub">Las marcas del tiempo como elemento estético</div>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-card-label">Cocina</span>
+                            <div class="fact-card-value">Parrilla Binchotan</div>
+                            <div class="fact-card-sub">Carbón blanco japonés. 1.000 °C de temperatura. Cero humo visible.</div>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-card-label">Ambiente</span>
+                            <div class="fact-card-value">Horror Inmersivo</div>
+                            <div class="fact-card-sub">Narrativa activa. El espacio siempre está contando algo.</div>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-card-label">Parte de</span>
+                            <div class="fact-card-value">The Maia Group</div>
+                            <div class="fact-card-sub">Grupo de conceptos gastronómicos únicos e irreplicables</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── PHILOSOPHY ───────────────────────────────────────────────── -->
+        <section class="philosophy" aria-labelledby="philosophy-heading">
+            <div class="container">
+                <div class="philosophy-inner">
+                    <div class="ornament" style="margin: 0 auto 48px;">
+                        <div class="ornament-line"></div>
+                        <span class="ornament-symbol" aria-hidden="true">⬡</span>
+                        <div class="ornament-line"></div>
+                    </div>
+                    <span class="section-label">Nuestra Filosofía</span>
+                    <h2 class="section-heading" id="philosophy-heading">Lo que creemos</h2>
+
+                    <p class="manifesto">
+                        Creemos que <em>comer bien</em> nunca debería ser aburrido.<br>
+                        Creemos que el <em>miedo bien administrado</em> es placer.<br>
+                        Creemos que la <em>calle</em> siempre ha sabido más que el restaurante elegante.<br>
+                        Creemos que lo <em>oscuro</em> tiene su propia forma de belleza.<br>
+                        Creemos que una brasa y un buen pincho pueden ser, en el contexto correcto, <em>algo cercano a lo sagrado.</em>
+                    </p>
+
+                    <p style="max-width: 620px; margin: 0 auto 32px; text-align: center;">
+                        En El Sanatorio, la experiencia no empieza cuando llegas a la mesa. Empieza cuando cruzas la puerta, cuando el olfato capta el primer rastro de binchotan, cuando los ojos tardan un segundo en adaptarse a la luz. El horror es sutil aquí. No es una máscara que te asalta. Es una presencia. Un clima. <strong>Una atmósfera que te acompaña toda la noche.</strong>
+                    </p>
+
+                    <p style="max-width: 620px; margin: 0 auto; text-align: center;">
+                        Y cuando te vayas, con los dedos impregnados de tare y los oídos todavía oyendo alguno de los sonidos ambientales que pueblan el local, algo en ti habrá cambiado un poco. Eso es lo que buscamos. No solo que comas bien. Sino que <strong>recuerdes que estuviste aquí.</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── TIMELINE ─────────────────────────────────────────────────── -->
+        <section class="timeline-section" aria-labelledby="timeline-heading">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start;">
+                    <div style="position: sticky; top: 120px;">
+                        <span class="section-label">Cronología</span>
+                        <h2 class="section-heading" id="timeline-heading">
+                            Cómo llegamos<br>
+                            hasta <em>aquí</em>
+                        </h2>
+                        <p>
+                            Todo proyecto que vale algo tiene un camino no lineal. El Sanatorio no fue diferente. Fue una serie de intuiciones, descubrimientos y decisiones tomadas en la oscuridad —metafóricamente, y a veces literalmente.
+                        </p>
+                    </div>
+                    <div>
+                        <nav class="timeline" aria-label="Cronología del proyecto">
+                            <div class="timeline-item">
+                                <span class="timeline-date">La Obsesión</span>
+                                <h3 class="timeline-heading">El yakitori como punto de partida</h3>
+                                <p class="timeline-body">
+                                    Todo comenzó con un viaje. Una noche en un callejón de Osaka, bajo farolillos de papel, descubriendo que una brasa y un pincho podían generar una experiencia tan intensa como cualquier restaurante de alta cocina. La sencillez como máxima complejidad.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">La Fusión</span>
+                                <h3 class="timeline-heading">Cuando el horror encontró la parrilla</h3>
+                                <p class="timeline-body">
+                                    La pregunta llegó casi sola: ¿qué pasaría si la experiencia del izakaya oscuro, del ambiente cargado y del fuego visible se envolviera en la estética del horror? No del gore, sino de lo psicológico. Del ambiente. De la incomodidad placentera.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">El Espacio</span>
+                                <h3 class="timeline-heading">El edificio que los eligió a ellos</h3>
+                                <p class="timeline-body">
+                                    Cuando el equipo de The Maia Group vio el edificio colonial por primera vez, la decisión fue inmediata. No necesitaba ser convencido. Hablaba solo. Tenía décadas de silencio acumulado y estaba listo para ser interrumpido de la manera correcta.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">La Apertura</span>
+                                <h3 class="timeline-heading">El Sanatorio abre sus puertas</h3>
+                                <p class="timeline-body">
+                                    El concepto se materializó. Las brasas se encendieron. Las primeras mesas se llenaron de personas que llegaron con curiosidad y se fueron con algo más difícil de describir. Un sabor en la boca y una historia que contar.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Hoy</span>
+                                <h3 class="timeline-heading">El lugar sigue evolucionando</h3>
+                                <p class="timeline-body">
+                                    El Sanatorio no es estático. La carta cambia. Los eventos evolucionan. Los rincones del espacio se reconfiguran. Como todo lo que está vivo —o lo que finge estarlo— no permanece igual dos noches seguidas.
+                                </p>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── MAIA GROUP ────────────────────────────────────────────────── -->
+        <section class="maia" aria-labelledby="maia-heading">
+            <div class="container">
+                <div class="maia-layout">
+
+                    <div class="maia-text">
+                        <span class="section-label">El Grupo</span>
+                        <h2 class="section-heading" id="maia-heading">
+                            Parte de algo<br>
+                            <em>más grande</em>
+                        </h2>
+                        <p>
+                            El Sanatorio no nació en el vacío. Es parte de <strong>The Maia Group</strong>, un grupo de conceptos gastronómicos fundado sobre una premisa simple pero radical: <em>ningún restaurante debería parecerse a otro.</em>
+                        </p>
+                        <p>
+                            The Maia Group no construye cadenas. Construye universos. Cada concepto dentro del grupo tiene su propia identidad, su propia narrativa, su propio lenguaje visual y gastronómico. Lo que los une no es la estética, sino el compromiso con la <strong>experiencia radical.</strong> Con la convicción de que comer fuera de casa puede —y debe— ser algo memorable.
+                        </p>
+                        <p>
+                            El Sanatorio es, dentro de ese ecosistema, el proyecto más oscuro, más arriesgado y quizás el más honesto. Porque el horror —bien hecho— no miente. No hace concesiones. No busca agradar a todo el mundo. Y eso, en gastronomía, es exactamente la actitud correcta.
+                        </p>
+                        <p>
+                            Ser parte de The Maia Group significa tener acceso a los recursos, la red y la experiencia de un grupo con visión. Significa que detrás de cada decisión —desde el proveedor de binchotan hasta el diseño de la carta— hay un estándar de excelencia que no se negocia.
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="maia-brand" role="img" aria-label="The Maia Group">
+                            <span class="maia-logo-text">Parte de</span>
+                            <span class="maia-name">THE MAIA<br>GROUP</span>
+                            <div class="maia-sub">Conceptos gastronómicos únicos</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── CTA ──────────────────────────────────────────────────────── -->
+        <section class="cta-section" aria-labelledby="cta-heading">
+            <div class="ornament" style="margin: 0 auto 48px;">
+                <div class="ornament-line"></div>
+                <span class="ornament-symbol" aria-hidden="true">✦</span>
+                <div class="ornament-line"></div>
+            </div>
+            <h2 class="section-heading" id="cta-heading">
+                Ahora que sabes<br>
+                <em>de dónde venimos</em>
+            </h2>
+            <p>
+                Las puertas están abiertas. Las brasas, encendidas. Solo falta que cruces el umbral y compruebes, por ti mismo, lo que hay al otro lado.
+            </p>
+            <div class="btn-group">
+                <a href="reservas.html" class="btn btn-primary">Reservar mesa</a>
+                <a href="carta.html" class="btn btn-secondary">Ver la carta</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ─── FOOTER ────────────────────────────────────────────────────────── -->
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <div>
+                <span class="footer-brand-name">El Sanatorio</span>
+                <p class="footer-tagline">
+                    Yakitori gastrobar de horror.<br>
+                    Donde la brasa y lo macabro<br>
+                    se sientan a la misma mesa.
+                </p>
+            </div>
+            <div>
+                <span class="footer-col-title">Navegar</span>
+                <ul class="footer-links">
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="carta.html">Carta</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <span class="footer-col-title">Visítanos</span>
+                <ul class="footer-links">
+                    <li><a href="#">el-sanatorio.com</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">The Maia Group</a></li>
+                    <li><a href="#">Prensa</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">
+                &copy; 2024 El Sanatorio. Todos los derechos reservados.
+            </p>
+            <span class="footer-maia-credit">
+                Un concepto de <span>The Maia Group</span>
+            </span>
+        </div>
+    </footer>
+
 </body>
 </html>
+```

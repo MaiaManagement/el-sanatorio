@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/consent-banner.js" defer></script>
+  <!-- Cookie Consent Banner — Consent Mode v2 / Ley 1581 — MUST be first script -->
+  <script src="/consent-banner.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZGDBW5K7Q"></script>
+  <script>gtag('js', new Date()); gtag('config', 'G-JZGDBW5K7Q');</script>
     <meta name="description" content="La historia de El Sanatorio — yakitori gastrobar de horror. Descubre el origen de este lugar donde la comida japonesa de calle se encuentra con lo macabro.">
     <meta name="author" content="The Maia Group">
     <title>Historia | El Sanatorio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=IM+Fell+English:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" /></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" /></noscript>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta property="og:image" content="https://el-sanatorio.com/images/og-image.jpg" />
+    <link rel="canonical" href="https://el-sanatorio.com/historia.html" />
     <style>
 
         /* ─── RESET & BASE ─────────────────────────────────────────────── */
@@ -37,9 +52,9 @@
             --gold:         #b8941a;
             --pale-gold:    #d4a830;
 
-            --font-display: 'Cinzel', serif;
+            --font-display: 'Playfair Display', serif;
             --font-body:    'IM Fell English', serif;
-            --font-ui:      'Inter', sans-serif;
+            --font-ui:      'Share Tech Mono', monospace;
 
             --max-width: 1100px;
             --section-gap: 120px;
@@ -973,49 +988,50 @@
 
     </style>
 
-<!-- Google tag (gtag.js) -- replace G-JZGDBW5K7Q with real GA4 ID -->
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZGDBW5K7Q"></script>
-<script>gtag('js', new Date()); gtag('config', 'G-JZGDBW5K7Q');</script>
-<meta property="og:image" content="https://el-sanatorio.com/images/og-image.jpg" />
-<link rel="canonical" href="https://el-sanatorio.com/historia.html" />
 </head>
 <body>
 
-    <!-- ─── NAVIGATION ──────────────────────────────────────────────────── -->
-    <nav aria-label="Navegación principal">
-        <a href="/" class="nav-logo">El Sanatorio</a>
-        <ul class="nav-links">
-            <li><a href="historia.html" class="active">Historia</a></li>
-            <li><a href="menu.html">Menú</a></li>
-            <li><a href="index.html#reservar">Reservas</a></li>
-            <li><a href="events.html">Eventos</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-        </ul>
-        <button class="ham-btn" id="hamBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">☰</button>
-    </nav>
-    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú móvil">
-        <a href="historia.html">Historia</a>
-        <a href="menu.html">Menú</a>
-        <a href="index.html#reservar">Reservas</a>
-        <a href="events.html">Eventos</a>
-        <a href="contact.html">Contacto</a>
+<!-- ── Navigation ────────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="El Sanatorio — inicio">
+      <span class="nav__logo-num">PACIENTE 013</span>
+      <span class="nav__logo-name" data-glitch="EL SANATORIO">EL SANATORIO</span>
+    </a>
+
+    <!-- Heart monitor -->
+    <div class="nav__monitor" aria-hidden="true">
+      <svg viewBox="0 0 300 36" preserveAspectRatio="none">
+        <path class="ekg-line" d="M 0,18 L 30,18 L 45,12 L 60,27 L 66,0 L 75,34 L 90,18 L 120,18 L 135,12 L 150,27 L 156,0 L 165,34 L 180,18 L 300,18" />
+      </svg>
     </div>
-    <script>
-      (function(){
-        var btn = document.getElementById('hamBtn');
-        var nav = document.getElementById('mobileNav');
-        btn.addEventListener('click', function(){
-          var open = nav.classList.toggle('open');
-          btn.setAttribute('aria-expanded', open);
-          btn.textContent = open ? '✕' : '☰';
-        });
-      })();
-    </script>
+
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="experience.html">Experiencia</a></li>
+      <li><a href="events.html">Eventos</a></li>
+      <li><a href="tours.html">Tours</a></li>
+      <li><a href="historia.html" aria-current="page">Historia</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav__mobile-menu" id="nav-mobile-menu" role="navigation" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="menu.html">Menú</a>
+  <a href="experience.html">Experiencia</a>
+  <a href="events.html">Eventos</a>
+  <a href="tours.html">Tours</a>
+  <a href="historia.html">Historia</a>
+  <a href="contact.html">Contacto</a>
+</div>
 
     <!-- ─── HERO ────────────────────────────────────────────────────────── -->
     <header class="hero" role="banner">
@@ -1351,47 +1367,50 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
 
     </main>
 
-    <!-- ─── FOOTER ────────────────────────────────────────────────────────── -->
-    <footer role="contentinfo">
-        <div class="footer-inner">
-            <div>
-                <span class="footer-brand-name">El Sanatorio</span>
-                <p class="footer-tagline">
-                    Yakitori gastrobar de horror.<br>
-                    Donde la brasa y lo macabro<br>
-                    se sientan a la misma mesa.
-                </p>
-            </div>
-            <div>
-                <span class="footer-col-title">Navegar</span>
-                <ul class="footer-links">
-                    <li><a href="historia.html">Historia</a></li>
-                    <li><a href="menu.html">Menú</a></li>
-                    <li><a href="index.html#reservar">Reservas</a></li>
-                    <li><a href="events.html">Eventos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div>
-                <span class="footer-col-title">Visítanos</span>
-                <ul class="footer-links">
-                    <li><a href="#">el-sanatorio.com</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">The Maia Group</a></li>
-                    <li><a href="#">Prensa</a></li>
-                    <li><a href="#">Trabaja con nosotros</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">
-                &copy; 2024 El Sanatorio. Todos los derechos reservados.
-            </p>
-            <span class="footer-maia-credit">
-                Un concepto de <span>The Maia Group</span>
-            </span>
-        </div>
-    </footer>
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__logo">EL SANATORIO</p>
+        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
+        <address class="mono" style="font-size: 0.75rem; color: var(--gray); margin-top: 1rem; line-height: 1.8; font-style: normal;">
+          Calle 19 #4-23<br>
+          Centro Histórico<br>
+          Santa Marta, Magdalena, Colombia
+        </address>
+      </div>
+      <div>
+        <p class="footer__col-title">Instalaciones</p>
+        <ul class="footer__links" role="list">
+          <li><a href="menu.html">El Menú / Expediente</a></li>
+          <li><a href="experience.html">La Experiencia</a></li>
+          <li><a href="tours.html">Tours Históricos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="index.html#reservar">Reservar Mesa</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Protocolo</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="historia.html">La Historia</a></li>
+          <li><a href="experience.html#rules">Normas del Laberinto</a></li>
+        </ul>
+        <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1.5rem; line-height: 1.8;">
+          Mié – Dom<br>
+          6:00 PM – 2:00 AM<br>
+          (Viernes y Sábado)
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados. | <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacidad</a> | <a href="#" onclick="MaiaConsent.reopenBanner();return false;" style="color:inherit;text-decoration:underline;">Gestionar cookies</a></p>
+      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
+    </div>
+  </div>
+</footer>
 
 
 <!-- Floating WhatsApp Button -->
@@ -1429,10 +1448,6 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
 </style>
 
 
-<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;color:#fff;padding:16px 24px;z-index:10000;font-family:sans-serif;font-size:14px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-  <span>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra <a href="/privacidad.html" style="color:#f0c040;text-decoration:underline">politica de privacidad</a>.</span>
-  <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookieConsent','accepted')" style="background:#f0c040;color:#000;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-weight:bold;white-space:nowrap">Aceptar</button>
-</div>
-<script>if(localStorage.getItem('cookieConsent')==='accepted')document.getElementById('cookie-banner').style.display='none';</script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

@@ -19,6 +19,7 @@
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="El Laberinto — Horror Experience | El Sanatorio" />
   <meta name="twitter:description" content="Los pisos superiores no fueron renovados. Grupos de máximo 8 personas. No todos salen por el mismo camino." />
+  <meta name="twitter:image"       content="https://el-sanatorio.com/images/og-image.jpg" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://el-sanatorio.com/experience.html" />
@@ -354,7 +355,7 @@
         <span class="form-panel__ref">REF-XXXXX-013</span>
       </div>
 
-      <form name="reserva-experiencia" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias">
+      <form name="reserva-experiencia" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="reserva-experiencia" />
         <p style="display:none;"><label>No llenar: <input name="bot-field" /></label></p>
 
@@ -373,4 +374,76 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="exp-size">Tamaño del Grupo *</label>
-            <select class="form-select" id="exp-size" name="gr
+            <select class="form-select" id="exp-size" name="grupo">
+                <option value="">Seleccionar...</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="7">7 personas</option>
+                <option value="8">8 personas (máximo)</option>
+              </select>
+            </div>
+          <div class="form-group">
+            <label class="form-label" for="exp-date">Fecha y Hora Deseada *</label>
+            <input class="form-input" type="text" id="exp-date" name="fecha_hora" required placeholder="Ej: Sábado 5 Jul · Turno 10 PM" />
+          </div>
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label class="form-label" for="exp-notes">Notas Adicionales</label>
+            <textarea class="form-input" id="exp-notes" name="notas" rows="3" placeholder="Celebraciones, restricciones de salud, idioma preferido…"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit" style="margin-top: 1.5rem;">ENVIAR SOLICITUD DE INGRESO</button>
+      </form>
+    </div><!-- /form-panel -->
+
+    <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1rem; text-align: center; line-height: 1.7; letter-spacing: 0.08em;">
+      No se requiere pago por adelantado · Pago el día de la experiencia<br>
+      Mayores de 16 años · No apto para personas con problemas cardíacos o epilepsia
+    </p>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__logo">EL SANATORIO</p>
+        <p class="footer__tagline">"Ella siempre ha estado aquí."</p>
+        <address class="mono" style="font-size: 0.75rem; color: var(--gray); margin-top: 1rem; line-height: 1.8; font-style: normal;">
+          Calle 19 #4-23<br>
+          Centro Histórico<br>
+          Santa Marta, Magdalena, Colombia
+        </address>
+      </div>
+      <div>
+        <p class="footer__col-title">Instalaciones</p>
+        <ul class="footer__links" role="list">
+          <li><a href="menu.html">El Menú / Expediente</a></li>
+          <li><a href="experience.html">La Experiencia</a></li>
+          <li><a href="tours.html">Tours Históricos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Protocolo</p>
+        <ul class="footer__links" role="list">
+          <li><a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="privacy.html" style="color:inherit;">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados.</p>
+      <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

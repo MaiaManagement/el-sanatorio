@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/consent-banner.js" defer></script>
     <meta name="description" content="La historia de El Sanatorio — yakitori gastrobar de horror. Descubre el origen de este lugar donde la comida japonesa de calle se encuentra con lo macabro.">
     <meta name="author" content="The Maia Group">
     <title>Historia | El Sanatorio</title>
@@ -926,6 +927,17 @@
         }
 
     </style>
+
+<!-- Google tag (gtag.js) -- replace G-XXXXXXXXXX with real GA4 ID -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');</script>
+<meta property="og:image" content="https://el-sanatorio.com/images/og-image.jpg" />
+<link rel="canonical" href="https://el-sanatorio.com/historia.html" />
 </head>
 <body>
 
@@ -1352,6 +1364,12 @@
 }
 </style>
 
+
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;color:#fff;padding:16px 24px;z-index:10000;font-family:sans-serif;font-size:14px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+  <span>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra <a href="/privacidad.html" style="color:#f0c040;text-decoration:underline">politica de privacidad</a>.</span>
+  <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookieConsent','accepted')" style="background:#f0c040;color:#000;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-weight:bold;white-space:nowrap">Aceptar</button>
+</div>
+<script>if(localStorage.getItem('cookieConsent')==='accepted')document.getElementById('cookie-banner').style.display='none';</script>
 </body>
 </html>
 ```

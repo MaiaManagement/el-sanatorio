@@ -26,7 +26,7 @@
  * - Rep. legal   : Andrew John Sidney Gallie, CE 8129525
  * - Address      : CR 1 # 19-61, Barrio Rodadero,
  *                  Santa Marta, Magdalena 470007, Colombia
- * - Email        : ajsgallie@gmail.com
+ * - Email        : andrew@maia-management.com
  *   PENDING: migrate to custom domain email once available
  * - Complies with Ley 1581 de 2012 (Colombia) & GDPR basics
  * - Consent Mode v2: ad_storage, analytics_storage,

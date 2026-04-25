@@ -276,9 +276,13 @@ p  { font-family: var(--font-fell); line-height: 1.8; font-size: 1rem; color: va
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  padding: 8px;
+  padding: 12px 10px;
   background: none;
   border: none;
+  min-height: 44px;
+  min-width: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__toggle span {
@@ -453,12 +457,15 @@ p  { font-family: var(--font-fell); line-height: 1.8; font-size: 1rem; color: va
 
 /* ── Buttons ─────────────────────────────────────────────────── */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 12px 28px;
+  min-height: 44px;
   border: 1px solid;
   cursor: pointer;
   transition: all 0.25s;
@@ -999,6 +1006,7 @@ section {
   font-family: var(--font-mono);
   font-size: 0.9rem;
   padding: 10px 14px;
+  min-height: 44px;
   outline: none;
   transition: border-color 0.2s;
   -webkit-appearance: none;
@@ -1029,6 +1037,7 @@ section {
 .form-submit {
   width: 100%;
   padding: 14px;
+  min-height: 48px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.3em;
@@ -1480,6 +1489,7 @@ section {
   color: var(--light-gray);
   border: 1px solid var(--border-mid);
   padding: 8px 16px;
+  min-height: 44px;
   transition: all 0.2s;
 }
 
@@ -1718,6 +1728,9 @@ html:not(.js-loaded) .fade-in-section {
   text-transform: uppercase;
   color: var(--light-gray);
   padding: 10px 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--border);
   transition: color 0.2s;
 }
@@ -1793,6 +1806,16 @@ html:not(.js-loaded) .fade-in-section {
 @media (max-width: 480px) {
   section { padding: 3rem 0; }
   .hero__ctas { flex-direction: column; align-items: stretch; text-align: center; }
+  /* Mobile font-size minimums: bump sub-12px labels to 12px */
+  .section-label span,
+  .form-label,
+  .patient-file__key,
+  .patient-file__stamp,
+  .patient-header__key,
+  .menu-item__num,
+  .footer__col-title,
+  .nav__logo-num,
+  .hours-table td { font-size: 0.75rem; }
 }
 
 /* ── Prefers Reduced Motion ──────────────────────────────────── */

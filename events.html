@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="El Sanatorio — Eventos privados y corporativos en Santa Marta. Horror yakitori bar en el Centro Histórico. Reserva tu experiencia oscura." />
+  <meta name="description" content="Celebra tu evento privado en el bar de terror de Santa Marta. Yakitori, cócteles macabros y atmósfera de horror. Grupos desde 10 personas. Reserva ahora." />
   <meta name="robots" content="index, follow" />
-  <title>Eventos Privados | El Sanatorio — Santa Marta</title>
+  <title>Eventos de Terror & Privados en Santa Marta | El Sanatorio</title>
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Eventos Privados | El Sanatorio — Santa Marta" />
-  <meta property="og:description" content="El Sanatorio — Eventos privados y corporativos en Santa Marta. Horror yakitori bar en el Centro Histórico. Reserva tu experiencia oscura." />
+  <meta property="og:title"       content="Eventos de Terror & Privados en Santa Marta | El Sanatorio" />
+  <meta property="og:description" content="Celebra tu evento privado en el bar de terror de Santa Marta. Yakitori, cócteles macabros y atmósfera de horror. Grupos desde 10 personas. Reserva ahora." />
   <meta property="og:url"         content="https://el-sanatorio.com/events.html" />
   <meta property="og:image"       content="https://el-sanatorio.com/images/og-image.jpg" />
   <meta property="og:locale"      content="es_CO" />
@@ -36,6 +36,70 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "EventVenue", "BarOrPub"],
+        "@id": "https://el-sanatorio.com/#establishment",
+        "name": "El Sanatorio",
+        "description": "Bar de terror, yakitori gastronómico y espacio de eventos privados en el Centro Histórico de Santa Marta, Colombia.",
+        "url": "https://el-sanatorio.com",
+        "telephone": "+19034598763",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle 19 #4-23",
+          "addressLocality": "Santa Marta",
+          "addressRegion": "Magdalena",
+          "postalCode": "470001",
+          "addressCountry": "CO"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "11.2408",
+          "longitude": "-74.2110"
+        },
+        "image": "https://el-sanatorio.com/images/og-image.jpg",
+        "sameAs": ["https://www.instagram.com/elsanatorio.sm/"]
+      },
+      {
+        "@type": "Event",
+        "@id": "https://el-sanatorio.com/events.html#eventos-privados",
+        "name": "Eventos Privados & Corporativos en El Sanatorio",
+        "description": "El Sanatorio ofrece su espacio de horror y yakitori para eventos privados, corporativos y celebraciones en el Centro Histórico de Santa Marta. Atmósfera única con brasas de binchotan, cócteles de autor y laberinto del terror.",
+        "url": "https://el-sanatorio.com/events.html",
+        "location": {
+          "@type": "Place",
+          "name": "El Sanatorio",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle 19 #4-23",
+            "addressLocality": "Santa Marta",
+            "addressRegion": "Magdalena",
+            "postalCode": "470001",
+            "addressCountry": "CO"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "El Sanatorio",
+          "url": "https://el-sanatorio.com"
+        },
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "url": "https://wa.me/19034598763",
+          "priceCurrency": "COP"
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     /* ============================================================

@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <script src="/consent-banner.js?v=20260430a"></script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bar de Terror & Yakitori en Santa Marta | El Sanatorio</title>
   <meta name="description" content="El Sanatorio — Santa Marta: tres zonas únicas. Patio de yakitori en la calle, bar de cócteles asylum-themed con Be Vida spirits, y la Casa del Terror. Calle 19 #4-23." />
@@ -26,31 +26,9 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://el-sanatorio.com/" />
 
-  <!-- Cookie Consent Banner — Consent Mode v2 / Ley 1581 — MUST be first script -->
-  <script src="/consent-banner.js"></script>
-<!-- Google tag (gtag.js) — replace G-JZGDBW5K7Q with real GA4 ID -->
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZGDBW5K7Q"></script>
-<script>gtag('js', new Date()); gtag('config', 'G-JZGDBW5K7Q');</script>
-
+  
   <!-- Fonts + Styles -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Load non-critical fonts async to reduce render-blocking -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
-  </noscript>
-  <!-- Remaining fonts — async load -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
-  </noscript>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="/css/style.css?v=20260430a" />
 
   <!-- Schema.org — @graph -->
   <script type="application/ld+json">
@@ -130,7 +108,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
         "sameAs": [
           "https://www.instagram.com/elsanatorio.sm/"
         ],
-        "image": "https://el-sanatorio.com/og-image.jpg",
+        "image": "https://el-sanatorio.com/images/og-image.jpg",
         "parentOrganization": {
           "@id": "https://maia-management.com/#organization"
         }
@@ -156,7 +134,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
 <!-- ── Navigation ────────────────────────────────────────────── -->
 <nav class="nav" role="navigation" aria-label="Navegación principal">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo" aria-label="El Sanatorio — inicio">
+    <a href="/" class="nav__logo" aria-label="El Sanatorio — inicio">
       <span class="nav__logo-num">PACIENTE 013</span>
       <span class="nav__logo-name" data-glitch="EL SANATORIO">EL SANATORIO</span>
     </a>
@@ -169,13 +147,13 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
     </div>
 
     <ul class="nav__links" role="list">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="menu.html">Menú</a></li>
-      <li><a href="experience.html">Experiencia</a></li>
-      <li><a href="events.html">Eventos</a></li>
-      <li><a href="tours.html">Tours</a></li>
-      <li><a href="historia.html">Historia</a></li>
-      <li><a href="contact.html">Contacto</a></li>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/menu">Menú</a></li>
+      <li><a href="/experience">Experiencia</a></li>
+      <li><a href="/events">Eventos</a></li>
+      <li><a href="/tours">Tours</a></li>
+      <li><a href="/historia">Historia</a></li>
+      <li><a href="/contact">Contacto</a></li>
     </ul>
 
     <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
@@ -186,25 +164,23 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
 
 <!-- Mobile menu -->
 <div class="nav__mobile-menu" role="navigation" aria-label="Menú móvil">
-  <a href="index.html">Inicio</a>
-  <a href="menu.html">Menú</a>
-  <a href="experience.html">Experiencia</a>
-  <a href="events.html">Eventos</a>
-  <a href="tours.html">Tours</a>
-  <a href="historia.html">Historia</a>
-  <a href="contact.html">Contacto</a>
+  <a href="/">Inicio</a>
+  <a href="/menu">Menú</a>
+  <a href="/experience">Experiencia</a>
+  <a href="/events">Eventos</a>
+  <a href="/tours">Tours</a>
+  <a href="/historia">Historia</a>
+  <a href="/contact">Contacto</a>
 </div>
 
 <!-- ── Hero ──────────────────────────────────────────────────── -->
 <section class="hero" aria-label="Bienvenida">
   <img
-    src="images/fachada.jpg"
+    src="/images/sanatorio-fachada.webp"
     alt="Fachada de El Sanatorio: edificio negro con buganvillas moradas y neón rojo, Centro Histórico Santa Marta"
     class="hero__bg-img"
     fetchpriority="high"
-    decoding="async"
-    width="1920"
-    height="1080"
+    decoding="async" width="1400" height="763"
   />
   <div class="hero__content">
     <p class="hero__cross" aria-hidden="true">✛ &nbsp;&nbsp; ✛ &nbsp;&nbsp; ✛</p>
@@ -226,8 +202,8 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
       <!-- FIX: Switched btn--red and btn--white classes so both buttons have
            strong visible contrast on black: red button fills on hover, white
            button has bright #f5f5f0 text + solid border visible against black. -->
-      <a href="menu.html" class="btn btn--red btn--hero-primary">Ver el Expediente</a>
-      <a href="experience.html" class="btn btn--white btn--hero-secondary">La Experiencia</a>
+      <a href="/menu" class="btn btn--red btn--hero-primary">Ver el Expediente</a>
+      <a href="/experience" class="btn btn--white btn--hero-secondary">La Experiencia</a>
     </div>
   </div>
 
@@ -320,7 +296,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
     </div>
 
     <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="menu.html" class="btn btn--red">Ver Menú del Patio</a>
+      <a href="/menu" class="btn btn--red">Ver Menú del Patio</a>
       <a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20información%20sobre%20El%20Sanatorio" target="_blank" rel="noopener noreferrer" class="btn btn--white">Reservar Mesa</a>
     </div>
   </div>
@@ -368,14 +344,14 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
     </div>
 
     <div style="margin-top: 2.5rem; text-align: center;">
-      <a href="menu.html" class="btn btn--red">Consultar el Expediente del Paciente</a>
+      <a href="/menu" class="btn btn--red">Consultar el Expediente del Paciente</a>
     </div>
 
     <figure style="margin: 3rem 0 0; border: 1px solid var(--border); overflow: hidden;">
-      <img src="images/bar-interior.jpg" alt="Interior de El Sanatorio: barra de acero inoxidable, grifos de jeringa y cajas de luz con radiografías" loading="lazy" width="1920" height="1080" style="width: 100%; display: block; max-height: 480px; object-fit: cover; object-position: center;" />
+      <img src="/images/sanatorio-bar-interior.webp" alt="Interior de El Sanatorio: barra de acero inoxidable, grifos de jeringa y cajas de luz con radiografías" loading="lazy" width="1400" height="763" style="width: 100%; display: block; max-height: 480px; object-fit: cover; object-position: center;" />
     </figure>
     <figure style="margin: 2rem 0 0; border: 1px solid var(--border); overflow: hidden;">
-      <img src="images/2026-04-25_el-sanatorio_imagen_yakitori-night-atmosphere.png" alt="Yakitori al carbón en El Sanatorio — brochetas japonesas a la parrilla en el ambiente nocturno del laboratorio" loading="lazy" width="1920" height="1080" style="width: 100%; display: block; max-height: 480px; object-fit: cover; object-position: center;" />
+      <img src="/images/sanatorio-yakitori-night.webp" alt="Yakitori al carbón en El Sanatorio — brochetas japonesas a la parrilla en el ambiente nocturno del laboratorio" loading="lazy" width="1400" height="764" style="width: 100%; display: block; max-height: 480px; object-fit: cover; object-position: center;" />
     </figure>
   </div>
 </section>
@@ -414,8 +390,8 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
         </p>
 
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="experience.html" class="btn btn--red">Ingresar al Expediente</a>
-          <a href="experience.html#booking" class="btn btn--white">Reservar Experiencia</a>
+          <a href="/experience" class="btn btn--red">Ingresar al Expediente</a>
+          <a href="/experience#booking" class="btn btn--white">Reservar Experiencia</a>
         </div>
       </div>
     </div>
@@ -432,7 +408,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
       <!-- Patient file -->
       <div class="story-patient">
         <figure style="margin: 0 0 1.5rem; border: 1px solid var(--border); overflow: hidden;">
-          <img src="images/paciente-013.jpg" alt="Expediente clínico sellado: Paciente 013, Confidencial" loading="lazy" width="800" height="600" style="width: 100%; display: block;" />
+          <img src="/images/sanatorio-paciente-013.webp" alt="Expediente clínico sellado: Paciente 013, Confidencial" loading="lazy" width="1400" height="763" style="width: 100%; display: block;" />
         </figure>
         <div class="patient-file" role="complementary" aria-label="Expediente Paciente 013">
           <div class="patient-file__header">
@@ -512,7 +488,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
         <p class="story-tagline" aria-label="Tagline">Ella siempre ha estado aquí.</p>
 
         <figure style="margin: 2rem 0 0; border: 1px solid var(--border); overflow: hidden;">
-          <img src="images/ella-patio.jpg" alt="Mujer mayor de pie en el patio interior del sanatorio, rodeada de buganvillas" loading="lazy" width="1200" height="800" style="width: 100%; display: block;" />
+          <img src="/images/sanatorio-ella-patio.webp" alt="Mujer mayor de pie en el patio interior del sanatorio, rodeada de buganvillas" loading="lazy" width="1400" height="763" style="width: 100%; display: block;" />
         </figure>
       </div>
     </div>
@@ -586,13 +562,11 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
 
       <!-- Map -->
       <div>
-        <div class="map-container">
-          <iframe
-            src="https://maps.google.com/maps?q=Calle+19+%234-23+Santa+Marta+Colombia&output=embed"
-            title="Ubicación El Sanatorio — Calle 19 #4-23, Centro Histórico, Santa Marta"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+        <div class="map-container map-card">
+          <a href="https://maps.google.com/?q=Calle+19+%234-23+Santa+Marta+Colombia" target="_blank" rel="noopener noreferrer" aria-label="Abrir ubicacion de El Sanatorio en Google Maps">
+            <span class="map-card__label">Calle 19 #4-23, Centro Historico, Santa Marta</span>
+            <span class="map-card__cta">Abrir en Google Maps</span>
+          </a>
         </div>
         <p style="font-size: 0.72rem; color: rgba(245,245,240,0.5); font-family: 'Share Tech Mono', monospace; letter-spacing: 0.06em; margin-bottom: 1rem; text-align: center;">
           Trabaja con nosotros → <a href="https://maia-management.com/empleo.html" target="_blank" rel="noopener" style="color: rgba(245,245,240,0.7); text-decoration: underline;">Únete al equipo Maia</a>
@@ -601,8 +575,8 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
         MAIA MANAGEMENT GROUP S.A.S. — NIT 901.862.977-7 — MATRÍCULA 218217 C.C.S.M.
         &nbsp;|&nbsp; CR 1 #19-61, Barrio Rodadero, Santa Marta, Magdalena, Colombia
         &nbsp;|&nbsp; <a href="tel:+19034598763" style="color: rgba(245,245,240,0.55); text-decoration: underline;">+1 903 459 8763</a>
-        &nbsp;|&nbsp; <a href="/privacidad" style="color: rgba(245,245,240,0.55); text-decoration: underline;">Política de Privacidad</a>
-        &nbsp;|&nbsp; <a href="/terminos" style="color: rgba(245,245,240,0.55); text-decoration: underline;">Términos de Uso</a>
+        &nbsp;|&nbsp; <a href="/privacy" style="color: rgba(245,245,240,0.55); text-decoration: underline;">Política de Privacidad</a>
+        &nbsp;|&nbsp; <a href="/terms" style="color: rgba(245,245,240,0.55); text-decoration: underline;">Términos de Uso</a>
       </p>
         <div style="margin-top: 1.5rem;">
           <a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio"
@@ -705,10 +679,10 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
       <div>
         <p class="footer__col-title">Instalaciones</p>
         <ul class="footer__links" role="list">
-          <li><a href="menu.html">El Menú / Expediente</a></li>
-          <li><a href="experience.html">La Experiencia</a></li>
-          <li><a href="tours.html">Tours Históricos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="/menu">El Menú / Expediente</a></li>
+          <li><a href="/experience">La Experiencia</a></li>
+          <li><a href="/tours">Tours Históricos</a></li>
+          <li><a href="/contact">Contacto</a></li>
           <li><a href="#reservar">Reservar Mesa</a></li>
         </ul>
       </div>
@@ -718,7 +692,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
           <li><a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
           <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="#historia">La Historia</a></li>
-          <li><a href="experience.html#rules">Normas del Laberinto</a></li>
+          <li><a href="/experience#rules">Normas del Laberinto</a></li>
         </ul>
         <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1.5rem; line-height: 1.8;">
           Mié – Dom<br>
@@ -728,7 +702,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
       </div>
     </div>
     <div class="footer__bottom">
-      <p class="footer__copy">© 2026 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados. | <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacidad</a> | <a href="terms.html" style="color:inherit;text-decoration:underline;">Términos</a> | <a href="#" onclick="MaiaConsent.reopenBanner();return false;" style="color:inherit;text-decoration:underline;">Gestionar cookies</a></p>
+      <p class="footer__copy">© 2026 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados. | <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacidad</a> | <a href="/terms" style="color:inherit;text-decoration:underline;">Términos</a> | <a href="#" onclick="MaiaConsent.reopenBanner();return false;" style="color:inherit;text-decoration:underline;">Gestionar cookies</a></p>
       <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
       <p style="font-size:0.75rem;color:rgba(245,245,240,0.35);margin-top:0.5rem;">Para consultas urgentes: Andrew Gallie, CEO — WhatsApp +1 903 459 8763</p>
       <p style="font-size:0.75rem;color:rgba(245,245,240,0.45);margin-top:0.5rem;">¿Quieres trabajar con nosotros? → <a href="https://maia-management.com/empleo.html" target="_blank" rel="noopener" style="color:rgba(245,245,240,0.65);text-decoration:underline;">maia-management.com/empleo.html</a></p>
@@ -760,7 +734,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
   <!-- /Maia Group -->
 </footer>
 
-<script src="js/main.js" defer></script>
+<script src="/js/main.js?v=20260430a" defer></script>
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/19034598763"

@@ -47,10 +47,10 @@
   }
 
   /* ── Active nav link ─────────────────────────────────────── */
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav__links a, .nav__mobile-menu a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    const href = (link.getAttribute('href') || '').replace(/\/$/, '') || '/';
+    if (href === currentPath) {
       link.classList.add('active');
     }
   });
@@ -217,19 +217,5 @@
   // if (audioTrigger) {
   //   audioTrigger.addEventListener('click', () => { ... });
   // }
-
-  /* ── Console easter egg ──────────────────────────────────── */
-  const style = 'color: #DC143C; font-size: 14px; font-family: monospace;';
-  console.log('%c', style);
-  console.log('%c EL SANATORIO — SISTEMA INTERNO', 'color: #DC143C; font-size: 16px; font-weight: bold; font-family: monospace;');
-  console.log('%c─────────────────────────────────────────────────────────', style);
-  console.log('%c PACIENTE 013 — IDENTIFICACIÓN: DESCONOCIDA', 'color: #c9a84c; font-family: monospace;');
-  console.log('%c ESTADO: ACTIVA', 'color: #39ff14; font-family: monospace;');
-  console.log('%c UBICACIÓN: EDIFICIO PRINCIPAL — NIVEL DESCONOCIDO', 'color: #999; font-family: monospace;');
-  console.log('%c─────────────────────────────────────────────────────────', style);
-  console.log('%c ADVERTENCIA: El personal no autorizado debe abandonar', 'color: #888; font-family: monospace;');
-  console.log('%c             estas instalaciones de inmediato.', 'color: #888; font-family: monospace;');
-  console.log('%c             Ella sabe que estás aquí.', 'color: #DC143C; font-family: monospace;');
-  console.log('%c─────────────────────────────────────────────────────────', style);
 
 })();

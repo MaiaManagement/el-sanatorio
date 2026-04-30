@@ -39,9 +39,9 @@
 
   var CONFIG = {
     storageKey:      'maia_consent',
-    version:         '1.0.0',
+    version:         '1.1.0',
     expiryMs:        15552000000,
-    privacyPolicyUrl: '/privacy.html',
+    privacyPolicyUrl: '/privacy',
     colors: {
       navy:       '#1B2A4A',
       blue:       '#2E75B6',
@@ -53,6 +53,11 @@
     signals: {
       GRANTED: 'granted',
       DENIED:  'denied'
+    },
+    google: {
+      analyticsId: 'G-JZGDBW5K7Q',
+      adsId: '',
+      conversionSendTo: ''
     }
   };
 
@@ -93,6 +98,7 @@
         if (!raw) return null;
         var record = JSON.parse(raw);
         if (!record || !record.timestamp) return null;
+        if (record.version !== CONFIG.version) { localStorage.removeItem(CONFIG.storageKey); return null; }
         var age = new Date().getTime() - record.timestamp;
         if (age > CONFIG.expiryMs) { localStorage.removeItem(CONFIG.storageKey); return null; }
         return record;
@@ -102,6 +108,43 @@
   };
 
   /* ── 3. CONSENT DISPATCHER ── */
+  var GoogleTags = {
+    loaded: false,
+    configuredAnalytics: false,
+    configuredAds: false,
+    sentThankYouConversion: false,
+    shouldSendThankYouConversion: function () {
+      return /\/thank-you(?:\.html)?\/?$/.test(window.location.pathname || '');
+    },
+    load: function (prefs) {
+      if (!prefs || (!prefs.analytics && !prefs.ads)) return;
+
+      if (!GoogleTags.loaded) {
+        GoogleTags.loaded = true;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(CONFIG.google.analyticsId);
+        (document.head || document.getElementsByTagName('head')[0]).appendChild(script);
+        window.gtag('js', new Date());
+      }
+
+      if (prefs.analytics && !GoogleTags.configuredAnalytics) {
+        GoogleTags.configuredAnalytics = true;
+        window.gtag('config', CONFIG.google.analyticsId);
+      }
+
+      if (prefs.ads && CONFIG.google.adsId && !GoogleTags.configuredAds) {
+        GoogleTags.configuredAds = true;
+        window.gtag('config', CONFIG.google.adsId);
+      }
+
+      if (prefs.ads && CONFIG.google.conversionSendTo && GoogleTags.shouldSendThankYouConversion() && !GoogleTags.sentThankYouConversion) {
+        GoogleTags.sentThankYouConversion = true;
+        window.gtag('event', 'conversion', { 'send_to': CONFIG.google.conversionSendTo });
+      }
+    }
+  };
+
   var ConsentDispatcher = {
     update: function (prefs) {
       var analyticsVal = prefs.analytics ? CONFIG.signals.GRANTED : CONFIG.signals.DENIED;
@@ -121,6 +164,7 @@
         'consent_version':             CONFIG.version,
         'consent_timestamp':           new Date().getTime()
       });
+      GoogleTags.load(prefs);
       ConsentDispatcher._dispatchFbq(prefs.ads);
     },
     _dispatchFbq: function (granted) {
@@ -142,15 +186,15 @@
 
   /* ── 5. CSS INJECTION ── */
   function injectStyles() {
-    var css = '#maia-consent-overlay{position:fixed;inset:0;background:rgba(27,42,74,0.55);z-index:2147483646;display:flex;align-items:flex-end;justify-content:center;font-family:Inter,Montserrat,Arial,sans-serif}' +
+    var css = '#maia-consent-overlay{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;background:rgba(27,42,74,0.55);z-index:2147483646;display:flex;align-items:flex-end;justify-content:center;font-family:Arial,Helvetica,sans-serif}' +
       '#maia-consent-banner{background:#1B2A4A;color:#fff;width:100%;max-width:900px;border-radius:12px 12px 0 0;padding:24px 28px 20px;box-shadow:0 -4px 32px rgba(0,0,0,0.35);box-sizing:border-box;font-size:14px;line-height:1.55}' +
       '#maia-consent-banner .mcb-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}' +
-      '#maia-consent-banner .mcb-title{font-family:Montserrat,Inter,Arial,sans-serif;font-size:17px;font-weight:700;color:#fff;margin:0}' +
+      '#maia-consent-banner .mcb-title{font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:700;color:#fff;margin:0}' +
       '#maia-consent-banner .mcb-logo{font-size:11px;color:#8fa3c0;text-align:right;line-height:1.3}' +
       '#maia-consent-banner .mcb-body{color:#c8d8ec;margin-bottom:16px}' +
       '#maia-consent-banner .mcb-body a{color:#E8F0F8;text-decoration:underline}' +
       '#maia-consent-banner .mcb-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:6px}' +
-      '#maia-consent-banner .mcb-btn{border:none;cursor:pointer;border-radius:6px;padding:10px 20px;font-size:14px;font-weight:600;font-family:Inter,Montserrat,Arial,sans-serif;transition:opacity .15s,transform .1s;white-space:nowrap}' +
+      '#maia-consent-banner .mcb-btn{border:none;cursor:pointer;border-radius:6px;padding:10px 20px;font-size:14px;font-weight:600;font-family:Arial,Helvetica,sans-serif;transition:opacity .15s,transform .1s;white-space:nowrap}' +
       '#maia-consent-banner .mcb-btn:hover{opacity:.88}' +
       '#maia-consent-banner .mcb-btn-accept{background:#2E75B6;color:#fff}' +
       '#maia-consent-banner .mcb-btn-reject{background:transparent;color:#E8F0F8;border:1.5px solid #2E75B6}' +
@@ -172,8 +216,8 @@
       '.mcb-toggle input:checked+.mcb-toggle-slider:before{transform:translateX(20px)}' +
       '.mcb-toggle input:disabled+.mcb-toggle-slider{opacity:.55;cursor:not-allowed}' +
       '.mcb-always-on{font-size:11px;color:#8fa3c0;margin-left:8px;white-space:nowrap}' +
-      '#maia-consent-banner .mcb-footer-note{font-size:11px;color:#5c7a9e;margin-top:10px}' +
-      '@media(max-width:600px){#maia-consent-banner{padding:18px 16px 14px;border-radius:10px 10px 0 0}#maia-consent-banner .mcb-header{flex-direction:column;align-items:flex-start;gap:4px}#maia-consent-banner .mcb-actions{flex-direction:column}#maia-consent-banner .mcb-btn{width:100%;text-align:center}}';
+      '#maia-consent-banner .mcb-footer-note{font-size:11px;color:#BFD2EA;margin-top:10px}' +
+      '@media(max-width:600px){#maia-consent-banner{padding:18px 16px 14px;border-radius:10px 10px 0 0;max-width:calc(100% - 32px);margin:0 16px}#maia-consent-banner .mcb-header{flex-direction:column;align-items:flex-start;gap:4px}#maia-consent-banner .mcb-actions{flex-direction:column}#maia-consent-banner .mcb-btn{width:100%;text-align:center}}';
     var style = document.createElement('style');
     style.id = 'maia-consent-styles';
     style.appendChild(document.createTextNode(css));

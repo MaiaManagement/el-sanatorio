@@ -14,10 +14,12 @@
   --border-bright: #3a3a3a;
   --white:         #f5f5f0;
   --off-white:     #e0ddd5;
-  --gray:          #666660;
-  --light-gray:    #999990;
+  --gray:          #8f8f88;
+  --light-gray:    #aaa99f;
   --blood:         #8B0000;
-  --crimson:       #DC143C;
+  --crimson:       #ff4d6d;
+  --crimson-fill:  #DC143C;
+  --red:           #ff4d6d;
   --neon-red:      #ff2244;
   --gold:          #c9a84c;
   --brass:         #8b6d3e;
@@ -78,7 +80,7 @@ body::before {
   z-index: 9997;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
@@ -87,6 +89,7 @@ h1 { font-family: var(--font-type); font-size: clamp(3rem, 8vw, 7rem); letter-sp
 h2 { font-family: var(--font-type); font-size: clamp(1.4rem, 3vw, 2.2rem); letter-spacing: 0.2em; text-transform: uppercase; }
 h3 { font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 700; }
 h4 { font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--light-gray); }
+.hours-heading { font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--light-gray); }
 /* FIX: Body paragraphs set to at least 1rem (16px) with high-contrast off-white color. */
 p  { font-family: var(--font-fell); line-height: 1.8; font-size: 1rem; color: var(--off-white); }
 
@@ -198,6 +201,7 @@ p  { font-family: var(--font-fell); line-height: 1.8; font-size: 1rem; color: va
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--crimson);
+  font-weight: 700;
   letter-spacing: 0.3em;
 }
 
@@ -302,6 +306,15 @@ p  { font-family: var(--font-fell); line-height: 1.8; font-size: 1rem; color: va
   position: relative;
   overflow: hidden;
   padding: var(--nav-h) 24px 0;
+}
+
+.hero__bg-img {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(10,10,10,0.46), rgba(10,10,10,0.68)), url('/images/sanatorio-fachada.webp');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
 
 /* Atmospheric background */
@@ -489,7 +502,7 @@ p  { font-family: var(--font-fell); line-height: 1.8; font-size: 1rem; color: va
 }
 
 .btn--red:hover {
-  background: var(--crimson);
+  background: var(--crimson-fill);
   color: var(--white);
   box-shadow: 0 0 20px rgba(220,20,60,0.4);
 }
@@ -525,9 +538,9 @@ p  { font-family: var(--font-fell); line-height: 1.8; font-size: 1rem; color: va
    the red button is immediately readable; btn--hero-secondary gets an
    opaque dark background so white text clears any background imagery. */
 .btn--hero-primary {
-  background: var(--crimson);
+  background: var(--crimson-fill);
   color: var(--white);
-  border-color: var(--crimson);
+  border-color: var(--crimson-fill);
 }
 
 .btn--hero-primary:hover {
@@ -1087,7 +1100,7 @@ section {
 }
 
 .form-submit:hover {
-  background: var(--crimson);
+  background: var(--crimson-fill);
   color: var(--white);
   box-shadow: 0 0 20px rgba(220,20,60,0.3);
 }
@@ -1378,7 +1391,7 @@ section {
   top: -1px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--crimson);
+  background: var(--crimson-fill);
   color: var(--white);
   font-family: var(--font-mono);
   font-size: 0.58rem;
@@ -1543,7 +1556,7 @@ section {
 .wifi-reveal__trigger {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--border-bright);
+  color: var(--gray);
   letter-spacing: 0.15em;
   text-align: center;
   padding: 6px;
@@ -1652,7 +1665,7 @@ section {
   font-family: var(--font-fell);
   font-style: italic;
   font-size: 0.82rem;
-  color: rgba(220,20,60,0.5);
+  color: var(--crimson);
   letter-spacing: 0.1em;
 }
 

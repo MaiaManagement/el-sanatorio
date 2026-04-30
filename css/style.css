@@ -3,8 +3,6 @@
    EL SANATORIO — Tropical Noir Design System
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap');
-
 /* ── Variables ─────────────────────────────────────────────── */
 :root {
   --black:         #0a0a0a;
@@ -29,10 +27,10 @@
   --green-dim:     #1a3a1a;
   --shadow-red:    rgba(220, 20, 60, 0.25);
   --shadow-gold:   rgba(201, 168, 76, 0.2);
-  --font-type:     'Special Elite', 'Courier New', monospace;
-  --font-serif:    'Playfair Display', Georgia, serif;
-  --font-mono:     'Share Tech Mono', 'Courier New', monospace;
-  --font-fell:     'IM Fell English', Georgia, serif;
+  --font-type:     'Courier New', Courier, monospace;
+  --font-serif:    Georgia, 'Times New Roman', serif;
+  --font-mono:     Consolas, 'Courier New', monospace;
+  --font-fell:     Georgia, 'Times New Roman', serif;
   --nav-h:         72px;
 }
 
@@ -898,6 +896,44 @@ section {
   border: 1px solid var(--border);
   overflow: hidden;
   filter: grayscale(0.4) contrast(1.1);
+}
+
+.map-card {
+  min-height: 280px;
+  background:
+    linear-gradient(135deg, rgba(10,10,10,0.88), rgba(139,0,0,0.18)),
+    repeating-linear-gradient(0deg, transparent, transparent 12px, rgba(245,245,240,0.04) 12px, rgba(245,245,240,0.04) 13px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.map-card a {
+  width: 100%;
+  min-height: 280px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.map-card__label {
+  font-family: var(--font-serif);
+  color: var(--off-white);
+  font-size: 1.1rem;
+}
+
+.map-card__cta {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .map-container iframe {
@@ -1805,6 +1841,56 @@ html:not(.js-loaded) .fade-in-section {
 
 @media (max-width: 480px) {
   section { padding: 3rem 0; }
+  .container,
+  .container--sm { padding-inline: 18px; }
+  .section-label {
+    gap: 0.55rem;
+  }
+  .section-label::before {
+    width: 22px;
+  }
+  .section-label span {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    letter-spacing: 0.16em;
+  }
+  .hr-label {
+    gap: 0.7rem;
+  }
+  .hr-label span {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+    letter-spacing: 0.14em;
+  }
+  section [style*="grid-template-columns: 1fr 1fr"],
+  .timeline-section [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .timeline-section [style*="position: sticky"] {
+    position: static !important;
+  }
+  .timeline {
+    display: block !important;
+    padding-left: 28px !important;
+  }
+  .timeline-item {
+    margin-bottom: 36px !important;
+  }
+  .legal-page table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  h1,
+  h2,
+  .nav__logo-name,
+  .menu-item__name,
+  .patient-file__value {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
   .hero__ctas { flex-direction: column; align-items: stretch; text-align: center; }
   /* Mobile font-size minimums: bump sub-12px labels to 12px */
   .section-label span,

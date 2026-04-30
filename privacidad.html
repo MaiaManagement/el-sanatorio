@@ -2,29 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/consent-banner.js?v=20260430a"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de Privacidad y Tratamiento de Datos — El Sanatorio</title>
   <meta name="description" content="Política de privacidad y tratamiento de datos personales de El Sanatorio, operado por MAIA MANAGEMENT GROUP S.A.S., conforme a la Ley 1581 de 2012." />
   <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://el-sanatorio.com/privacidad.html" />
+  <link rel="canonical" href="https://el-sanatorio.com/privacy" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:image"       content="https://el-sanatorio.com/images/og-image.jpg" />
-  <!-- Cookie Consent Banner — Consent Mode v2 / Ley 1581 — MUST be first script -->
-  <script src="/consent-banner.js" defer></script>
-<!-- Google tag (gtag.js) -- replace G-JZGDBW5K7Q with real GA4 ID -->
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZGDBW5K7Q"></script>
-<script>gtag('js', new Date()); gtag('config', 'G-JZGDBW5K7Q');</script>
 
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/css/style.css?v=20260430a" />
   <style>
     .legal-page {
       max-width: 780px;
@@ -197,7 +185,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
       </tr>
       <tr>
         <td>Datos de analítica web (IP anonimizada, cookies)</td>
-        <td>Cloudflare Web Analytics</td>
+        <td>Google Analytics</td>
         <td>Solo con consentimiento</td>
         <td>Medición de rendimiento del sitio web</td>
       </tr>
@@ -254,7 +242,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
   </p>
   <ul>
     <li>Netlify, Inc. (proveedor de hosting), como encargado del tratamiento para la recepción de formularios.</li>
-    <li>Cloudflare, Inc. (proveedor de analítica web), únicamente si usted acepta las cookies de analítica.</li>
+    <li>Google LLC (proveedor de analítica web), únicamente si usted acepta las cookies de analítica.</li>
     <li>Autoridades competentes colombianas, cuando exista obligación legal.</li>
   </ul>
 
@@ -271,12 +259,12 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
   </p>
   <ul>
     <li><strong>Cookies esenciales:</strong> Almacenan su preferencia de consentimiento. No requieren autorización.</li>
-    <li><strong>Cloudflare Web Analytics:</strong> Herramienta de medición de tráfico web. Solo se activa con su consentimiento explícito. Cloudflare afirma que sus métricas son privacy-first y no utilizan cookies de seguimiento cross-site.</li>
+    <li><strong>Google Analytics:</strong> Herramienta de medición de tráfico web. Solo se carga después de su consentimiento explícito para cookies de analítica.</li>
   </ul>
   <p>
     Puede retirar su consentimiento de cookies en cualquier momento borrando las cookies de su navegador
     y recargando el sitio. Su preferencia se almacena en <code>localStorage</code> bajo la clave
-    <code>es_cookie_consent</code>.
+    <code>maia_consent</code>.
   </p>
 
   <h2>9. Seguridad</h2>
@@ -337,10 +325,10 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
       <div>
         <p class="footer__col-title">Instalaciones</p>
         <ul class="footer__links" role="list">
-          <li><a href="menu.html">El Menú / Expediente</a></li>
-          <li><a href="experience.html">La Experiencia</a></li>
-          <li><a href="tours.html">Tours Históricos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="/menu">El Menú / Expediente</a></li>
+          <li><a href="/experience">La Experiencia</a></li>
+          <li><a href="/tours">Tours Históricos</a></li>
+          <li><a href="/contact">Contacto</a></li>
           <li><a href="#reservar">Reservar Mesa</a></li>
         </ul>
       </div>
@@ -350,7 +338,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
           <li><a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20El%20Sanatorio" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
           <li><a href="https://instagram.com/elsanatorio.sm" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="#historia">La Historia</a></li>
-          <li><a href="experience.html#rules">Normas del Laberinto</a></li>
+          <li><a href="/experience#rules">Normas del Laberinto</a></li>
         </ul>
         <p class="mono" style="font-size: 0.62rem; color: var(--gray); margin-top: 1.5rem; line-height: 1.8;">
           Mié – Dom<br>
@@ -360,7 +348,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
       </div>
     </div>
     <div class="footer__bottom">
-      <p class="footer__copy">© 2026 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados. | <a href="privacy.html" style="color:inherit;text-decoration:underline;">Privacidad</a> | <a href="terms.html" style="color:inherit;text-decoration:underline;">Términos</a> | <a href="#" onclick="MaiaConsent.reopenBanner();return false;" style="color:inherit;text-decoration:underline;">Gestionar cookies</a></p>
+      <p class="footer__copy">© 2026 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados. | <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacidad</a> | <a href="/terms" style="color:inherit;text-decoration:underline;">Términos</a> | <a href="#" onclick="MaiaConsent.reopenBanner();return false;" style="color:inherit;text-decoration:underline;">Gestionar cookies</a></p>
       <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
       <p style="font-size:0.75rem;color:rgba(245,245,240,0.35);margin-top:0.5rem;">Para consultas urgentes: Andrew Gallie, CEO — WhatsApp +1 903 459 8763</p>
     </div>
@@ -391,7 +379,7 @@ gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wa
   <!-- /Maia Group -->
 </footer>
 
-<script src="/js/main.js" defer></script>
+<script src="/js/main.js?v=20260430a" defer></script>
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/19034598763"

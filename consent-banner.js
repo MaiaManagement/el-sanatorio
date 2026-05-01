@@ -187,14 +187,14 @@
   /* ── 5. CSS INJECTION ── */
   function injectStyles() {
     var css = '#maia-consent-overlay{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;background:rgba(27,42,74,0.55);z-index:2147483646;display:flex;align-items:flex-end;justify-content:center;font-family:Arial,Helvetica,sans-serif}' +
-      '#maia-consent-banner{background:#1B2A4A;color:#fff;width:100%;max-width:900px;border-radius:12px 12px 0 0;padding:24px 28px 20px;box-shadow:0 -4px 32px rgba(0,0,0,0.35);box-sizing:border-box;font-size:14px;line-height:1.55}' +
+      '#maia-consent-banner{background:#1B2A4A;color:#fff;width:100%;max-width:900px;max-height:calc(100vh - 24px);max-height:calc(100svh - 24px);overflow-y:auto;border-radius:12px 12px 0 0;padding:24px 28px 20px;box-shadow:0 -4px 32px rgba(0,0,0,0.35);box-sizing:border-box;font-size:14px;line-height:1.55}' +
       '#maia-consent-banner .mcb-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}' +
-      '#maia-consent-banner .mcb-title{font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:700;color:#fff;margin:0}' +
-      '#maia-consent-banner .mcb-logo{font-size:11px;color:#8fa3c0;text-align:right;line-height:1.3}' +
-      '#maia-consent-banner .mcb-body{color:#c8d8ec;margin-bottom:16px}' +
+      '#maia-consent-banner .mcb-title{font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.25;font-weight:700;color:#fff;margin:0;letter-spacing:0;text-transform:none}' +
+      '#maia-consent-banner .mcb-logo{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#8fa3c0;text-align:right;line-height:1.3;letter-spacing:0;text-transform:none}' +
+      '#maia-consent-banner .mcb-body{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.55;color:#c8d8ec;margin:0 0 16px;overflow-wrap:anywhere;letter-spacing:0;text-transform:none}' +
       '#maia-consent-banner .mcb-body a{color:#E8F0F8;text-decoration:underline}' +
       '#maia-consent-banner .mcb-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:6px}' +
-      '#maia-consent-banner .mcb-btn{border:none;cursor:pointer;border-radius:6px;padding:10px 20px;font-size:14px;font-weight:600;font-family:Arial,Helvetica,sans-serif;transition:opacity .15s,transform .1s;white-space:nowrap}' +
+      '#maia-consent-banner .mcb-btn{border:none;cursor:pointer;border-radius:6px;padding:10px 20px;font-size:14px;line-height:1.2;font-weight:600;font-family:Arial,Helvetica,sans-serif;transition:opacity .15s,transform .1s;white-space:nowrap;letter-spacing:0;text-transform:none}' +
       '#maia-consent-banner .mcb-btn:hover{opacity:.88}' +
       '#maia-consent-banner .mcb-btn-accept{background:#2E75B6;color:#fff}' +
       '#maia-consent-banner .mcb-btn-reject{background:transparent;color:#E8F0F8;border:1.5px solid #2E75B6}' +
@@ -216,8 +216,8 @@
       '.mcb-toggle input:checked+.mcb-toggle-slider:before{transform:translateX(20px)}' +
       '.mcb-toggle input:disabled+.mcb-toggle-slider{opacity:.55;cursor:not-allowed}' +
       '.mcb-always-on{font-size:11px;color:#8fa3c0;margin-left:8px;white-space:nowrap}' +
-      '#maia-consent-banner .mcb-footer-note{font-size:11px;color:#BFD2EA;margin-top:10px}' +
-      '@media(max-width:600px){#maia-consent-banner{padding:18px 16px 14px;border-radius:10px 10px 0 0;max-width:calc(100% - 32px);margin:0 16px}#maia-consent-banner .mcb-header{flex-direction:column;align-items:flex-start;gap:4px}#maia-consent-banner .mcb-actions{flex-direction:column}#maia-consent-banner .mcb-btn{width:100%;text-align:center}}';
+      '#maia-consent-banner .mcb-footer-note{font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.45;color:#BFD2EA;margin-top:10px;overflow-wrap:anywhere;letter-spacing:0;text-transform:none}' +
+      '@media(max-width:600px){#maia-consent-banner{width:calc(100% - 24px);max-width:none;max-height:calc(100vh - 16px);max-height:calc(100svh - 16px);margin:0 12px;padding:16px 14px 12px;border-radius:10px 10px 0 0;font-size:13px;line-height:1.45}#maia-consent-banner .mcb-title{font-size:16px}#maia-consent-banner .mcb-body{font-size:13px;line-height:1.45}#maia-consent-banner .mcb-header{flex-direction:column;align-items:flex-start;gap:4px}#maia-consent-banner .mcb-actions{flex-direction:column}#maia-consent-banner .mcb-btn{width:100%;text-align:center;padding:9px 16px;white-space:normal}}';
     var style = document.createElement('style');
     style.id = 'maia-consent-styles';
     style.appendChild(document.createTextNode(css));

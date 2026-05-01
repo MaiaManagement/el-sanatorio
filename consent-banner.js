@@ -1,7 +1,7 @@
 /**
  * ============================================================
- * MAIA MANAGEMENT GROUP S.A.S.
- * NIT: 901.862.977-7
+ * EL SANATORIO S.A.S.
+ * NIT: 902.051.563-5
  * Cookie Consent Banner — Google Consent Mode v2 Compatible
  * ============================================================
  *
@@ -21,11 +21,11 @@
  *   </a>
  *
  * NOTES:
- * - Legal entity : MAIA MANAGEMENT GROUP S.A.S.
- * - NIT          : 901.862.977-7
+ * - Legal entity : EL SANATORIO S.A.S.
+ * - NIT          : 902.051.563-5
  * - Rep. legal   : Andrew John Sidney Gallie, CE 8129525
- * - Address      : CR 1 # 19-61, Barrio Rodadero,
- *                  Santa Marta, Magdalena 470007, Colombia
+ * - Address      : Calle 19 #4-23, Centro Histórico,
+ *                  Santa Marta, Magdalena, Colombia
  * - Email        : andrew@maia-management.com
  *   PENDING: migrate to custom domain email once available
  * - Complies with Ley 1581 de 2012 (Colombia) & GDPR basics
@@ -247,7 +247,7 @@
     var banner = document.createElement('div'); banner.id = 'maia-consent-banner';
     var header = document.createElement('div'); header.className = 'mcb-header';
     var title = document.createElement('h2'); title.className = 'mcb-title'; title.textContent = 'Preferencias de cookies';
-    var logo = document.createElement('div'); logo.className = 'mcb-logo'; logo.innerHTML = 'MAIA MANAGEMENT GROUP S.A.S.<br>NIT 901.862.977-7';
+    var logo = document.createElement('div'); logo.className = 'mcb-logo'; logo.innerHTML = 'EL SANATORIO S.A.S.<br>NIT 902.051.563-5';
     header.appendChild(title); header.appendChild(logo);
     var body = document.createElement('p'); body.className = 'mcb-body';
     body.innerHTML = 'Utilizamos cookies propias y de terceros para mejorar tu experiencia, analizar el tr\u00e1fico y personalizar el contenido y la publicidad. Conforme a la <strong>Ley 1581 de 2012</strong> (Colombia), puedes aceptar todas las cookies, rechazar las opcionales o personalizar tu elecci\u00f3n. Consulta nuestra <a href="' + CONFIG.privacyPolicyUrl + '" target="_blank" rel="noopener noreferrer">Pol\u00edtica de Privacidad</a> para m\u00e1s informaci\u00f3n.';
@@ -263,7 +263,7 @@
     var btnSave = document.createElement('button'); btnSave.className = 'mcb-btn mcb-btn-save'; btnSave.id = 'mcb-save-custom'; btnSave.type = 'button'; btnSave.textContent = 'Guardar preferencias';
     panel.appendChild(btnSave);
     var footerNote = document.createElement('p'); footerNote.className = 'mcb-footer-note';
-    footerNote.innerHTML = 'MAIA MANAGEMENT GROUP S.A.S. \u2014 NIT 901.862.977-7 \u2014 CR 1 # 19-61, Barrio Rodadero, Santa Marta, Magdalena 470007, Colombia. Puedes cambiar tus preferencias en cualquier momento desde el pie de p\u00e1gina.';
+    footerNote.innerHTML = 'EL SANATORIO S.A.S. \u2014 NIT 902.051.563-5 \u2014 Calle 19 #4-23, Centro Hist\u00f3rico, Santa Marta, Magdalena, Colombia. Puedes cambiar tus preferencias en cualquier momento desde el pie de p\u00e1gina.';
     banner.appendChild(header); banner.appendChild(body); banner.appendChild(actions); banner.appendChild(panel); banner.appendChild(footerNote);
     overlay.appendChild(banner); document.body.appendChild(overlay);
   }

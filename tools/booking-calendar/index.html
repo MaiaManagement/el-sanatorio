@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendario de Reservas | El Sanatorio</title>
+  <meta name="description" content="Consulta disponibilidad para Patio, Laboratorio y Casa del Terror en El Sanatorio y solicita tu reserva por WhatsApp.">
+  <link rel="canonical" href="https://el-sanatorio.com/tools/booking-calendar/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css?v=20260430d">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js" defer></script>
+  <meta name="theme-color" content="#0a0a0a">
+  <style>
+    .booking-hero {
+      min-height: auto;
+      padding: calc(var(--nav-h) + 4rem) 24px 3rem;
+      background:
+        radial-gradient(80% 60% at 50% 0%, rgba(220, 20, 60, 0.14), transparent 70%),
+        var(--black);
+      text-align: center;
+    }
+
+    .booking-hero h1 {
+      color: var(--white);
+      font-size: clamp(2.6rem, 7vw, 5.8rem);
+      line-height: 1.02;
+      margin-bottom: 1rem;
+    }
+
+    .booking-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--off-white);
+    }
+
+    .booking-shell {
+      padding: 3rem 0 5rem;
+      background: var(--black);
+    }
+
+    .zone-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--border);
+      background: var(--border);
+    }
+
+    .zone-tab {
+      min-height: 72px;
+      border: 0;
+      background: var(--panel-bg);
+      color: var(--light-gray);
+      cursor: pointer;
+      font-family: var(--font-mono);
+      letter-spacing: 0.12em;
+      text-align: left;
+      text-transform: uppercase;
+      padding: 1rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .zone-tab strong {
+      display: block;
+      color: var(--off-white);
+      font-family: var(--font-type);
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.25rem;
+    }
+
+    .zone-tab[aria-selected="true"] {
+      background: rgba(220, 20, 60, 0.16);
+      color: var(--crimson);
+      box-shadow: inset 0 2px 0 var(--crimson);
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .calendar-panel,
+    .events-panel,
+    .fallback-panel {
+      background: var(--panel-bg);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .calendar-panel::before,
+    .events-panel::before,
+    .fallback-panel::before {
+      content: "";
+      height: 1px;
+      background: linear-gradient(90deg, var(--crimson), transparent);
+      opacity: 0.5;
+      position: absolute;
+      inset: 0 0 auto;
+    }
+
+    .calendar-header,
+    .events-header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+    }
+
+    .calendar-header h2,
+    .events-header h2 {
+      color: var(--off-white);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .calendar-header p,
+    .events-header p {
+      color: var(--gray);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    #calendar {
+      padding: 1rem;
+      min-height: 640px;
+    }
+
+    .fc {
+      color: var(--off-white);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+
+    .fc .fc-toolbar-title {
+      color: var(--white);
+      font-family: var(--font-type);
+      font-size: 1.08rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .fc .fc-button-primary {
+      background: transparent;
+      border-color: var(--border-bright);
+      color: var(--off-white);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .fc .fc-button-primary:hover,
+    .fc .fc-button-primary:not(:disabled).fc-button-active {
+      background: var(--crimson-fill);
+      border-color: var(--crimson-fill);
+      color: var(--white);
+    }
+
+    .fc-theme-standard td,
+    .fc-theme-standard th,
+    .fc-theme-standard .fc-scrollgrid {
+      border-color: var(--border-mid);
+    }
+
+    .fc .fc-col-header-cell-cushion,
+    .fc .fc-daygrid-day-number,
+    .fc .fc-timegrid-slot-label {
+      color: var(--light-gray);
+    }
+
+    .fc .fc-day-today {
+      background: rgba(201, 168, 76, 0.08) !important;
+    }
+
+    .fc-event {
+      border: 1px solid var(--crimson) !important;
+      background: rgba(220, 20, 60, 0.28) !important;
+      color: var(--white) !important;
+      cursor: pointer;
+    }
+
+    .events-list {
+      display: grid;
+      gap: 0.8rem;
+      padding: 1rem;
+    }
+
+    .event-card {
+      border: 1px solid var(--border-mid);
+      background: var(--black);
+      padding: 1rem;
+    }
+
+    .event-card h3 {
+      color: var(--gold);
+      font-family: var(--font-type);
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.45rem;
+      text-transform: uppercase;
+    }
+
+    .event-card p {
+      color: var(--light-gray);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.55;
+    }
+
+    .event-card button,
+    .fallback-panel a,
+    .modal-actions button {
+      min-height: 44px;
+      border: 1px solid var(--crimson);
+      background: transparent;
+      color: var(--crimson);
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      margin-top: 0.85rem;
+      padding: 0 1rem;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+
+    .event-card button:hover,
+    .fallback-panel a:hover,
+    .modal-actions button:hover {
+      background: var(--crimson-fill);
+      color: var(--white);
+    }
+
+    .fallback-panel {
+      display: none;
+      margin-bottom: 1.25rem;
+      padding: 1.25rem;
+      border-left: 2px solid var(--gold);
+    }
+
+    .fallback-panel.show {
+      display: block;
+    }
+
+    .fallback-panel h2 {
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .fallback-panel p {
+      color: var(--light-gray);
+      font-size: 0.95rem;
+    }
+
+    .fallback-panel a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0, 0, 0, 0.76);
+      padding: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-card {
+      width: min(520px, 100%);
+      background: var(--panel-bg);
+      border: 1px solid var(--border-bright);
+      box-shadow: 0 18px 80px rgba(0, 0, 0, 0.58);
+    }
+
+    .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+    }
+
+    .modal-head h2 {
+      color: var(--off-white);
+      font-size: 1rem;
+    }
+
+    .modal-close {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border-mid);
+      background: var(--black);
+      color: var(--off-white);
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+
+    .booking-form {
+      display: grid;
+      gap: 1rem;
+      padding: 1.25rem;
+    }
+
+    .booking-form label {
+      display: grid;
+      gap: 0.4rem;
+      color: var(--light-gray);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      min-height: 44px;
+      border: 1px solid var(--border-mid);
+      background: var(--black);
+      color: var(--off-white);
+      font-family: var(--font-mono);
+      padding: 0 0.8rem;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      padding: 0 1.25rem 1.25rem;
+    }
+
+    .modal-actions .primary {
+      background: var(--crimson-fill);
+      color: var(--white);
+    }
+
+    @media (max-width: 960px) {
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .zone-tabs {
+        grid-template-columns: 1fr;
+      }
+
+      #calendar {
+        min-height: 560px;
+      }
+
+      .fc .fc-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+
+      .modal-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Navegacion principal">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-num">PACIENTE 013</span>
+        <span class="nav__logo-name">EL SANATORIO</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/experience">Experiencia</a></li>
+        <li><a href="/events">Eventos</a></li>
+        <li><a href="/contact">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="booking-hero">
+    <div class="container">
+      <div class="section-label" style="justify-content:center;"><span>Agenda clinica</span></div>
+      <h1>Calendario de Reservas</h1>
+      <p>Selecciona zona, revisa eventos de los proximos 30 dias y solicita tu reserva por WhatsApp. La confirmacion final llega por mensaje del equipo.</p>
+    </div>
+  </header>
+
+  <main class="booking-shell">
+    <div class="container">
+      <section class="fallback-panel" id="fallback-panel">
+        <h2>Calendar coming soon</h2>
+        <p id="fallback-message">Book directly by WhatsApp while the live calendar is being connected.</p>
+        <a href="https://wa.me/573195962773?text=Quiero%20reservar%20El%20Sanatorio" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+      </section>
+
+      <div class="zone-tabs" role="tablist" aria-label="Zonas de reserva">
+        <button class="zone-tab" type="button" role="tab" aria-selected="true" data-zone="Patio"><strong>Patio</strong>Capacidad 30</button>
+        <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone="Laboratorio"><strong>Laboratorio</strong>Capacidad 15</button>
+        <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone="Casa del Terror"><strong>Casa del Terror</strong>Capacidad 20</button>
+      </div>
+
+      <div class="booking-grid">
+        <section class="calendar-panel" aria-labelledby="calendar-title">
+          <div class="calendar-header">
+            <h2 id="calendar-title">Disponibilidad</h2>
+            <p>Haz clic en un horario libre para preparar la solicitud de reserva.</p>
+          </div>
+          <div id="calendar"></div>
+        </section>
+
+        <aside class="events-panel" aria-labelledby="events-title">
+          <div class="events-header">
+            <h2 id="events-title">Proximos eventos</h2>
+            <p id="events-status">Cargando calendario...</p>
+          </div>
+          <div class="events-list" id="events-list"></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="modal-title">Solicitar reserva</h2>
+        <button class="modal-close" type="button" id="modal-close" aria-label="Cerrar">x</button>
+      </div>
+      <form class="booking-form" id="booking-form">
+        <label>Nombre
+          <input id="guest-name" required autocomplete="name">
+        </label>
+        <label>WhatsApp
+          <input id="guest-phone" required inputmode="tel" autocomplete="tel">
+        </label>
+        <label>Zona
+          <select id="booking-zone">
+            <option>Patio</option>
+            <option>Laboratorio</option>
+            <option>Casa del Terror</option>
+          </select>
+        </label>
+        <label>Personas
+          <input id="guest-count" type="number" min="1" max="30" value="2" required>
+        </label>
+        <input id="booking-date" type="hidden">
+        <input id="booking-time" type="hidden">
+      </form>
+      <div class="modal-actions">
+        <button type="button" id="cancel-booking">Cancelar</button>
+        <button class="primary" type="submit" form="booking-form">Abrir WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const zones = {
+      Patio: { capacity: 30 },
+      Laboratorio: { capacity: 15 },
+      "Casa del Terror": { capacity: 20 }
+    };
+
+    let activeZone = "Patio";
+    let calendar;
+    let allEvents = [];
+    let currentCardEvents = [];
+
+    const qs = (selector) => document.querySelector(selector);
+    const directBookingUrl = "https://wa.me/573195962773?text=Quiero%20reservar%20El%20Sanatorio";
+
+    function buildBookingMessage(zone, date, time, name, guests) {
+      const msg = `Hola El Sanatorio! Quiero reservar:\nZona: ${zone}\nFecha: ${date}\nHora: ${time}\nNombre: ${name}\nPersonas: ${guests}`;
+      return `https://wa.me/573195962773?text=${encodeURIComponent(msg)}`;
+    }
+
+    function detectZone(event) {
+      const haystack = `${event.summary || ""} ${event.location || ""} ${event.description || ""}`.toLowerCase();
+      if (haystack.includes("laboratorio")) return "Laboratorio";
+      if (haystack.includes("terror") || haystack.includes("paciente") || haystack.includes("casa")) return "Casa del Terror";
+      return "Patio";
+    }
+
+    function dateFromEvent(event) {
+      return event.start?.dateTime || event.start?.date || new Date().toISOString();
+    }
+
+    function endFromEvent(event) {
+      return event.end?.dateTime || event.end?.date || dateFromEvent(event);
+    }
+
+    function toCalendarEvent(event) {
+      const zone = detectZone(event);
+      return {
+        id: event.id,
+        title: event.summary || "Reservado",
+        start: dateFromEvent(event),
+        end: endFromEvent(event),
+        extendedProps: { zone, original: event }
+      };
+    }
+
+    function filteredEvents() {
+      return allEvents.filter((event) => event.extendedProps.zone === activeZone);
+    }
+
+    function renderCalendarEvents() {
+      if (!calendar) return;
+      calendar.removeAllEvents();
+      filteredEvents().forEach((event) => calendar.addEvent(event));
+    }
+
+    function renderEventCards() {
+      const list = qs("#events-list");
+      const events = filteredEvents()
+        .slice()
+        .sort((a, b) => new Date(a.start) - new Date(b.start))
+        .slice(0, 8);
+      currentCardEvents = events;
+
+      qs("#events-status").textContent = events.length ? `${activeZone} - capacidad ${zones[activeZone].capacity}` : `Sin eventos cargados para ${activeZone}`;
+      if (!events.length) {
+        list.innerHTML = `<div class="event-card"><h3>Sin eventos publicados</h3><p>Elige un horario libre en el calendario o escribe por WhatsApp para confirmar disponibilidad.</p><button type="button" data-direct="true">Reservar</button></div>`;
+        return;
+      }
+
+      list.innerHTML = events.map((event, index) => {
+        const start = new Date(event.start);
+        const date = start.toLocaleDateString("es-CO", { weekday: "short", month: "short", day: "numeric" });
+        const time = start.toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" });
+        return `<article class="event-card">
+          <h3>${event.title}</h3>
+          <p>${date} / ${time}<br>Zona: ${event.extendedProps.zone}<br>Capacidad: ${zones[event.extendedProps.zone].capacity}</p>
+          <button type="button" data-event-index="${index}">Reserve</button>
+        </article>`;
+      }).join("");
+    }
+
+    function showFallback(message) {
+      const panel = qs("#fallback-panel");
+      qs("#fallback-message").textContent = message || "Book directly by WhatsApp while the live calendar is being connected.";
+      panel.classList.add("show");
+      qs("#events-status").textContent = "Calendario no configurado";
+    }
+
+    async function loadAvailability() {
+      try {
+        const response = await fetch("/.netlify/functions/calendar-availability", { headers: { Accept: "application/json" } });
+        if (!response.ok) throw new Error("Calendar request failed");
+        const payload = await response.json();
+        const items = Array.isArray(payload) ? payload : payload.items || [];
+        allEvents = items.map(toCalendarEvent);
+        if (!Array.isArray(payload) && payload.configured === false) {
+          showFallback(payload.message || "Calendar coming soon - book via WhatsApp");
+        }
+      } catch (error) {
+        allEvents = [];
+        showFallback("Calendar coming soon - book via WhatsApp");
+      }
+      renderCalendarEvents();
+      renderEventCards();
+    }
+
+    function openBookingModal({ zone = activeZone, date = new Date(), title = "" } = {}) {
+      const start = date instanceof Date ? date : new Date(date);
+      const dateText = start.toLocaleDateString("es-CO", { year: "numeric", month: "2-digit", day: "2-digit" });
+      const timeText = start.toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" });
+      qs("#modal-title").textContent = title ? `Reservar: ${title}` : "Solicitar reserva";
+      qs("#booking-zone").value = zone;
+      qs("#guest-count").max = String(zones[zone].capacity);
+      qs("#booking-date").value = dateText;
+      qs("#booking-time").value = timeText;
+      qs("#booking-modal").classList.add("show");
+      qs("#guest-name").focus();
+    }
+
+    function closeBookingModal() {
+      qs("#booking-modal").classList.remove("show");
+    }
+
+    function initCalendar() {
+      calendar = new FullCalendar.Calendar(qs("#calendar"), {
+        initialView: "timeGridWeek",
+        locale: "es",
+        height: "auto",
+        nowIndicator: true,
+        selectable: true,
+        slotMinTime: "16:00:00",
+        slotMaxTime: "26:00:00",
+        headerToolbar: {
+          left: "prev,next today",
+          center: "title",
+          right: "dayGridMonth,timeGridWeek,timeGridDay"
+        },
+        dateClick(info) {
+          openBookingModal({ zone: activeZone, date: info.date });
+        },
+        eventClick(info) {
+          openBookingModal({
+            zone: info.event.extendedProps.zone,
+            date: info.event.start,
+            title: info.event.title
+          });
+        }
+      });
+      calendar.render();
+      loadAvailability();
+    }
+
+    document.querySelectorAll(".zone-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        activeZone = tab.dataset.zone;
+        document.querySelectorAll(".zone-tab").forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
+        renderCalendarEvents();
+        renderEventCards();
+      });
+    });
+
+    qs("#events-list").addEventListener("click", (event) => {
+      const button = event.target.closest("button");
+      if (!button) return;
+      if (button.dataset.direct) {
+        window.open(directBookingUrl, "_blank", "noopener,noreferrer");
+        return;
+      }
+      const index = Number(button.dataset.eventIndex);
+      const selected = currentCardEvents[index];
+      if (selected) openBookingModal({ zone: selected.extendedProps.zone, date: selected.start, title: selected.title });
+    });
+
+    qs("#modal-close").addEventListener("click", closeBookingModal);
+    qs("#cancel-booking").addEventListener("click", closeBookingModal);
+    qs("#booking-modal").addEventListener("click", (event) => {
+      if (event.target.id === "booking-modal") closeBookingModal();
+    });
+    qs("#booking-zone").addEventListener("change", (event) => {
+      qs("#guest-count").max = String(zones[event.target.value].capacity);
+    });
+    qs("#booking-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const zone = qs("#booking-zone").value;
+      const url = buildBookingMessage(
+        zone,
+        qs("#booking-date").value,
+        qs("#booking-time").value,
+        qs("#guest-name").value.trim(),
+        qs("#guest-count").value
+      );
+      window.open(url, "_blank", "noopener,noreferrer");
+      closeBookingModal();
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (!window.FullCalendar) {
+        showFallback("Calendar coming soon - book via WhatsApp");
+        return;
+      }
+      initCalendar();
+    });
+  </script>
+</body>
+</html>

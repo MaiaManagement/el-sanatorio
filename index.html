@@ -152,6 +152,7 @@
       <li><a href="/tours">Tours</a></li>
       <li><a href="/historia">Historia</a></li>
       <li><a href="/contact">Contacto</a></li>
+      <li><a href="/#book-paciente-013">Paciente 013</a></li>
     </ul>
 
     <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
@@ -169,6 +170,7 @@
   <a href="/tours">Tours</a>
   <a href="/historia">Historia</a>
   <a href="/contact">Contacto</a>
+  <a href="/#book-paciente-013">Paciente 013</a>
 </div>
 
 <!-- ── Hero ──────────────────────────────────────────────────── -->
@@ -582,6 +584,69 @@
   </div>
 </section>
 
+<!-- ── Paciente 013 Booking ─────────────────────────────────── -->
+<section class="reserve-section fade-in-section" id="book-paciente-013" aria-labelledby="paciente-013-title" style="background:#0a0a0a;border-top:1px solid rgba(180,80,255,0.22);border-bottom:1px solid rgba(180,80,255,0.22);">
+  <div class="container--sm">
+    <div class="section-label"><span>Acceso al Manicomio</span></div>
+    <h2 class="section-title section-title--center" id="paciente-013-title">Book Paciente 013</h2>
+    <p class="text-center serif" style="color: var(--light-gray); margin-bottom: 2.5rem;">
+      Reserve your horror maze admission by WhatsApp. Send the date, group size, and contact details directly to the admission desk.
+    </p>
+
+    <div class="form-panel">
+      <div class="form-panel__header">
+        <span class="form-panel__title">FORMULARIO DE ADMISIÓN — PACIENTE 013</span>
+        <span class="form-panel__ref">WHATSAPP-013</span>
+      </div>
+
+      <form id="paciente-013-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="paciente-name">Name *</label>
+            <input class="form-input" type="text" id="paciente-name" name="name" required placeholder="Full name" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="paciente-whatsapp">WhatsApp *</label>
+            <input class="form-input" type="tel" id="paciente-whatsapp" name="whatsapp" required placeholder="+57 300 000 0000" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="paciente-date">Date *</label>
+            <input class="form-input" type="date" id="paciente-date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="paciente-group-size">Group Size *</label>
+            <select class="form-select" id="paciente-group-size" name="groupSize" required>
+              <option value="" disabled selected>Select group size</option>
+              <option value="1">1 person</option>
+              <option value="2">2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6">6 people</option>
+              <option value="7">7 people</option>
+              <option value="8">8 people</option>
+              <option value="9">9 people</option>
+              <option value="10">10 people</option>
+              <option value="11">11 people</option>
+              <option value="12">12 people</option>
+              <option value="13">13 people</option>
+              <option value="14">14 people</option>
+              <option value="15">15 people</option>
+              <option value="16">16 people</option>
+              <option value="17">17 people</option>
+              <option value="18">18 people</option>
+              <option value="19">19 people</option>
+              <option value="20">20 people</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit">SEND PACIENTE 013 BOOKING</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ── Reservation ────────────────────────────────────────────── -->
 <section class="reserve-section fade-in-section" id="reservar" aria-labelledby="reserve-title">
   <div class="container--sm">
@@ -816,6 +881,44 @@
   </div>
   <!-- /Maia Group -->
 </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var bookingForm = document.getElementById("paciente-013-form");
+    var dateInput = document.getElementById("paciente-date");
+
+    if (dateInput) {
+      dateInput.min = new Date().toISOString().split("T")[0];
+    }
+
+    if (!bookingForm) return;
+
+    bookingForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var name = document.getElementById("paciente-name").value.trim();
+      var whatsapp = document.getElementById("paciente-whatsapp").value.trim();
+      var date = document.getElementById("paciente-date").value;
+      var groupSize = document.getElementById("paciente-group-size").value;
+
+      var message = [
+        "Hola, quiero reservar Paciente 013.",
+        "",
+        "Nombre: " + name,
+        "WhatsApp: " + whatsapp,
+        "Fecha: " + date,
+        "Grupo: " + groupSize + (groupSize === "1" ? " persona" : " personas"),
+        "Origen: el-sanatorio.com"
+      ].join("\n");
+
+      window.open(
+        "https://wa.me/573195962773?text=" + encodeURIComponent(message),
+        "_blank",
+        "noopener,noreferrer"
+      );
+    });
+  });
+</script>
 
 <script src="/js/main.js?v=20260430d" defer></script>
 

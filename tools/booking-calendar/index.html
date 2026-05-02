@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -405,7 +405,7 @@
       <section class="fallback-panel" id="fallback-panel">
         <h2>Calendar coming soon</h2>
         <p id="fallback-message">Book directly by WhatsApp while the live calendar is being connected.</p>
-        <a href="https://wa.me/573195962773?text=Quiero%20reservar%20El%20Sanatorio" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+        <a href="https://wa.me/19034598763?text=Quiero%20reservar%20El%20Sanatorio" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
       </section>
 
       <div class="zone-tabs" role="tablist" aria-label="Zonas de reserva">
@@ -480,11 +480,11 @@
     let currentCardEvents = [];
 
     const qs = (selector) => document.querySelector(selector);
-    const directBookingUrl = "https://wa.me/573195962773?text=Quiero%20reservar%20El%20Sanatorio";
+    const directBookingUrl = "https://wa.me/19034598763?text=Quiero%20reservar%20El%20Sanatorio";
 
     function buildBookingMessage(zone, date, time, name, guests) {
       const msg = `Hola El Sanatorio! Quiero reservar:\nZona: ${zone}\nFecha: ${date}\nHora: ${time}\nNombre: ${name}\nPersonas: ${guests}`;
-      return `https://wa.me/573195962773?text=${encodeURIComponent(msg)}`;
+      return `https://wa.me/19034598763?text=${encodeURIComponent(msg)}`;
     }
 
     function detectZone(event) {

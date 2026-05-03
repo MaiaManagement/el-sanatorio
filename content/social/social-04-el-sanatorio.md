@@ -1,55 +1,59 @@
 # El Sanatorio — Bilingual Social Captions
 
----
-
-**CAPTION 1 — Arrival Vibe**
-
-**ES:** Bajas del jeep y el aire cambia. Aquí huele a tierra mojada, a café recién tostado, a montaña viva. Minca no se explica, se siente en la piel. Bienvenido a donde el tiempo se mueve más despacio.
-
-**EN:** You step off the jeep and the air shifts. It smells like wet earth, freshly roasted coffee, living mountain. Minca isn't explained, it's felt on your skin. Welcome to where time moves slower.
-
-**HASHTAGS:** #ElSanatorio #MincaColombia #SierraNevada #ColombiaTravel #BackpackingColombia #HostelLife #MincaMagia #SouthAmericaTravel #JungleVibes #SlowTravel #BohemianTravel #MochilerosPorElMundo #ColombiaEsMagia #OffTheBeatenPath
+> **Venue:** Spookers-style 3-zone horror entertainment complex
+> **Location:** Calle 19 #4-23, Centro Histórico, Santa Marta, Colombia
+> **NIT:** 902.051.563-5
+> **Zones:** Sushi bar (street-front patio) · Asylum-themed cocktail bar · Paciente 013 horror maze
+> **Inspired by:** Spookers NZ — the world's most-awarded scream park
+>
+> *Not a hostel. Not in Minca. No accommodation.*
 
 ---
 
-**CAPTION 2 — Hammock Life**
+**CAPTION 1 — Three Zones, One Night**
 
-**ES:** Tarde lenta, hamaca al viento, una guitarra suena en algún rincón. Afuera la selva canta su sinfonía de pájaros y hojas. No hay prisa, no hay agenda, solo el balanceo. Esto también es viajar.
+**ES:** Tres zonas. Un edificio colonial. Una sola noche que no vas a olvidar. Empieza en el patio con sushi y un cóctel. Baja al laboratorio donde el Doctor de turno te receta tu diagnóstico. Y si te atreves… sube a Paciente 013. Calle 19 #4-23, Centro Histórico.
 
-**EN:** Slow afternoon, hammock in the breeze, a guitar playing somewhere. Outside the jungle sings its symphony of birds and leaves. No rush, no agenda, just the sway. This is traveling too.
+**EN:** Three zones. One colonial building. One night you won't forget. Start on the patio with sushi and a cocktail. Step down into the laboratory where the Doctor on duty prescribes your diagnosis. And if you dare… go up to Paciente 013. Calle 19 #4-23, Centro Histórico.
 
-**HASHTAGS:** #ElSanatorio #HammockLife #MincaColombia #JungleHostel #VidaDeHostel #SlowTravel #SierraNevadaDeSantaMarta #LazyDays #ColombiaBackpacker #HostelVibes #BohoTravel #ViajerosDelMundo #DolceFarNiente #MincaVibes
-
----
-
-**CAPTION 3 — Waterfall Day**
-
-**ES:** Botas puestas, mochilas livianas, risas que se pierden entre los árboles. El sendero baja entre helechos hasta que el rugido del agua nos encuentra. Pozo Azul nos espera con sus aguas frías y su poesía verde. Días así no se olvidan.
-
-**EN:** Boots on, light backpacks, laughter lost between the trees. The trail descends through ferns until the roar of water finds us. Pozo Azul waits with its cold waters and green poetry. Days like this aren't forgotten.
-
-**HASHTAGS:** #ElSanatorio #PozoAzul #CascadasMarinka #MincaColombia #WaterfallChasing #SierraNevada #ColombiaAdventures #JungleHike #BackpackingColombia #AventuraEnColombia #HiddenColombia #MochileroLife #TravelCrew #WildSwimming #MincaMagic
+**HASHTAGS:** #ElSanatorio #SantaMarta #CentroHistoricoSantaMarta #BarDeTerror #HorrorBar #SushiBar #CocktailBar #Paciente013 #SpookersStyle #ColombiaNightlife #ThingsToDoSantaMarta #ImmersiveHorror
 
 ---
 
-**CAPTION 4 — Golden Hour**
+**CAPTION 2 — The Sushi Bar**
 
-**ES:** El sol se derrama lento sobre la Sierra y todo se vuelve oro. Las montañas se tiñen de rosa, el mar a lo lejos brilla como un espejo. Nadie habla, nadie quiere romper el momento. Hay atardeceres que se sienten como una oración.
+**ES:** El patio es el lugar donde empieza todo. Sushi al frente de la calle, mesas iluminadas con bombillas tenues, los gritos del manicomio escapando por las ventanas del piso de arriba. Sin reserva, sin boleto. Solo tú, una mesa y la sensación de que algo te está mirando.
 
-**EN:** The sun spills slow over the Sierra and everything turns to gold. The mountains blush pink, the distant sea shines like a mirror. Nobody speaks, nobody wants to break the moment. Some sunsets feel like a prayer.
+**EN:** The patio is where it all begins. Sushi street-side, tables lit by dim bulbs, the screams from the asylum upstairs leaking through the windows. No reservation, no ticket. Just you, a table, and the feeling that something is watching.
 
-**HASHTAGS:** #ElSanatorio #GoldenHour #SierraNevadaDeSantaMarta #MincaSunset #AtardeceresDeColombia #MincaColombia #ColombiaTravel #MountainViews #HostelTerrace #SunsetLovers #ColombiaEsMagia #TravelColombia #SkyOnFire #BohemianVibes #SlowTravel
-
----
-
-**CAPTION 5 — Community / New Friends**
-
-**ES:** Llegaste solo y te vas con una tribu. Caras de todos los rincones del mundo, historias compartidas alrededor de una cerveza, planes inventados a medianoche. La magia de Minca no son solo las montañas, son ellos. Los desconocidos que se vuelven hogar.
-
-**EN:** You arrived alone and you leave with a tribe. Faces from every corner of the world, stories shared over a beer, plans invented at midnight. The magic of Minca isn't only the mountains, it's them. The strangers who become home.
-
-**HASHTAGS:** #ElSanatorio #TravelCrew #HostelFamily #MincaColombia #BackpackerLife #MochilerosPorElMundo #MakingMemories #ColombiaTravel #StrangersToFriends #HostelVibes #CommunityOverEverything #SierraNevada #ViajerosSinFronteras #GoodPeopleGoodTimes #MincaMagia
+**HASHTAGS:** #ElSanatorio #SushiBar #SantaMarta #CentroHistorico #StreetFood #SushiSantaMarta #HorrorVibes #BarDeTerror #ColombiaFoodie
 
 ---
 
-Want me to adapt these into shorter TikTok hook versions, or write follow-up carousel captions for each theme?
+**CAPTION 3 — The Cocktail Bar / The Laboratory**
+
+**ES:** No vendemos cócteles — los recetamos. La Morfina. El Paracetamol. La Transfusión. Cada trago lleva nombre de diagnóstico. La barra es una mesa de autopsias. Los grifos son jeringas gigantes. Be Vida spirits en cada prescripción. Bienvenido al Laboratorio.
+
+**EN:** We don't sell cocktails — we prescribe doses. La Morfina. El Paracetamol. La Transfusión. Every drink carries a diagnosis. The bar is an autopsy table. The taps are giant syringes. Be Vida spirits in every prescription. Welcome to the Laboratory.
+
+**HASHTAGS:** #ElSanatorio #CocktailBar #BarDeCocteles #BeVida #SantaMartaNightlife #HorrorCocktails #AsylumBar #ImmersiveDrinking #Coctelería #SantaMarta
+
+---
+
+**CAPTION 4 — Paciente 013 (Horror Maze)**
+
+**ES:** Subes una escalera. Las luces cambian. Los actores ya no son actores. Paciente 013 te está esperando — y ella siempre ha estado aquí. Inspirado en Spookers NZ. Grupos de 4–8. Sesiones cada 20 minutos. Sin garantía de salida tranquila.
+
+**EN:** You climb a staircase. The lights shift. The actors stop feeling like actors. Paciente 013 is waiting for you — and she's always been here. Inspired by Spookers NZ. Groups of 4–8. Sessions every 20 minutes. No guarantee of a calm exit.
+
+**HASHTAGS:** #ElSanatorio #Paciente013 #HorrorMaze #LaberintoDelTerror #SpookersStyle #ImmersiveHorror #ScarySantaMarta #HouseOfHorrors #CasaDelTerror #ColombiaHorror #ThingsToDoSantaMarta
+
+---
+
+**CAPTION 5 — Centro Histórico Location**
+
+**ES:** Calle 19 #4-23. A dos cuadras del Parque de los Novios, a tres del mar. La fachada parece abandonada. Por dentro: sushi, cócteles y el horror más oscuro de Colombia. No somos un hotel. No somos un hostal. Somos una noche.
+
+**EN:** Calle 19 #4-23. Two blocks from Parque de los Novios, three from the sea. The façade looks abandoned. Inside: sushi, cocktails, and Colombia's darkest horror experience. We're not a hotel. We're not a hostel. We're a night.
+
+**HASHTAGS:** #ElSanatorio #CentroHistoricoSantaMarta #SantaMarta #ParqueDeLosNovios #VisitSantaMarta #ColombiaTravel #NightOutSantaMarta #BarDeTerror #SushiBar #Paciente013

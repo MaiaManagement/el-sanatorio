@@ -1,22 +1,12 @@
-HEADLINES:
-1. El Sanatorio Minca Hostel [25 chars]
-2. Stay in the Sierra Nevada [25 chars]
-3. Jungle Vibes in Minca [21 chars]
-4. Hammocks & Waterfalls [21 chars]
-5. Social Hostel in Minca [22 chars]
-6. Affordable Minca Rooms [22 chars]
-7. Walk to Pozo Azul Falls [23 chars]
-8. Bunkbeds & Private Rooms [24 chars]
-9. Community Hostel Minca [22 chars]
-10. Bohemian Jungle Escape [22 chars]
-11. Sleep in the Mountains [22 chars]
-12. Book Your Minca Stay [20 chars]
-13. Chill Hostel Near Falls [23 chars]
-14. Minca Backpacker Haven [22 chars]
-15. Wake Up in the Jungle [21 chars]
+# DEPRECATED — Legacy file from previous brand concept
 
-DESCRIPTIONS:
-1. Bohemian hostel in Minca. Hammocks, jungle views & waterfalls. Book via WhatsApp [80 chars]
-2. Escape to the Sierra Nevada. Social vibes, cheap rooms, walk to Pozo Azul [73 chars]
-3. Bunkbeds or private rooms in jungle Minca. Walk-ins welcome, message us today [77 chars]
-4. Community, music & nature 45 min from Santa Marta. Reserve via WhatsApp now [75 chars]
+> **El Sanatorio is NOT a hostel and is NOT in Minca.**
+>
+> El Sanatorio is a Spookers-style 3-zone horror entertainment venue at
+> **Calle 19 #4-23, Centro Histórico, Santa Marta, Colombia**.
+> NIT 902.051.563-5. No accommodation. No Beds24. Night-out destination only.
+>
+> This file previously contained ad copy framing the venue as a Minca jungle
+> hostel. It has been deprecated to avoid feeding incorrect descriptions to
+> bots, AI summarisers, and content scrapers. See `content/ads/sushi-horror.md`
+> (or future replacement files) for current ad copy.

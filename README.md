@@ -1,7 +1,8 @@
 # El Sanatorio
 
-**Yakitori Gastro Bar & Immersive Horror Experience**
+**Spookers-style 3-Zone Horror Entertainment Complex — Sushi Bar, Cocktail Bar & Paciente 013 Horror Maze**
 Calle 19 #4-23, Centro Histórico, Santa Marta, Colombia
+NIT 902.051.563-5
 
 > *"Ella siempre ha estado aquí."*
 
@@ -9,11 +10,11 @@ Calle 19 #4-23, Centro Histórico, Santa Marta, Colombia
 
 ## About
 
-El Sanatorio is a dual-concept venue built inside a restored abandoned psychiatric building in the heart of Santa Marta's historic district:
+El Sanatorio is a 3-zone immersive horror and hospitality venue built inside a restored colonial building in the heart of Santa Marta's historic district. It is **not a hostel** and offers **no accommodation** — it is a night-out destination only.
 
-- **Ground floor** — Yakitori charcoal grill bar with medical/hospital-themed cocktails. Autopsy-table bar, giant syringe beer taps, X-ray lightbox menus, medicine cabinet bottle display.
-- **Upper floors** — Immersive horror maze set inside an abandoned 1950s sanatorium. Groups of 4–8. 45–70 minute experience.
-- **Tours** — Bilingual walking tour of Centro Histórico ending at El Sanatorio. $55 USD. Cruise ship passengers welcome.
+- **Zone 1 — Sushi Bar (street-front patio)** — Open-front sushi bar on Calle 19. Walk-in, no reservations required. Where the night begins.
+- **Zone 2 — Cocktail Bar (interior)** — Asylum-themed cocktail bar with medical/hospital iconography and Be Vida spirits. Autopsy-table bar, giant syringe beer taps, X-ray lightbox menus, medicine cabinet bottle display. *"We don't sell cocktails — we prescribe doses."*
+- **Zone 3 — Paciente 013 (horror maze)** — Immersive horror experience inspired by **Spookers NZ**. Live actors, cinematic scenes, a 1950s sanatorium narrative. Groups of 4–8. 45–70 minute experience.
 
 ---
 

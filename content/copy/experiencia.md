@@ -1,73 +1,67 @@
 # Experiencia El Sanatorio
 
+> **El Sanatorio** is a Spookers-style 3-zone horror entertainment complex
+> at **Calle 19 #4-23, Centro Histórico, Santa Marta, Colombia**.
+> NIT 902.051.563-5. Not a hostel. Not in Minca. No accommodation.
+
+---
+
 ## 🇪🇸 Versión en Español
 
-### Bienvenido a Minca, donde el tiempo respira distinto
+### Tres zonas. Un edificio. Una noche que no vas a olvidar.
 
-Hay un lugar en la Sierra Nevada de Santa Marta donde el asfalto se rinde, las nubes bajan a saludarte y el ruido del mundo se queda atrás. Minca no es un destino: es una pausa. Un pequeño pueblo de montaña suspendido entre cafetales, ríos y selva, donde las mañanas huelen a tierra mojada y las noches se cubren de estrellas tan cercanas que parecen al alcance de la mano.
+El Sanatorio no es un restaurante. Tampoco un bar. Tampoco una casa del terror. Es las tres cosas a la vez, dispuestas en capas dentro de un edificio colonial restaurado en el corazón del Centro Histórico de Santa Marta. Calle 19 #4-23, a dos cuadras del Parque de los Novios.
 
-Aquí no hay prisa. Hay silencio interrumpido por pájaros, hay neblina que abraza las copas de los árboles, hay esa sensación rara y bonita de estar desconectado y, al mismo tiempo, profundamente conectado contigo mismo.
+### Zona 1 — La Sala de Espera (Sushi Bar)
 
-### El Sanatorio: tu casa en la selva
+El patio que da a la calle. Acceso libre desde mediodía hasta la madrugada. Sin reservas, sin boletos. Una barra de sushi al frente de Calle 19, mesas iluminadas con bombillas tenues, fachada negra mate y neón rojo. Aquí dejas de ser transeúnte y te conviertes en paciente.
 
-El Sanatorio nació como un refugio para viajeros con alma curiosa. Ofrecemos **camas en dormitorios compartidos** para los que viajan ligero y buscan compañía, y **habitaciones privadas** para quienes prefieren su propio rincón de selva. Tenemos **zonas de hamacas** colgando entre árboles, perfectas para una siesta o un libro que nunca termina; un **bar** donde nacen amistades a medianoche; una **cocina compartida** llena de historias y recetas de paso; y **noches de música en vivo y eventos** que convierten cualquier martes en algo memorable.
+### Zona 2 — El Laboratorio (Bar de Cócteles)
 
-Cada rincón está pensado con arte, color y manos locales. No somos un hotel: somos un espacio vivo.
+La planta baja del sanatorio fue reconvertida. La mesa de autopsias es ahora la barra. El Doctor de turno prescribe dosis con **Be Vida** spirits — nuestra marca hermana de destilados artesanales colombianos. La Morfina. El Paracetamol. La Transfusión. Cada trago lleva nombre de diagnóstico. Los grifos de cerveza tienen forma de jeringa gigante. Las cajas de luz de rayos X muestran el menú del día.
 
-### Aventuras que te esperan afuera
+> *"No vendemos cócteles — los recetamos."*
 
-Minca es un parque de juegos para los sentidos:
+### Zona 3 — Paciente 013 (Casa del Terror)
 
-- **Pozo Azul** – piscinas naturales de agua cristalina, ideales para refrescarse después de una caminata.
-- **Cascada Marinka** – dos cascadas espectaculares enmarcadas en selva pura.
-- **Tours guiados a fincas cafeteras** – descubre cómo nace una de las mejores tazas de café del mundo.
-- **Caminata al amanecer en la Sierra Nevada** – ver salir el sol sobre las montañas más altas de Colombia es algo que no se olvida.
-- **Bajadas en bicicleta hasta el río** – adrenalina, viento y selva.
-- **Avistamiento de aves** – Minca es uno de los mejores lugares del mundo para los amantes de las aves.
-
-### La verdadera magia: la comunidad
-
-Lo que hace especial a El Sanatorio no son las paredes. Son las personas. Aquí los viajeros llegan como desconocidos y se van como amigos. Se comparten cervezas, mapas, canciones, planes improvisados al día siguiente. Hay algo en este lugar que hace que la gente baje la guardia y vuelva a creer en lo simple.
+La planta superior. Acceso restringido. Casa del terror profesional con actores en vivo, efectos de sonido espacial, escenas cinematográficas y pasillos que no terminan donde deberían. Inspirado en **Spookers NZ** — la atracción de terror más premiada del mundo. Primera experiencia de este nivel en la Costa Caribe colombiana. Grupos de 4–8. Sesiones cada 20 minutos. 45–70 minutos de duración. Sin garantía de salida tranquila.
 
 ### Cómo llegar
 
-Minca está a 45 minutos de Santa Marta. Desde el **Mercado Público** salen **jeeps colectivos** y **mototaxis** durante todo el día. El trayecto en sí ya es parte del viaje: una carretera que sube serpenteando entre montañas verdes hasta dejarte justo en el corazón del pueblo.
+Calle 19 #4-23, Centro Histórico, Santa Marta. A dos cuadras del Parque de los Novios, a tres cuadras del mar. Fácil acceso a pie desde cualquier hotel del centro o del Rodadero (taxi 10–15 min).
 
-### **Reserva tu lugar en El Sanatorio.**
+### **Reserva tu mesa o tu boleto en El Sanatorio.**
+
+WhatsApp: +1 (903) 459-8763
+Instagram: [@elsanatorio.sm](https://instagram.com/elsanatorio.sm)
 
 ---
 
 ## 🇬🇧 English Version
 
-### Welcome to Minca, where time breathes differently
+### Three zones. One building. One night you won't forget.
 
-There's a place in the Sierra Nevada de Santa Marta where the pavement gives up, the clouds come down to greet you, and the noise of the world stays behind. Minca isn't a destination — it's a pause. A small mountain village suspended between coffee plantations, rivers and jungle, where mornings smell like wet earth and the nights are draped in stars so close you could almost touch them.
+El Sanatorio isn't a restaurant. It isn't a bar. It isn't a haunted house. It's all three, layered inside a restored colonial building at the heart of Santa Marta's Centro Histórico. Calle 19 #4-23, two blocks from Parque de los Novios.
 
-There's no rush here. Just silence broken by birdsong, mist hugging the treetops, and that rare, beautiful feeling of being disconnected and, at the same time, deeply connected to yourself.
+### Zone 1 — The Waiting Room (Sushi Bar)
 
-### El Sanatorio: your home in the jungle
+The street-front patio. Open access from noon until late. No reservations, no tickets. A sushi bar facing Calle 19, tables lit by dim bulbs, matte-black façade and red neon. This is where passers-by stop being tourists and become patients.
 
-El Sanatorio was born as a shelter for travellers with curious souls. We offer **dorm beds** for those travelling light and looking for company, and **private rooms** for those who prefer their own corner of the jungle. We have **hammock zones** strung between trees, perfect for a nap or a book that never ends; a **bar** where friendships are born at midnight; a **shared kitchen** full of stories and recipes from passing travellers; and **live music nights and events** that turn any Tuesday into something memorable.
+### Zone 2 — The Laboratory (Cocktail Bar)
 
-Every corner is designed with art, colour and local hands. We're not a hotel — we're a living space.
+The ground floor of the sanatorium has been repurposed. The autopsy table is now the bar. The Doctor on duty prescribes doses with **Be Vida** spirits — our sister brand of Colombian artisanal distillates. La Morfina. El Paracetamol. La Transfusión. Every drink carries a diagnosis. The beer taps are giant syringes. X-ray lightboxes display the day's menu.
 
-### Adventures waiting outside
+> *"We don't sell cocktails — we prescribe doses."*
 
-Minca is a playground for the senses:
+### Zone 3 — Paciente 013 (Horror Maze)
 
-- **Pozo Azul** – crystal-clear natural pools, ideal for cooling off after a hike.
-- **Marinka Waterfall** – two spectacular cascades framed by pure jungle.
-- **Guided coffee farm tours** – discover how one of the world's best cups of coffee is born.
-- **Sunrise hike in the Sierra Nevada** – watching the sun rise over Colombia's highest mountains is unforgettable.
-- **Downhill bike rides to the river** – adrenaline, wind and jungle.
-- **Birdwatching** – Minca is one of the world's top destinations for bird lovers.
-
-### The real magic: the community
-
-What makes El Sanatorio special isn't the walls. It's the people. Travellers arrive as strangers and leave as friends. Beers are shared, maps unfolded, songs sung, last-minute plans made for tomorrow. There's something about this place that makes people drop their guard and believe in the simple things again.
+The upper floor. Restricted access. A professional horror experience with live actors, spatial sound design, cinematic scenes and corridors that don't end where they should. Inspired by **Spookers NZ** — the most-awarded scream park in the world. The first experience of this level on Colombia's Caribbean coast. Groups of 4–8. Sessions every 20 minutes. 45–70 minute experience. No guarantee of a calm exit.
 
 ### How to get here
 
-Minca is 45 minutes from Santa Marta. From the **Mercado Público**, **shared jeeps** and **mototaxis** leave throughout the day. The ride itself is part of the journey: a winding road climbing through green mountains until it drops you right in the heart of the village.
+Calle 19 #4-23, Centro Histórico, Santa Marta. Two blocks from Parque de los Novios, three from the sea. Walking distance from any hotel in the historic centre or a 10–15 minute taxi from Rodadero.
 
-### **Book your place at El Sanatorio.**
+### **Book your table or your horror maze ticket at El Sanatorio.**
+
+WhatsApp: +1 (903) 459-8763
+Instagram: [@elsanatorio.sm](https://instagram.com/elsanatorio.sm)

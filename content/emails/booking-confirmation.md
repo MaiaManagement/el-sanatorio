@@ -1,7 +1,7 @@
 # 🩺 Confirmación de Reserva — El Sanatorio, Santa Marta
 
 > **Nota:** El Sanatorio NO es un hostal y NO ofrece alojamiento.
-> Esta plantilla cubre reservas de mesa (Sushi Bar / Laboratorio) y
+> Esta plantilla cubre reservas de mesa (Yakitori Bar / Laboratorio) y
 > boletos para Paciente 013 (laberinto del terror).
 
 ---
@@ -11,7 +11,7 @@
 Tu reserva en **El Sanatorio** está confirmada. Calle 19 #4-23, Centro Histórico, Santa Marta — a dos cuadras del Parque de los Novios.
 
 **Detalles de tu reserva:**
-- Tipo: [MESA_SUSHI / MESA_LABORATORIO / BOLETO_PACIENTE_013 / EVENTO_PRIVADO]
+- Tipo: [MESA_YAKITORI / MESA_LABORATORIO / BOLETO_PACIENTE_013 / EVENTO_PRIVADO]
 - Fecha: [FECHA]
 - Hora de llegada: [HORA]
 - Número de personas: [NUMERO_PERSONAS]
@@ -27,7 +27,7 @@ Calle 19 #4-23, Centro Histórico, Santa Marta. A dos cuadras del Parque de los 
 - Aceptamos efectivo, tarjeta y transferencia (COP).
 
 **Lo que te espera:**
-Tres zonas dentro de un edificio colonial restaurado: Sushi Bar al frente de la calle, Laboratorio (bar de cócteles asylum-themed con Be Vida spirits) en la planta baja, y Paciente 013 (laberinto del terror inspirado en Spookers NZ) en la planta superior.
+Tres zonas dentro de un edificio colonial restaurado: Yakitori Bar al frente de la calle, Laboratorio (bar de cócteles asylum-themed con Be Vida spirits) en la planta baja, y Paciente 013 (laberinto del terror inspirado en Spookers NZ) en la planta superior.
 
 > *"Ella siempre ha estado aquí."*
 
@@ -41,7 +41,7 @@ WhatsApp: +1 (903) 459-8763 · Instagram: @elsanatorio.sm
 # 🩺 Booking Confirmation — El Sanatorio, Santa Marta
 
 > **Note:** El Sanatorio is NOT a hostel and does NOT offer accommodation.
-> This template covers table reservations (Sushi Bar / Laboratorio) and
+> This template covers table reservations (Yakitori Bar / Laboratorio) and
 > Paciente 013 horror-maze tickets.
 
 ---
@@ -51,7 +51,7 @@ Hello [NAME]!
 Your booking at **El Sanatorio** is confirmed. Calle 19 #4-23, Centro Histórico, Santa Marta — two blocks from Parque de los Novios.
 
 **Your booking details:**
-- Type: [SUSHI_TABLE / LABORATORIO_TABLE / PACIENTE_013_TICKET / PRIVATE_EVENT]
+- Type: [YAKITORI_TABLE / LABORATORIO_TABLE / PACIENTE_013_TICKET / PRIVATE_EVENT]
 - Date: [DATE]
 - Arrival time: [TIME]
 - Guests: [GUESTS]
@@ -67,7 +67,7 @@ Calle 19 #4-23, Centro Histórico, Santa Marta. Two blocks from Parque de los No
 - We accept cash, card, and bank transfer (COP).
 
 **What awaits you:**
-Three zones inside a restored colonial building: Sushi Bar street-side, Laboratorio (asylum-themed cocktail bar with Be Vida spirits) on the ground floor, and Paciente 013 (horror maze inspired by Spookers NZ) on the upper floor.
+Three zones inside a restored colonial building: Yakitori Bar street-side, Laboratorio (asylum-themed cocktail bar with Be Vida spirits) on the ground floor, and Paciente 013 (horror maze inspired by Spookers NZ) on the upper floor.
 
 > *"She has always been here."*
 

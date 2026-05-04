@@ -12,9 +12,9 @@
 
 El Sanatorio no es un restaurante. Tampoco un bar. Tampoco una casa del terror. Es las tres cosas a la vez, dispuestas en capas dentro de un edificio colonial restaurado en el corazón del Centro Histórico de Santa Marta. Calle 19 #4-23, a dos cuadras del Parque de los Novios.
 
-### Zona 1 — La Sala de Espera (Sushi Bar)
+### Zona 1 — La Sala de Espera (Yakitori Bar)
 
-El patio que da a la calle. Acceso libre desde mediodía hasta la madrugada. Sin reservas, sin boletos. Una barra de sushi al frente de Calle 19, mesas iluminadas con bombillas tenues, fachada negra mate y neón rojo. Aquí dejas de ser transeúnte y te conviertes en paciente.
+El patio que da a la calle. Acceso libre desde mediodía hasta la madrugada. Sin reservas, sin boletos. Una barra de yakitori al frente de Calle 19, mesas iluminadas con bombillas tenues, fachada negra mate y neón rojo. Aquí dejas de ser transeúnte y te conviertes en paciente.
 
 ### Zona 2 — El Laboratorio (Bar de Cócteles)
 
@@ -43,9 +43,9 @@ Instagram: [@elsanatorio.sm](https://instagram.com/elsanatorio.sm)
 
 El Sanatorio isn't a restaurant. It isn't a bar. It isn't a haunted house. It's all three, layered inside a restored colonial building at the heart of Santa Marta's Centro Histórico. Calle 19 #4-23, two blocks from Parque de los Novios.
 
-### Zone 1 — The Waiting Room (Sushi Bar)
+### Zone 1 — The Waiting Room (Yakitori Bar)
 
-The street-front patio. Open access from noon until late. No reservations, no tickets. A sushi bar facing Calle 19, tables lit by dim bulbs, matte-black façade and red neon. This is where passers-by stop being tourists and become patients.
+The street-front patio. Open access from noon until late. No reservations, no tickets. A yakitori bar facing Calle 19, tables lit by dim bulbs, matte-black façade and red neon. This is where passers-by stop being tourists and become patients.
 
 ### Zone 2 — The Laboratory (Cocktail Bar)
 

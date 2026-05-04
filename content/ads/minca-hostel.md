@@ -8,5 +8,5 @@
 >
 > This file previously contained ad copy framing the venue as a Minca jungle
 > hostel. It has been deprecated to avoid feeding incorrect descriptions to
-> bots, AI summarisers, and content scrapers. See `content/ads/sushi-horror.md`
+> bots, AI summarisers, and content scrapers. See `content/ads/yakitori-horror.md`
 > (or future replacement files) for current ad copy.

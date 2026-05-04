@@ -3,7 +3,7 @@
 > **Venue:** Spookers-style 3-zone horror entertainment complex
 > **Location:** Calle 19 #4-23, Centro Histórico, Santa Marta, Colombia
 > **NIT:** 902.051.563-5
-> **Zones:** Sushi bar (street-front patio) · Asylum-themed cocktail bar · Paciente 013 horror maze
+> **Zones:** Yakitori bar (street-front patio) · Asylum-themed cocktail bar · Paciente 013 horror maze
 > **Inspired by:** Spookers NZ — the world's most-awarded scream park
 >
 > *Not a hostel. Not in Minca. No accommodation.*
@@ -12,21 +12,21 @@
 
 **CAPTION 1 — Three Zones, One Night**
 
-**ES:** Tres zonas. Un edificio colonial. Una sola noche que no vas a olvidar. Empieza en el patio con sushi y un cóctel. Baja al laboratorio donde el Doctor de turno te receta tu diagnóstico. Y si te atreves… sube a Paciente 013. Calle 19 #4-23, Centro Histórico.
+**ES:** Tres zonas. Un edificio colonial. Una sola noche que no vas a olvidar. Empieza en el patio con yakitori y un cóctel. Baja al laboratorio donde el Doctor de turno te receta tu diagnóstico. Y si te atreves… sube a Paciente 013. Calle 19 #4-23, Centro Histórico.
 
-**EN:** Three zones. One colonial building. One night you won't forget. Start on the patio with sushi and a cocktail. Step down into the laboratory where the Doctor on duty prescribes your diagnosis. And if you dare… go up to Paciente 013. Calle 19 #4-23, Centro Histórico.
+**EN:** Three zones. One colonial building. One night you won't forget. Start on the patio with yakitori and a cocktail. Step down into the laboratory where the Doctor on duty prescribes your diagnosis. And if you dare… go up to Paciente 013. Calle 19 #4-23, Centro Histórico.
 
-**HASHTAGS:** #ElSanatorio #SantaMarta #CentroHistoricoSantaMarta #BarDeTerror #HorrorBar #SushiBar #CocktailBar #Paciente013 #SpookersStyle #ColombiaNightlife #ThingsToDoSantaMarta #ImmersiveHorror
+**HASHTAGS:** #ElSanatorio #SantaMarta #CentroHistoricoSantaMarta #BarDeTerror #HorrorBar #YakitoriBar #CocktailBar #Paciente013 #SpookersStyle #ColombiaNightlife #ThingsToDoSantaMarta #ImmersiveHorror
 
 ---
 
-**CAPTION 2 — The Sushi Bar**
+**CAPTION 2 — The Yakitori Bar**
 
-**ES:** El patio es el lugar donde empieza todo. Sushi al frente de la calle, mesas iluminadas con bombillas tenues, los gritos del manicomio escapando por las ventanas del piso de arriba. Sin reserva, sin boleto. Solo tú, una mesa y la sensación de que algo te está mirando.
+**ES:** El patio es el lugar donde empieza todo. Yakitori al frente de la calle, mesas iluminadas con bombillas tenues, los gritos del manicomio escapando por las ventanas del piso de arriba. Sin reserva, sin boleto. Solo tú, una mesa y la sensación de que algo te está mirando.
 
-**EN:** The patio is where it all begins. Sushi street-side, tables lit by dim bulbs, the screams from the asylum upstairs leaking through the windows. No reservation, no ticket. Just you, a table, and the feeling that something is watching.
+**EN:** The patio is where it all begins. Yakitori street-side, tables lit by dim bulbs, the screams from the asylum upstairs leaking through the windows. No reservation, no ticket. Just you, a table, and the feeling that something is watching.
 
-**HASHTAGS:** #ElSanatorio #SushiBar #SantaMarta #CentroHistorico #StreetFood #SushiSantaMarta #HorrorVibes #BarDeTerror #ColombiaFoodie
+**HASHTAGS:** #ElSanatorio #YakitoriBar #SantaMarta #CentroHistorico #StreetFood #YakitoriSantaMarta #HorrorVibes #BarDeTerror #ColombiaFoodie
 
 ---
 
@@ -52,8 +52,8 @@
 
 **CAPTION 5 — Centro Histórico Location**
 
-**ES:** Calle 19 #4-23. A dos cuadras del Parque de los Novios, a tres del mar. La fachada parece abandonada. Por dentro: sushi, cócteles y el horror más oscuro de Colombia. No somos un hotel. No somos un hostal. Somos una noche.
+**ES:** Calle 19 #4-23. A dos cuadras del Parque de los Novios, a tres del mar. La fachada parece abandonada. Por dentro: yakitori, cócteles y el horror más oscuro de Colombia. No somos un hotel. No somos un hostal. Somos una noche.
 
-**EN:** Calle 19 #4-23. Two blocks from Parque de los Novios, three from the sea. The façade looks abandoned. Inside: sushi, cocktails, and Colombia's darkest horror experience. We're not a hotel. We're not a hostel. We're a night.
+**EN:** Calle 19 #4-23. Two blocks from Parque de los Novios, three from the sea. The façade looks abandoned. Inside: yakitori, cocktails, and Colombia's darkest horror experience. We're not a hotel. We're not a hostel. We're a night.
 
-**HASHTAGS:** #ElSanatorio #CentroHistoricoSantaMarta #SantaMarta #ParqueDeLosNovios #VisitSantaMarta #ColombiaTravel #NightOutSantaMarta #BarDeTerror #SushiBar #Paciente013
+**HASHTAGS:** #ElSanatorio #CentroHistoricoSantaMarta #SantaMarta #ParqueDeLosNovios #VisitSantaMarta #ColombiaTravel #NightOutSantaMarta #BarDeTerror #YakitoriBar #Paciente013

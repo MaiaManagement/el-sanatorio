@@ -1,77 +1,59 @@
-# 🩺 Confirmación de Reserva — El Sanatorio, Santa Marta
-
-> **Nota:** El Sanatorio NO es un hostal y NO ofrece alojamiento.
-> Esta plantilla cubre reservas de mesa (Yakitori Bar / Laboratorio) y
-> boletos para Paciente 013 (laberinto del terror).
-
----
+# 🌿 Confirmación de Reserva — El Sanatorio, Minca
 
 ¡Hola [NOMBRE]!
 
-Tu reserva en **El Sanatorio** está confirmada. Calle 19 #4-23, Centro Histórico, Santa Marta — a dos cuadras del Parque de los Novios.
+Qué emoción saber que pronto te unirás a nosotros en la montaña. Tu reserva está confirmada y queremos darte la bienvenida oficial a la familia de El Sanatorio.
 
-**Detalles de tu reserva:**
-- Tipo: [MESA_YAKITORI / MESA_LABORATORIO / BOLETO_PACIENTE_013 / EVENTO_PRIVADO]
-- Fecha: [FECHA]
-- Hora de llegada: [HORA]
+**Detalles de tu estadía:**
+- Fechas: [FECHAS]
+- Habitación: [TIPO_HABITACION]
 - Número de personas: [NUMERO_PERSONAS]
-- Total: [MONTO_COP]
 
 **Cómo llegar:**
-Calle 19 #4-23, Centro Histórico, Santa Marta. A dos cuadras del Parque de los Novios, a tres cuadras del mar. Llega a pie desde cualquier hotel del centro o en taxi (10–15 min desde Rodadero). Busca la fachada negra mate con neón rojo — parece abandonada por fuera.
+Desde Santa Marta, dirígete al Mercado Público (Calle 11 con Cra 12) y toma un jeep colectivo o mototaxi hacia Minca. El viaje dura unos 45 minutos por una carretera con vistas espectaculares. Una vez en el centro de Minca, encontrarás El Sanatorio en [DIRECCION]. Si te pierdes, pregunta — todos en el pueblo nos conocen.
 
-**Información importante:**
-- Llega 10 minutos antes de tu hora reservada.
-- Paciente 013: prohibido el ingreso a menores de 18 años. Documento de identidad obligatorio.
-- Política de cancelación: hasta 24 horas antes sin cargo. Después, se factura el 100% del valor.
-- Aceptamos efectivo, tarjeta y transferencia (COP).
+**Qué traer:**
+- Ropa ligera y cómoda
+- Repelente de mosquitos (¡importante!)
+- Efectivo — no hay cajero en Minca, retira en Santa Marta
+- Un buen libro
+- Una mente abierta
 
 **Lo que te espera:**
-Tres zonas dentro de un edificio colonial restaurado: Yakitori Bar al frente de la calle, Laboratorio (bar de cócteles asylum-themed con Be Vida spirits) en la planta baja, y Paciente 013 (laberinto del terror inspirado en Spookers NZ) en la planta superior.
+Hamacas perfectas para perderte entre las nubes, una comunidad de viajeros que se vuelve familia, y excursiones inolvidables a las cascadas escondidas de la Sierra Nevada.
 
-> *"Ella siempre ha estado aquí."*
+Prepara el alma. La montaña ya te está llamando. 🌱
 
-Con clínica precisión,
-**El equipo de El Sanatorio 🩺**
-
-WhatsApp: +1 (903) 459-8763 · Instagram: @elsanatorio.sm
+Con cariño selvático,
+**El equipo de El Sanatorio 🌿**
 
 ---
 
-# 🩺 Booking Confirmation — El Sanatorio, Santa Marta
-
-> **Note:** El Sanatorio is NOT a hostel and does NOT offer accommodation.
-> This template covers table reservations (Yakitori Bar / Laboratorio) and
-> Paciente 013 horror-maze tickets.
-
----
+# 🌿 Booking Confirmation — El Sanatorio, Minca
 
 Hello [NAME]!
 
-Your booking at **El Sanatorio** is confirmed. Calle 19 #4-23, Centro Histórico, Santa Marta — two blocks from Parque de los Novios.
+We're thrilled to know you'll soon be joining us up in the mountains. Your booking is confirmed and we'd like to officially welcome you to the El Sanatorio family.
 
-**Your booking details:**
-- Type: [YAKITORI_TABLE / LABORATORIO_TABLE / PACIENTE_013_TICKET / PRIVATE_EVENT]
-- Date: [DATE]
-- Arrival time: [TIME]
-- Guests: [GUESTS]
-- Total: [AMOUNT_COP]
+**Your stay details:**
+- Dates: [DATES]
+- Room: [ROOM_TYPE]
+- Number of guests: [GUESTS]
 
 **Getting here:**
-Calle 19 #4-23, Centro Histórico, Santa Marta. Two blocks from Parque de los Novios, three from the sea. Walk from any hotel in the historic centre or take a taxi (10–15 min from Rodadero). Look for the matte-black façade with red neon — it looks abandoned from outside.
+From Santa Marta, head to the Mercado Público (Calle 11 con Cra 12) and grab a shared jeep or mototaxi to Minca. The ride takes around 45 minutes along a road with spectacular views. Once in the centre of Minca, you'll find El Sanatorio at [DIRECCION]. If you get lost, just ask around — everyone in town knows us.
 
-**Important info:**
-- Arrive 10 minutes before your booked time.
-- Paciente 013: 18+ only. Government ID required.
-- Cancellation policy: free up to 24 hours before. After that, 100% of the booking is charged.
-- We accept cash, card, and bank transfer (COP).
+**What to bring:**
+- Light, comfortable clothing
+- Mosquito repellent (essential!)
+- Cash — there's no ATM in Minca, withdraw in Santa Marta
+- A good book
+- An open mind
 
 **What awaits you:**
-Three zones inside a restored colonial building: Yakitori Bar street-side, Laboratorio (asylum-themed cocktail bar with Be Vida spirits) on the ground floor, and Paciente 013 (horror maze inspired by Spookers NZ) on the upper floor.
+Hammocks made for losing yourself among the clouds, a community of travellers that quickly becomes family, and unforgettable day trips to the hidden waterfalls of the Sierra Nevada.
 
-> *"She has always been here."*
+Get your soul ready. The mountain is already calling. 🌱
 
-With clinical precision,
-**The El Sanatorio team 🩺**
-
-WhatsApp: +1 (903) 459-8763 · Instagram: @elsanatorio.sm
+With jungle love,
+**The El Sanatorio Crew 🌿**

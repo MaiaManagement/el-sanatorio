@@ -41,7 +41,7 @@
     storageKey:      'maia_consent',
     version:         '1.1.0',
     expiryMs:        15552000000,
-    privacyPolicyUrl: '/privacy',
+    privacyPolicyUrl: '/privacidad.html',
     colors: {
       navy:       '#1B2A4A',
       blue:       '#2E75B6',

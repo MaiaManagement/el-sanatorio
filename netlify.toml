@@ -37,6 +37,18 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "https://www.el-sanatorio.com/*"
+  to = "https://el-sanatorio.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.el-sanatorio.com/*"
+  to = "https://el-sanatorio.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/favicon.ico"
   to = "/favicon.svg"
   status = 301

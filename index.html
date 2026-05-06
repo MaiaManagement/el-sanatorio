@@ -556,7 +556,7 @@
           <p class="wifi-reveal__trigger">[ TABLERO DE ANUNCIOS — PERSONAL INTERNO ]</p>
           <div class="wifi-reveal__secret" aria-label="Información WiFi">
             <p style="color: var(--gray); font-size: 0.62rem; margin-bottom: 8px;">RED WIFI — PERSONAL AUTORIZADO</p>
-            <p>Red: <code>HospitalDelTorax_Pacientes</code></p>
+            <p>Red: <code>ElSanatorio_Guests</code></p>
             <p style="margin-top: 6px;">WiFi disponible — solicita la contraseña al hacer check-in.</p>
             <p style="margin-top: 8px; font-size: 0.6rem; color: var(--gray);">No compartir con visitas. Ella vigila.</p>
           </div>
@@ -651,6 +651,13 @@
           </div>
         </div>
 
+        <div class="form-consent" style="margin-top: 1.25rem; display: flex; gap: 0.5rem; align-items: flex-start;">
+          <input type="checkbox" id="paciente-consent" name="aviso-privacidad" value="aceptado" required style="margin-top: 0.25rem; flex-shrink: 0;" />
+          <label for="paciente-consent" class="mono" style="font-size: 0.72rem; color: var(--light-gray); line-height: 1.6; letter-spacing: 0.04em;">
+            He leído y acepto la <a href="/privacidad" style="color: var(--crimson); text-decoration: underline;">Política de Privacidad</a> (Ley 1581 de 2012). *
+          </label>
+        </div>
+
         <button type="submit" class="form-submit">ENVIAR RESERVA PACIENTE 013</button>
       </form>
     </div>
@@ -723,6 +730,13 @@
             <label class="form-label" for="res-notes">Notas del Diagnóstico</label>
             <textarea class="form-textarea" id="res-notes" name="notas" placeholder="Alergias, ocasiones especiales, peticiones..."></textarea>
           </div>
+        </div>
+
+        <div class="form-consent" style="margin-top: 1.25rem; display: flex; gap: 0.5rem; align-items: flex-start;">
+          <input type="checkbox" id="res-consent" name="aviso-privacidad" value="aceptado" required style="margin-top: 0.25rem; flex-shrink: 0;" />
+          <label for="res-consent" class="mono" style="font-size: 0.72rem; color: var(--light-gray); line-height: 1.6; letter-spacing: 0.04em;">
+            He leído y acepto la <a href="/privacidad" style="color: var(--crimson); text-decoration: underline;">Política de Privacidad</a> (Ley 1581 de 2012). *
+          </label>
         </div>
 
         <button type="submit" class="form-submit">ENVIAR SOLICITUD DE ADMISIÓN</button>

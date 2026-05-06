@@ -99,9 +99,8 @@ netlify deploy --prod
 
 ## Easter Eggs
 
-- **WiFi password** — hover over `[ TABLERO DE ANUNCIOS — PERSONAL INTERNO ]` on `index.html` and `contact.html`
-  - Network: `HospitalDelTorax_Pacientes`
-  - Password: `013desconocida`
+- **WiFi notice** — hover over `[ TABLERO DE ANUNCIOS — PERSONAL INTERNO ]` on `index.html` and `contact.html`
+  - Network name shown is a generic placeholder; real SSID and password are kept out of the repo and shared only in person.
 - **Browser console** — open DevTools → Console for a classified patient file
 - **Redacted patient file** — Patient 013's diagnosis and family fields are visually redacted on the landing page
 

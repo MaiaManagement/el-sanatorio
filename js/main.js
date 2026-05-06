@@ -6,7 +6,7 @@
   'use strict';
 
   /* ── js-ready flag (enables CSS scroll animations) ────────── */
-  document.documentElement.classList.add('js-ready');
+  document.documentElement.classList.add('js-ready', 'js-loaded');
 
   /* ── Reduced motion preference ───────────────────────────── */
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

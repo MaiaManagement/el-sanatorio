@@ -119,10 +119,10 @@ netlify deploy --prod
 
 ## Contact
 
-- **WhatsApp:** [+57 317 437 0575](https://wa.me/573174370575)
+- **WhatsApp:** [+1 903 459 8763](https://wa.me/19034598763)
 - **Instagram:** [@elsanatorio.sm](https://instagram.com/elsanatorio.sm)
 - **Email:** hola@el-sanatorio.com
 
 ---
 
-*© 2025 El Sanatorio — Santa Marta, Colombia*
+*© 2026 El Sanatorio — Santa Marta, Colombia*

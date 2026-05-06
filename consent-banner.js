@@ -23,11 +23,8 @@
  * NOTES:
  * - Legal entity : EL SANATORIO S.A.S.
  * - NIT          : 902.051.563-5
- * - Rep. legal   : Andrew John Sidney Gallie, CE 8129525
  * - Address      : Calle 19 #4-23, Centro Histórico,
  *                  Santa Marta, Magdalena, Colombia
- * - Email        : andrew@maia-management.com
- *   PENDING: migrate to custom domain email once available
  * - Complies with Ley 1581 de 2012 (Colombia) & GDPR basics
  * - Consent Mode v2: ad_storage, analytics_storage,
  *   ad_user_data, ad_personalization

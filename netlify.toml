@@ -86,25 +86,25 @@
 
 [[redirects]]
   from = "/privacy.html"
-  to = "/privacy"
+  to = "/privacidad"
   status = 301
   force = true
 
 [[redirects]]
   from = "/privacidad.html"
-  to = "/privacy"
+  to = "/privacidad"
   status = 301
   force = true
 
 [[redirects]]
   from = "/terms.html"
-  to = "/terms"
+  to = "/terminos"
   status = 301
   force = true
 
 [[redirects]]
   from = "/terminos.html"
-  to = "/terms"
+  to = "/terminos"
   status = 301
   force = true
 
@@ -128,27 +128,25 @@
 
 [[redirects]]
   from = "/privacidad"
-  to = "/privacy"
-  status = 301
-  force = true
+  to = "/privacidad.html"
+  status = 200
 
 [[redirects]]
   from = "/politica-privacidad"
-  to = "/privacy"
+  to = "/privacidad"
   status = 301
   force = true
 
 [[redirects]]
   from = "/politica-de-privacidad"
-  to = "/privacy"
+  to = "/privacidad"
   status = 301
   force = true
 
 [[redirects]]
   from = "/terminos"
-  to = "/terms"
-  status = 301
-  force = true
+  to = "/terminos.html"
+  status = 200
 
 [[redirects]]
   from = "/menu"
@@ -182,13 +180,15 @@
 
 [[redirects]]
   from = "/privacy"
-  to = "/privacidad.html"
-  status = 200
+  to = "/privacidad"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/terms"
-  to = "/terminos.html"
-  status = 200
+  to = "/terminos"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/gracias"

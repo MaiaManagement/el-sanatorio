@@ -248,7 +248,7 @@
           <p style="color:var(--light-gray,#aaa);font-size:0.9rem;line-height:1.7;margin-bottom:1.25rem;">
             Casa del terror profesional. Actores en vivo, escenas cinematográficas, pasillos que no terminan donde deberían. Grupos de 4–8. Sin garantía de salida tranquila. Inspirado en el modelo de <strong style="color:#f5f5f0;">Spookers NZ</strong>.
           </p>
-          <p style="font-size:0.75rem;color:rgba(200,100,255,0.9);letter-spacing:0.05em;">6:00 PM – 12:00 AM Mié–Dom · Boletos: COP 55,000 →</p>
+          <p style="font-size:0.75rem;color:rgba(200,100,255,0.9);letter-spacing:0.05em;">6:00 PM – 12:00 AM Mié–Dom · Boletos: desde COP 45,000 →</p>
         </div>
       </a>
 
@@ -501,8 +501,12 @@
       <div>
         <!-- Hours -->
         <div class="panel panel--gold-accent" style="margin-bottom: 2rem;">
-            <h3 class="hours-heading" style="margin-bottom: 1rem;">Horario de Atención</h3>
-          <table class="hours-table" aria-label="Horarios de apertura">
+            <h3 class="hours-heading" style="margin-bottom: 0.5rem;">Horario de Atención</h3>
+            <p style="font-size:0.7rem;color:var(--gray);font-family:'Share Tech Mono',monospace;letter-spacing:0.06em;margin-bottom:0.75rem;">ZONA 1 — PATIO: todos los días, 12:00 PM – 2:00 AM</p>
+          <table class="hours-table" aria-label="Horarios de apertura Zona 2 y 3">
+            <thead>
+              <tr><th colspan="2" style="font-size:0.65rem;color:var(--gray);font-family:'Share Tech Mono',monospace;letter-spacing:0.08em;text-align:left;padding-bottom:0.4rem;">ZONA 2 &amp; 3 — INTERIOR</th></tr>
+            </thead>
             <tbody>
               <tr class="closed"><td>Lunes</td><td>Cerrado</td></tr>
               <tr class="closed"><td>Martes</td><td>Cerrado</td></tr>
@@ -589,9 +593,9 @@
 <section class="reserve-section fade-in-section" id="book-paciente-013" aria-labelledby="paciente-013-title" style="background:#0a0a0a;border-top:1px solid rgba(180,80,255,0.22);border-bottom:1px solid rgba(180,80,255,0.22);">
   <div class="container--sm">
     <div class="section-label"><span>Acceso al Manicomio</span></div>
-    <h2 class="section-title section-title--center" id="paciente-013-title">Book Paciente 013</h2>
+    <h2 class="section-title section-title--center" id="paciente-013-title">Reservar Paciente 013</h2>
     <p class="text-center serif" style="color: var(--light-gray); margin-bottom: 2.5rem;">
-      Reserve your horror maze admission by WhatsApp. Send the date, group size, and contact details directly to the admission desk.
+      Reserva tu admisión al laberinto del horror. Envía la fecha, el tamaño del grupo y tus datos de contacto directamente al escritorio de admisiones.
     </p>
 
     <div class="form-panel">
@@ -600,49 +604,50 @@
         <span class="form-panel__ref">WHATSAPP-013</span>
       </div>
 
-      <form id="paciente-013-form">
+      <form id="paciente-013-form" data-netlify="true" method="POST" action="/gracias">
+        <input type="hidden" name="form-name" value="paciente-013" />
         <div class="form-grid">
           <div class="form-group">
-            <label class="form-label" for="paciente-name">Name *</label>
-            <input class="form-input" type="text" id="paciente-name" name="name" required placeholder="Full name" autocomplete="name" />
+            <label class="form-label" for="paciente-name">Nombre *</label>
+            <input class="form-input" type="text" id="paciente-name" name="name" required placeholder="Nombre completo" autocomplete="name" />
           </div>
           <div class="form-group">
             <label class="form-label" for="paciente-whatsapp">WhatsApp *</label>
             <input class="form-input" type="tel" id="paciente-whatsapp" name="whatsapp" required placeholder="+57 300 000 0000" autocomplete="tel" />
           </div>
           <div class="form-group">
-            <label class="form-label" for="paciente-date">Date *</label>
+            <label class="form-label" for="paciente-date">Fecha *</label>
             <input class="form-input" type="date" id="paciente-date" name="date" required />
           </div>
           <div class="form-group">
-            <label class="form-label" for="paciente-group-size">Group Size *</label>
+            <label class="form-label" for="paciente-group-size">Tamaño del grupo *</label>
             <select class="form-select" id="paciente-group-size" name="groupSize" required>
-              <option value="" disabled selected>Select group size</option>
-              <option value="1">1 person</option>
-              <option value="2">2 people</option>
-              <option value="3">3 people</option>
-              <option value="4">4 people</option>
-              <option value="5">5 people</option>
-              <option value="6">6 people</option>
-              <option value="7">7 people</option>
-              <option value="8">8 people</option>
-              <option value="9">9 people</option>
-              <option value="10">10 people</option>
-              <option value="11">11 people</option>
-              <option value="12">12 people</option>
-              <option value="13">13 people</option>
-              <option value="14">14 people</option>
-              <option value="15">15 people</option>
-              <option value="16">16 people</option>
-              <option value="17">17 people</option>
-              <option value="18">18 people</option>
-              <option value="19">19 people</option>
-              <option value="20">20 people</option>
+              <option value="" disabled selected>Seleccionar tamaño del grupo</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 personas</option>
+              <option value="6">6 personas</option>
+              <option value="7">7 personas</option>
+              <option value="8">8 personas</option>
+              <option value="9">9 personas</option>
+              <option value="10">10 personas</option>
+              <option value="11">11 personas</option>
+              <option value="12">12 personas</option>
+              <option value="13">13 personas</option>
+              <option value="14">14 personas</option>
+              <option value="15">15 personas</option>
+              <option value="16">16 personas</option>
+              <option value="17">17 personas</option>
+              <option value="18">18 personas</option>
+              <option value="19">19 personas</option>
+              <option value="20">20 personas</option>
             </select>
           </div>
         </div>
 
-        <button type="submit" class="form-submit">SEND PACIENTE 013 BOOKING</button>
+        <button type="submit" class="form-submit">ENVIAR RESERVA PACIENTE 013</button>
       </form>
     </div>
   </div>
@@ -782,7 +787,7 @@
     <div class="footer__bottom">
       <p class="footer__copy">&copy; 2026 El Sanatorio — Santa Marta, Colombia. Todos los derechos reservados. | <a href="/privacidad" style="color:inherit;text-decoration:underline;">Privacidad</a> | <a href="/terminos" style="color:inherit;text-decoration:underline;">Términos</a> | <button type="button" onclick="if(window.MaiaConsent)window.MaiaConsent.reopenBanner();" style="color:inherit;background:none;border:0;padding:0;font:inherit;cursor:pointer;text-decoration:underline;">Gestionar cookies</button></p>
       <p class="footer__patient">PACIENTE 013 — DESCONOCIDA — ACTIVA</p>
-      <p style="font-size:0.75rem;color:var(--gray);margin-top:0.5rem;">Para consultas urgentes: Andrew Gallie, CEO — WhatsApp +1 903 459 8763</p>
+      <p style="font-size:0.75rem;color:var(--gray);margin-top:0.5rem;">Consultas operacionales: WhatsApp El Sanatorio +1 903 459 8763</p>
     </div>
   </div>
 </footer>
@@ -812,15 +817,4 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  z-index: 9999;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
-}
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-}
-</style>
-
-</body>
-</html>
+  z-inde

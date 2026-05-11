@@ -19,6 +19,9 @@ function json(body, status = 200) {
   });
 }
 
+let cachedAuth;
+let cachedCalendar;
+
 export default async (request) => {
   if (request.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: corsHeaders });
@@ -41,16 +44,18 @@ export default async (request) => {
   }
 
   try {
-    const auth = new google.auth.GoogleAuth({
-      credentials: {
-        client_email: clientEmail,
-        private_key: privateKey.replace(/\\n/g, '\n')
-      },
-      scopes: ['https://www.googleapis.com/auth/calendar.readonly']
-    });
+    if (!cachedCalendar) {
+      cachedAuth = new google.auth.GoogleAuth({
+        credentials: {
+          client_email: clientEmail,
+          private_key: privateKey.replace(/\\n/g, '\n')
+        },
+        scopes: ['https://www.googleapis.com/auth/calendar.readonly']
+      });
+      cachedCalendar = google.calendar({ version: 'v3', auth: cachedAuth });
+    }
 
-    const calendar = google.calendar({ version: 'v3', auth });
-    const { data } = await calendar.events.list({
+    const { data } = await cachedCalendar.events.list({
       calendarId,
       timeMin: new Date().toISOString(),
       timeMax: new Date(Date.now() + 30 * 86400000).toISOString(),

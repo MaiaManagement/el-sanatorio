@@ -480,6 +480,7 @@
     let currentCardEvents = [];
 
     const qs = (selector) => document.querySelector(selector);
+    const esc = (str) => String(str).replace(/[&<>"']/g, (s) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[s]));
     const directBookingUrl = "https://wa.me/19034598763?text=Quiero%20reservar%20El%20Sanatorio";
 
     function buildBookingMessage(zone, date, time, name, guests) {
@@ -542,8 +543,8 @@
         const date = start.toLocaleDateString("es-CO", { weekday: "short", month: "short", day: "numeric" });
         const time = start.toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" });
         return `<article class="event-card">
-          <h3>${event.title}</h3>
-          <p>${date} / ${time}<br>Zona: ${event.extendedProps.zone}<br>Capacidad: ${zones[event.extendedProps.zone].capacity}</p>
+          <h3>${esc(event.title)}</h3>
+          <p>${date} / ${time}<br>Zona: ${esc(event.extendedProps.zone)}<br>Capacidad: ${zones[event.extendedProps.zone].capacity}</p>
           <button type="button" data-event-index="${index}">Reserve</button>
         </article>`;
       }).join("");

@@ -106,8 +106,8 @@
       --negro-suave:  #0f0f0f;
       --carbon:       #141414;
       --humo:         #1a1a1a;
-      --sangre:       #8b0000;
-      --sangre-viva:  #c0392b;
+      --sangre:       #b91c1c;
+      --sangre-viva:  #e05243;
       --sangre-glow:  #e74c3c;
       --oro-viejo:    #b8960c;
       --oro:          #d4a017;
@@ -258,7 +258,7 @@
       position: relative;
       z-index: 1;
       font-size: 1.4rem;
-      color: var(--sangre);
+      color: var(--sangre-viva);
       letter-spacing: 1rem;
       margin-bottom: 1.5rem;
       opacity: 0.7;
@@ -317,7 +317,7 @@
     }
 
     .hero-divider-icon {
-      color: var(--sangre);
+      color: var(--sangre-viva);
       font-size: 1.2rem;
       opacity: 0.9;
     }
@@ -506,7 +506,7 @@
     }
 
     .ornament-line-glyph {
-      color: var(--sangre);
+      color: var(--sangre-viva);
       font-size: 1rem;
       opacity: 0.6;
     }
@@ -935,7 +935,7 @@
       left: 2rem;
       font-family: var(--font-lit);
       font-size: 6rem;
-      color: var(--sangre);
+      color: var(--sangre-viva);
       opacity: 0.15;
       line-height: 1;
     }
@@ -1029,7 +1029,6 @@
       font-style: italic;
       font-size: 0.9rem;
       color: var(--gris-ceniza);
-      opacity: 0.7;
     }
 
     /* ============================================================
@@ -1140,7 +1139,7 @@
       top: 1.2rem;
       right: 1.5rem;
       font-size: 2.5rem;
-      color: var(--sangre);
+      color: var(--sangre-viva);
       opacity: 0.2;
       line-height: 1;
     }
@@ -1608,7 +1607,7 @@
 
     .footer-links a::before {
       content: '›';
-      color: var(--sangre);
+      color: var(--sangre-viva);
       font-size: 0.9rem;
     }
 
@@ -1723,7 +1722,7 @@
     }
 
     .deco-glyph {
-      color: var(--sangre);
+      color: var(--sangre-viva);
       font-size: 1.2rem;
       opacity: 0.5;
     }
@@ -1891,8 +1890,7 @@
   <a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20reservar%20un%20evento%20en%20El%20Sanatorio"
      target="_blank"
      rel="noopener noreferrer"
-     class="whatsapp-float"
-     aria-label="Contáctanos por WhatsApp">
+     class="whatsapp-float">
     <span class="wa-bubble">Reservar Evento</span>
     <span class="wa-btn" aria-hidden="true">🟢</span>
   </a>
@@ -2098,7 +2096,7 @@
 
         <!-- Package 2 - Featured -->
         <article class="package-card featured" role="listitem">
-          <span class="featured-badge" aria-label="Más popular">Más Solicitado</span>
+          <span class="featured-badge">Más Solicitado</span>
           <span class="package-icon" aria-hidden="true">💀</span>
           <h3 class="package-name">El Purgatorio</h3>
           <p class="package-tagline">
@@ -2448,7 +2446,7 @@
       <div class="testimonials-grid">
 
         <article class="testimonial-card">
-          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <div class="stars" role="img" aria-label="5 de 5 estrellas"><span aria-hidden="true">★★★★★</span></div>
           <p class="testimonial-text">
             "Organizamos el lanzamiento de nuestra nueva colección aquí y fue
             absolutamente perfecto. La atmósfera es incomparable en Santa Marta.
@@ -2466,7 +2464,7 @@
         </article>
 
         <article class="testimonial-card">
-          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <div class="stars" role="img" aria-label="5 de 5 estrellas"><span aria-hidden="true">★★★★★</span></div>
           <p class="testimonial-text">
             "Mi cumpleaños 30 en El Sanatorio fue la mejor decisión de mi vida.
             Escogimos el paquete Purgatorio para 45 personas. El yakitori
@@ -2484,7 +2482,7 @@
         </article>
 
         <article class="testimonial-card">
-          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <div class="stars" role="img" aria-label="5 de 5 estrellas"><span aria-hidden="true">★★★★★</span></div>
           <p class="testimonial-text">
             "Hicimos la cena anual de nuestra empresa aquí y rompimos
             completamente el molde. El equipo del Sanatorio coordinó
@@ -2691,8 +2689,7 @@
         <a href="https://wa.me/19034598763?text=Hola%2C%20quiero%20reservar%20un%20evento%20privado%20en%20El%20Sanatorio%20de%20Santa%20Marta.%20Me%20pueden%20dar%20informaci%C3%B3n%3F"
            target="_blank"
            rel="noopener noreferrer"
-           class="booking-cta-main"
-           aria-label="Reservar evento privado por WhatsApp">
+           class="booking-cta-main">
           <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
           </svg>

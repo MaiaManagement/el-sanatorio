@@ -129,13 +129,14 @@
 <!-- ── Main Contact ───────────────────────────────────────────── -->
 <section style="background: var(--panel-dark); padding: 4rem 0;" aria-labelledby="contact-main">
   <div class="container">
+    <h2 id="contact-main" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Información de contacto</h2>
     <div class="contact-grid">
 
       <!-- Left: Info -->
       <div class="fade-in-section">
         <!-- Address -->
         <div class="panel panel--red-accent" style="margin-bottom: 1.5rem;">
-          <h4 style="margin-bottom: 1rem;">Dirección</h4>
+          <h3 class="hours-heading" style="margin-bottom: 1rem;">Dirección</h3>
           <p style="font-family: var(--font-type); font-size: 1.2rem; letter-spacing: 0.08em; color: var(--white); margin-bottom: 0.5rem;">
             Calle 19 #4-23
           </p>
@@ -178,7 +179,7 @@
 
         <!-- Direct contact -->
         <div class="panel">
-          <h4 style="margin-bottom: 1rem;">Contacto Directo</h4>
+          <h3 class="hours-heading" style="margin-bottom: 1rem;">Contacto Directo</h3>
           <div class="contact-list">
             <div class="contact-item">
               <div class="contact-item__icon" aria-hidden="true">📱</div>
@@ -246,7 +247,7 @@
 
         <!-- Quick contact form -->
         <div class="panel panel--red-accent">
-          <h4 style="margin-bottom: 1.25rem;">Enviar Mensaje</h4>
+          <h3 class="hours-heading" style="margin-bottom: 1.25rem;">Enviar Mensaje</h3>
           <!-- FIX: Removed action="/gracias" to prevent 404 on Netlify form submit. -->
           <form name="contacto-general" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contacto-general" />

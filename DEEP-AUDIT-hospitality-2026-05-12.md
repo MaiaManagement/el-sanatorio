@@ -42,7 +42,7 @@ Changed `author content="The Maia Group"` → `"El Sanatorio S.A.S."` (commit `2
 
 ### Passing Checks
 
-- NIT: 902.051.563-5 correct in all JSON-LD (index.html Organization + LocalBusiness, contact.html, menu.html, experience.html)
+- NIT: 901.862.977-7 correct in all JSON-LD (index.html Organization + LocalBusiness, contact.html, menu.html, experience.html)
 - WhatsApp: all links use wa.me/19034598763 — correct
 - llevalleva.co: zero instances
 - Personal numbers: none in HTML ("+57 300 000 0000" is a placeholder in form fields — correct)
@@ -148,7 +148,7 @@ File ended mid-tag (no `</footer>`, `</body>`, `</html>`). Also missing mandator
 
 | Check | el-sanatorio | sushi-pop | be-vida |
 |---|---|---|---|
-| Correct NIT | PASS (902.051.563-5) | PASS (901.862.977-7) | PASS (901.862.977-7) |
+| Correct NIT | PASS (901.862.977-7) | PASS (901.862.977-7) | PASS (901.862.977-7) |
 | WhatsApp = bot number | PASS | PASS | PASS |
 | llevalleva.co absent | PASS | PASS | PASS |
 | Personal numbers absent | PASS | PASS | PASS |
